@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{89C02572-83A8-4504-B03A-A055578BCAE3}|ecosysteme\\ecosysteme.vcxproj|C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\ecosysteme\\ecosysteme.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{89C02572-83A8-4504-B03A-A055578BCAE3}|ecosysteme\\ecosysteme.vcxproj|solutionrelative:ecosysteme\\ecosysteme.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ecosysteme.cpp",
+              "DocumentMoniker": "C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\ecosysteme\\ecosysteme.cpp",
+              "RelativeDocumentMoniker": "ecosysteme\\ecosysteme.cpp",
+              "ToolTip": "C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\ecosysteme\\ecosysteme.cpp*",
+              "RelativeToolTip": "ecosysteme\\ecosysteme.cpp*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-08T10:32:13.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
