@@ -1,10 +1,27 @@
-// ecosysteme.cpp : Ce fichier contient la fonction 'main'. L'exécution du programme commence et se termine à cet endroit.
-//
+// Groupe 7
+// Projet : Ecosysteme
+// AYITE Julia
+// ALVES GAMA Miguel
+// GRUMIAUX--KAPAHOU KENMOE Janelle
+// GONCALVES Teo
 
 #include <iostream>
 
+using namespace std;
+
+
+
+
+
+
 int main()
 {
-    std::cout << "Test !\n";
-}
 
+
+
+
+
+
+    cout << "Test !\n";
+    cout << "test 2 "
+}
