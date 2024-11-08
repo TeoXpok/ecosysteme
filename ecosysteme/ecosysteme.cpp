@@ -23,5 +23,6 @@ int main()
 
 
     cout << "Test !\n";
-    cout << "test 2 "
+    cout << "test 2 ";
+    cout << "Test 3";
 }
