@@ -1,5 +1,3 @@
-``` cpp
-
 class Animal
 {
 protected:
@@ -39,4 +37,3 @@ public:
 	int getHungry() const { return hungry; }
 
 };
-```
