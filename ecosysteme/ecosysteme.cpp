@@ -14,9 +14,9 @@ void caca() {
 
 
 
-void abbbcc() {
-    cout << "eiozufoiezhfoiehzo";
-}
+    void abbbcc() {
+        cout << "eiozufoiezhfoiehzo";
+    }
 
 }
 

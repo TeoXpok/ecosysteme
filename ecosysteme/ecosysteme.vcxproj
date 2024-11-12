@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{89c02572-83a8-4504-b03a-a055578bcae3}</ProjectGuid>
+    <ProjectGuid>{746a1943-feff-4385-a084-4302273c8e28}</ProjectGuid>
     <RootNamespace>ecosysteme</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="deplacement.cpp" />
     <ClCompile Include="ecosysteme.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
