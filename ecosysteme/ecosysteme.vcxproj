@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Class.cpp" />
     <ClCompile Include="deplacement.cpp" />
     <ClCompile Include="ecosysteme.cpp" />
   </ItemGroup>
