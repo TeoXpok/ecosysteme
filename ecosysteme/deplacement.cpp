@@ -1,20 +1,23 @@
 #include <iostream>
 
 int x, y;
+// ajouter position animal pour suivre déplacement
+// animal (int posX, int posY) : x(posX), y(posY){}
+void deplacer(int deltax, )
 
-void Animal::deplacement(int x, int y) {
+
+
+void suivreAnimal(int x, int y) {
     if (age < 3)
     {
         // relier les bébés avec la mère
+        if (x < perso.x)x++;
+        else if (x > perso.x)x--;
 
+        if (y < perso.y) y++;
+        else if (y > perso.y)y--;
 
     }
-
-
-
-
-
-
 
 
 }
@@ -32,9 +35,7 @@ void Animal::deplacement(int x, int y) {
 
 // chasser priorité sur soif
 
-//dormir (a voir)
-
-
+// dormir (a voir)
 
 int main()
 {
