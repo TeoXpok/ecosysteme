@@ -11,13 +11,6 @@
 #include <memory>
 using namespace std;
 
-class Age {
-private:
-	int age;
+void age() {
 
-public:
-	Age(int a) : age(a) {
-		cout <<
-	}
-
-};
+}
