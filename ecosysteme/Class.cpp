@@ -3,7 +3,7 @@
 using namespace std;
 
 const int Size = 30;
-const char tab[Size][Size];
+// const char tab[Size][Size];
 
 class Animal
 {
@@ -21,7 +21,7 @@ protected:
 
 public:
 
-	Animal(string name, string race, string sexe, string pos, int e, int a, int h) : name(name), race(race), sexe(sexe), pos(pos), x(rand() % 20), y(rand() % 20), speed(e), age(a), thirsty(h), hungry(h) {}
+	Animal( string race, string sexe, string pos, int e, int a, int h) : race(race), sexe(sexe), pos(pos), x(rand() % 20), y(rand() % 20), speed(e), age(a), thirsty(h), hungry(h) {}
 
 	// reproduction, manger, boire, chasser, deplacer : methodes
 
@@ -50,7 +50,7 @@ public:
 class Capybara : public Animal
 {
 public:
-	Capybara(string name) : Animal(name, "capybara", 'f', "bebe", x, y, 1, 0, 100) {}
+	Capybara() : Animal("capybara", 'f', "bebe", x, y, 1, 0, 100) {} // a voir male femelle
 
 	void eat() override
 	{
@@ -81,15 +81,26 @@ public:
 	void reproduction(Animal& target) override
 	{
 		// trouver un animal du sexe opposé et ken
+		
+
+
 		// création d'un nouveau bebe
+		
+
+
+		// race de l'animal en question() : Animal(target.getRace(), 'f', "bebe", x(rand() % 20), y(rand() % 20), 1, 0, 100) {}
 
 		cout << " un nouveau " << target.getRace() << " est né ! " << endl;
 	}
 
 	void hunt(Animal& target) override
 	{
-		// se deplace en fonction de la position de target
-		// si sur la meme case ou case adjacente target mouru
+		// se deplace en fonction de la position de target : deplacer()
+		// si sur la meme case target mouru
+		if (x == target.getX() && target.getY())
+		{
+			// detruire dans le vecteur
+		}
 
 		cout << name << " chasse " << target.getName() << " ! " << endl;
 
@@ -110,7 +121,7 @@ public:
 				// Vérification des limites
 				if (nx >= 0 && nx < Size && ny >= 0 && ny < Size)
 				{
-					if (tab[nx][ny] == ...  && other.getRace() == race) // ... = parcours de vecteurs et regarder si position correspond
+					if ( ...  && other.getRace() == race) // ... = parcours de vecteur  et regarder si position correspond
 					{
 						cout << " le " << race << " discute avec " << other.getRace() << endl;
 					}
