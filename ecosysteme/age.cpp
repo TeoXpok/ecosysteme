@@ -28,9 +28,7 @@ public:
 
 };*/
 
-class Age {
-private:
-    int age;
+/**/
 
 /*public:
     Age(int a) : age(a) {

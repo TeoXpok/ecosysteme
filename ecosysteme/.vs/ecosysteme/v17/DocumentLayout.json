@@ -1,6 +1,5 @@
 {
   "Version": 1,
-<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\jgrumiaux\\Documents\\GitHub\\ecosysteme\\ecosysteme\\",
   "Documents": [
     {
@@ -8,34 +7,16 @@
       "RelativeMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|solutionrelative:class.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\jgrumiaux\\Documents\\GitHub\\ecosysteme\\ecosysteme\\ecosysteme.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|solutionrelative:ecosysteme.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\jgrumiaux\\Documents\\GitHub\\ecosysteme\\ecosysteme\\age.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-=======
-  "WorkspaceRootPath": "C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\class.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|solutionrelative:class.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\deplacement.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|solutionrelative:deplacement.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\ecosysteme.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|solutionrelative:ecosysteme.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\age.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
->>>>>>> 962bf36a74bfbef93247cd4c78f6cd2636c81cc5
       "RelativeMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|solutionrelative:age.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\jgrumiaux\\Documents\\GitHub\\ecosysteme\\ecosysteme\\deplacement.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|solutionrelative:deplacement.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\jgrumiaux\\Documents\\GitHub\\ecosysteme\\ecosysteme\\ecosysteme.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|solutionrelative:ecosysteme.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -49,104 +30,54 @@
           "Children": [
             {
               "$type": "Document",
-<<<<<<< HEAD
+              "DocumentIndex": 3,
+              "Title": "ecosysteme.cpp",
+              "DocumentMoniker": "C:\\Users\\jgrumiaux\\Documents\\GitHub\\ecosysteme\\ecosysteme\\ecosysteme.cpp",
+              "RelativeDocumentMoniker": "ecosysteme.cpp",
+              "ToolTip": "C:\\Users\\jgrumiaux\\Documents\\GitHub\\ecosysteme\\ecosysteme\\ecosysteme.cpp",
+              "RelativeToolTip": "ecosysteme.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-14T16:25:40.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "deplacement.cpp",
+              "DocumentMoniker": "C:\\Users\\jgrumiaux\\Documents\\GitHub\\ecosysteme\\ecosysteme\\deplacement.cpp",
+              "RelativeDocumentMoniker": "deplacement.cpp",
+              "ToolTip": "C:\\Users\\jgrumiaux\\Documents\\GitHub\\ecosysteme\\ecosysteme\\deplacement.cpp",
+              "RelativeToolTip": "deplacement.cpp",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAI4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-14T16:25:40.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "class.cpp",
               "DocumentMoniker": "C:\\Users\\jgrumiaux\\Documents\\GitHub\\ecosysteme\\ecosysteme\\Class.cpp",
               "RelativeDocumentMoniker": "Class.cpp",
               "ToolTip": "C:\\Users\\jgrumiaux\\Documents\\GitHub\\ecosysteme\\ecosysteme\\Class.cpp",
               "RelativeToolTip": "Class.cpp",
-              "ViewState": "AgIAAD8AAAAAAAAAAIAwwFQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFkAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-14T14:28:22.066Z",
+              "WhenOpened": "2024-11-14T16:25:40.419Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ecosysteme.cpp",
-              "DocumentMoniker": "C:\\Users\\jgrumiaux\\Documents\\GitHub\\ecosysteme\\ecosysteme\\ecosysteme.cpp",
-              "RelativeDocumentMoniker": "ecosysteme.cpp",
-              "ToolTip": "C:\\Users\\jgrumiaux\\Documents\\GitHub\\ecosysteme\\ecosysteme\\ecosysteme.cpp",
-              "RelativeToolTip": "ecosysteme.cpp",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAowHsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-14T14:28:21.872Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "deplacement.cpp",
-              "DocumentMoniker": "C:\\Users\\jgrumiaux\\Documents\\GitHub\\ecosysteme\\ecosysteme\\deplacement.cpp",
-              "RelativeDocumentMoniker": "deplacement.cpp",
-              "ToolTip": "C:\\Users\\jgrumiaux\\Documents\\GitHub\\ecosysteme\\ecosysteme\\deplacement.cpp",
-              "RelativeToolTip": "deplacement.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-14T14:28:21.987Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "age.cpp",
               "DocumentMoniker": "C:\\Users\\jgrumiaux\\Documents\\GitHub\\ecosysteme\\ecosysteme\\age.cpp",
               "RelativeDocumentMoniker": "age.cpp",
               "ToolTip": "C:\\Users\\jgrumiaux\\Documents\\GitHub\\ecosysteme\\ecosysteme\\age.cpp",
-=======
-              "DocumentIndex": 2,
-              "Title": "ecosysteme.cpp",
-              "DocumentMoniker": "C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\ecosysteme.cpp",
-              "RelativeDocumentMoniker": "ecosysteme.cpp",
-              "ToolTip": "C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\ecosysteme.cpp",
-              "RelativeToolTip": "ecosysteme.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIAAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-14T14:29:22.61Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "deplacement.cpp",
-              "DocumentMoniker": "C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\deplacement.cpp",
-              "RelativeDocumentMoniker": "deplacement.cpp",
-              "ToolTip": "C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\deplacement.cpp",
-              "RelativeToolTip": "deplacement.cpp",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAI4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-14T14:29:22.715Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "class.cpp",
-              "DocumentMoniker": "C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\Class.cpp",
-              "RelativeDocumentMoniker": "Class.cpp",
-              "ToolTip": "C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\Class.cpp",
-              "RelativeToolTip": "Class.cpp",
-              "ViewState": "AgIAABEBAAAAAAAAAAAAAGkAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-14T14:29:22.801Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "age.cpp",
-              "DocumentMoniker": "C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\age.cpp",
-              "RelativeDocumentMoniker": "age.cpp",
-              "ToolTip": "C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\age.cpp",
->>>>>>> 962bf36a74bfbef93247cd4c78f6cd2636c81cc5
               "RelativeToolTip": "age.cpp",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAwwHEAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-<<<<<<< HEAD
-              "WhenOpened": "2024-11-14T14:28:22.235Z",
+              "WhenOpened": "2024-11-14T16:25:40.464Z",
               "EditorCaption": ""
-=======
-              "WhenOpened": "2024-11-14T14:29:22.983Z"
->>>>>>> 962bf36a74bfbef93247cd4c78f6cd2636c81cc5
             }
           ]
         }
