@@ -1,37 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\ecosysteme\\",
+  "WorkspaceRootPath": "C:\\Users\\malvesgama\\Documents\\GitHub\\ecosysteme\\ecosysteme\\",
   "Documents": [
     {
-<<<<<<< Updated upstream
-      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\class.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|solutionrelative:class.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\deplacement.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|solutionrelative:deplacement.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\ecosysteme.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\malvesgama\\Documents\\GitHub\\ecosysteme\\ecosysteme\\ecosysteme.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|solutionrelative:ecosysteme.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\age.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-=======
-      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\ecosysteme\\ecosysteme.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|solutionrelative:ecosysteme.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\ecosysteme\\class.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|solutionrelative:class.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\ecosysteme\\deplacement.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\malvesgama\\Documents\\GitHub\\ecosysteme\\ecosysteme\\deplacement.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|solutionrelative:deplacement.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\ecosysteme\\age.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
->>>>>>> Stashed changes
+      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\malvesgama\\Documents\\GitHub\\ecosysteme\\ecosysteme\\class.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|solutionrelative:class.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\malvesgama\\Documents\\GitHub\\ecosysteme\\ecosysteme\\age.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|solutionrelative:age.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -46,62 +30,54 @@
           "Children": [
             {
               "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 2,
-=======
               "DocumentIndex": 0,
->>>>>>> Stashed changes
               "Title": "ecosysteme.cpp",
-              "DocumentMoniker": "C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\ecosysteme\\ecosysteme.cpp",
+              "DocumentMoniker": "C:\\Users\\malvesgama\\Documents\\GitHub\\ecosysteme\\ecosysteme\\ecosysteme.cpp",
               "RelativeDocumentMoniker": "ecosysteme.cpp",
-              "ToolTip": "C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\ecosysteme\\ecosysteme.cpp",
+              "ToolTip": "C:\\Users\\malvesgama\\Documents\\GitHub\\ecosysteme\\ecosysteme\\ecosysteme.cpp",
               "RelativeToolTip": "ecosysteme.cpp",
-<<<<<<< Updated upstream
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHkAAAABAAAAAAAAAA==",
-=======
-              "ViewState": "AgIAAG4AAAAAAAAAAAAwwHkAAAABAAAAAAAAAA==",
->>>>>>> Stashed changes
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-12T16:43:23.262Z",
+              "WhenOpened": "2024-11-14T14:29:22.61Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "deplacement.cpp",
-              "DocumentMoniker": "C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\ecosysteme\\deplacement.cpp",
+              "DocumentMoniker": "C:\\Users\\malvesgama\\Documents\\GitHub\\ecosysteme\\ecosysteme\\deplacement.cpp",
               "RelativeDocumentMoniker": "deplacement.cpp",
-              "ToolTip": "C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\ecosysteme\\deplacement.cpp",
-              "RelativeToolTip": "deplacement.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAUAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\malvesgama\\Documents\\GitHub\\ecosysteme\\ecosysteme\\deplacement.cpp*",
+              "RelativeToolTip": "deplacement.cpp*",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAJgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-12T16:43:21.949Z",
+              "WhenOpened": "2024-11-14T14:29:22.715Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "class.cpp",
-              "DocumentMoniker": "C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\ecosysteme\\Class.cpp",
+              "DocumentMoniker": "C:\\Users\\malvesgama\\Documents\\GitHub\\ecosysteme\\ecosysteme\\Class.cpp",
               "RelativeDocumentMoniker": "Class.cpp",
-              "ToolTip": "C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\ecosysteme\\Class.cpp",
-              "RelativeToolTip": "Class.cpp",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAAAHwAAAAGAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\malvesgama\\Documents\\GitHub\\ecosysteme\\ecosysteme\\Class.cpp*",
+              "RelativeToolTip": "Class.cpp*",
+              "ViewState": "AgIAACABAAAAAAAAAAAAANcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-12T16:43:20.817Z",
+              "WhenOpened": "2024-11-14T14:29:22.801Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "age.cpp",
-              "DocumentMoniker": "C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\ecosysteme\\age.cpp",
+              "DocumentMoniker": "C:\\Users\\malvesgama\\Documents\\GitHub\\ecosysteme\\ecosysteme\\age.cpp",
               "RelativeDocumentMoniker": "age.cpp",
-              "ToolTip": "C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\ecosysteme\\age.cpp",
+              "ToolTip": "C:\\Users\\malvesgama\\Documents\\GitHub\\ecosysteme\\ecosysteme\\age.cpp",
               "RelativeToolTip": "age.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-12T16:43:19.576Z"
+              "WhenOpened": "2024-11-14T14:29:22.983Z"
             }
           ]
         }

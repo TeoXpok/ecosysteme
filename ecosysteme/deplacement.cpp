@@ -13,7 +13,6 @@
 
 int researchx, researchy, nbCase;
 
-
 int besoin;
 int posx,posy;
 int nbCasex;
@@ -37,8 +36,23 @@ void research(int valeur, const Animal& target) {
                 case 1:
                     if (board[researchy][researchx].iswater == true)
                     {
-                        nbCasex = researchx - target.getX();
-                        nbCasey = researchy - target.getY();
+                        if (researchx - target.x > 0)
+                        {
+                            nbCasex = researchx - target.x;
+                        }
+                        else
+                        {
+                            nbCasex = target.x - researchx;
+                        }
+
+                        if (researchy - target.y>0)
+                        {
+                            researchx - target.x;
+                        }
+                        else
+                        {
+                            researchx - target.x;
+                        }
                         nbCase = nbCasex + nbCasey;
                         
                         if (nbCase<min)
@@ -52,8 +66,23 @@ void research(int valeur, const Animal& target) {
                 case 2:
                     if (board[researchy][researchx].iswater == true)
                     {
-                        nbCasex = researchx - target.getX();
-                        nbCasey = researchy - target.getY();
+                        if (researchx - target.x > 0)
+                        {
+                            nbCasex = researchx - target.x;
+                        }
+                        else
+                        {
+                            nbCasex = target.x - researchx;
+                        }
+
+                        if (researchy - target.y > 0)
+                        {
+                            researchx - target.x;
+                        }
+                        else
+                        {
+                            researchx - target.x;
+                        }
                         nbCase = nbCasex + nbCasey;
 
                         if (nbCase < min)
@@ -81,17 +110,7 @@ void research(int valeur, const Animal& target) {
 
 
 
-//void suivreAnimal(const Animal& target, int x, int y) {
-//    if (age < 3)
-//    {
-//        // relier les bébés avec la mère
-//        if (x < animal.x)x++;
-//        else if (x > animal.x)x--;
-//
-//        if (y < animal.y) y++;
-//        else if (y > animal.y)y--;
-//    }
-//};
+
 //BOUF < SOIF
 
 //=================BOUF=======================
@@ -126,16 +145,15 @@ void hungryanimal(Animal& target) {// rajouter choix de vide en fonction chaine 
         target.getThirsty() - 2;
         target.getHungry() - 4;
     }
-    if ()
-    {
-        if ((wx - 1, wy - 1) ||
-        hungry(wx - 1, wy) ||
-        hungry(wx - 1, wy + 1) ||
-        hungry(wx, wy + 1) ||
-        hungry(wx, wy - 1) ||
-        hungry(wx + 1, wy - 1) ||
-        hungry(wx + 1, wy) ||
-        hungry(wx + 1, wy + 1) == true)
+    
+    if ((wx - 1, wy - 1) ||
+    hungry(wx - 1, wy) ||
+    hungry(wx - 1, wy + 1) ||
+    hungry(wx, wy + 1) ||
+    hungry(wx, wy - 1) ||
+    hungry(wx + 1, wy - 1) ||
+    hungry(wx + 1, wy) ||
+    hungry(wx + 1, wy + 1) == true)
 
             wx >= 0 && wx < 30 && wy >= 0 && wy < 90
     {
@@ -193,6 +211,23 @@ void thirstyanimal(const Animal& ) {// rajouter choix de vide
         }
     }
 }
+
+
+
+
+//void suivreAnimal(const Animal& target, int x, int y) {
+//    if (age < 3)
+//    {
+//        // relier les bébés avec la mère
+//        if (x < animal.x)x++;
+//        else if (x > animal.x)x--;
+//
+//        if (y < animal.y) y++;
+//        else if (y > animal.y)y--;
+//    }
+//};
+
+
 
 // bébé se déplace en groupe avec mère, si mère chasse alors groupe éloigner
 // une fois chasser les bébés doivent se nourrir avec mère

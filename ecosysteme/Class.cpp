@@ -15,11 +15,12 @@ protected:
 	int speed;
 	int thirsty;
 	int hungry;
+	int categorie;
 	
 
 public:
 
-	Animal(string name, string race, string sexe, string pos, int e, int a, int h) : name(name), race(race), sexe(sexe), pos(pos), x(rand() % 20), y(rand() % 20), speed(e), age(a), thirsty(h), hungry(h) {}
+	Animal(string name, string race, string sexe, string pos, int e, int a, int h, int categorie) : name(name), race(race), sexe(sexe), pos(pos), x(rand() % 20), y(rand() % 20), speed(e), age(a), thirsty(h), hungry(h),categorie(categorie) {}
 
 	// reproduction, manger, boire, chasser, deplacer : methodes
 	int x, y;
@@ -46,7 +47,7 @@ public:
 class Capybara : public Animal
 {
 public:
-	Capybara(string name) : Animal(name, "Capybara", 'f', "bebe", x, y, 1, 0, 100) {}
+	Capybara(string name) : Animal(name, "Capybara", 'f', "bebe", x, y, 1, 0, 100, 1) {}
 
 	void eat() override
 	{
@@ -137,7 +138,7 @@ public:
 class Hippopotamus : public Animal
 {
 public:
-	Hippopotamus(string name) : Animal(name, "capybara", 'f', "bebe", x, y, 1, 0, 100) {}
+	Hippopotamus(string name) : Animal(name, "capybara", 'f', "bebe", x, y, 1, 0, 100, 2) {}
 
 	void eat() override
 	{
@@ -220,7 +221,7 @@ public:
 class Dragon : public Animal
 {
 public:
-	Dragon(string name) : Animal(name, "capybara", 'f', "bebe", x, y, 1, 0, 100) {}
+	Dragon(string name) : Animal(name, "capybara", 'f', "bebe", x, y, 1, 0, 100, 3) {}
 
 	void eat() override
 	{
