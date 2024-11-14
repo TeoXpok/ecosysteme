@@ -94,7 +94,7 @@ public:
 		// si sur la meme case mouru
 		if (x == target.getX() && y == target.getY())
 		{
-			// appel du destructeur a voir avec le manager
+			// appel du destructeur 
 		}
 		cout << name << " chasse " << target.getName() << " ! " << endl;
 
@@ -125,24 +125,3 @@ public:
 	}
 };
 
-/*class managerAnimal
-{
-private:
-	vector<Animal*> animaux;
-
-public:
-
-	~managerAnimal()
-	{
-		for (auto animal : animaux)
-		{
-			delete animal;
-		}
-		animaux.clear();
-	}
-
-	Animal* creerAnimal(string name, string race, string sexe, string pos, int e, int a, int h)
-	{
-		Animal* a = new Animal( name, race, sexe, pos, e, a, h)
-	}
-};*/
