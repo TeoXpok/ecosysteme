@@ -28,8 +28,10 @@ public:
 	virtual void reproduction(Animal& target) = 0;
 	virtual void hunt(Animal& target) = 0;
 	virtual void talk(Animal& other) = 0;
+	virtual void agee() = 0;
+	
+	
 	// virtual void die() = 0;
-
 	// bool alive(){}
 
 	string getRace() const { return race; }
@@ -78,11 +80,19 @@ public:
 		}
 	}
 
+
+	void agee() override {
+
+	}
+
+
 	void reproduction(Animal& target) override
 	{
 		if (race == target.getRace()) {
-			if (age <= 10 &&  target.getAge() <= 10) {
-			Capybara: (name, "Capybara", "f", "B�b�", x, y, 1, 0, 100) {}
+			if (age == 10 &&  target.getAge() <= 10) {
+				Capybara: ( "Capybara", "f", "B�b�", x, y, 1, 0, 100) {
+					cout << " Un Capybara est né." << endl;
+				}
 
 			}
 		}
