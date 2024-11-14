@@ -80,14 +80,18 @@ public:
 		}
 	}
 
-	void reproduction(Animal& target) override
-	{
-		// trouver un animal du sexe opposé et ken
+	
+	void reproduction(Animal & target) override {
+		if (race == target.getRace()) {
+			if (age <= 10 && target.getAge() <= 10) {
+			Capybara: ("Capybara", "f", "Bebe", x, y, 1, 0, 100); {}
+				if (age == 10 && target.getAge() <= 10) {
+				Capybara: ("Capybara", "f", "Bebe", x, y, 1, 0, 100); {}
+					cout << " Un Capybara est né." << endl;
+				}
+			}
+		}
 		
-		// création d'un nouveau bebe : avoir avec manager
-
-		cout << " un nouveau " << target.getRace() << " est né ! " << endl;
-	}
 
 	void hunt(Animal& target) override
 	{
