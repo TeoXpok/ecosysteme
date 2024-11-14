@@ -10,10 +10,11 @@ int x, y,researchx, researchy, nbCase;
 // animal (int posX, int posY) : x(posX), y(posY){}
 void deplacer(int deltax, int deltay){}
 int besoin;
-int nbCasex, nbCasey, posx,posy;
-
-
-
+int posx,posy;
+int nbCasex;
+int nbCasey;
+int nbCase = 30 * 90;
+int valeur;
 
 
 // rajouter une consommation // se déplacer (*2) ou ne rien faire consomme de l'énergie et de la faim
@@ -22,17 +23,32 @@ void research() {
     {
         for (int researchx = 0; researchx < 90; researchx++)
         {
-            //switch
-            if (tab[researchy][researchx].iswater == true)// changer la recherche
+            switch (valeur)
             {
-                nbCasex = tab[researchx] - x;
-                nbCasey = tab[researchy] - y;
-                nbCase = nbCasex + nbCasey;
-            }
-            if ()
-            {
+                case 1:
+                    if (tab[researchy][researchx].iswater == true)// changer la recherche
+                    {
+                        nbCasex = tab[researchx] - x;
+                        nbCasey = tab[researchy] - y;
+                        nbCase = nbCasex + nbCasey;
+                        
+                        if ()
+                        {
 
+
+                        }
+                    }
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+
+                    break;
+                default:
+                    break;
             }
+           
         }  
     }
 }
@@ -57,12 +73,12 @@ void suivreAnimal(int x, int y) {
 //BOUF < SOIF
 
 //=================BOUF=======================
-void hungryanimal(const Animal& ) {// rajouter choix de vide en fonction chaine alimentaire
+void hungryanimal(const Animal&) {// rajouter choix de vide en fonction chaine alimentaire
     if (animal.hungry < 50)
     {
         research();
     }
-    if(x < animal.x)
+    if (x < animal.x)
     {
         x++;
         animal.thirsty - 2;
@@ -98,7 +114,7 @@ void hungryanimal(const Animal& ) {// rajouter choix de vide en fonction chaine 
         hungry(wx + 1, wy + 1) == true)
     {
         animal.hungry + 50;
-    }
+        return;
     }
 }
 
@@ -146,6 +162,7 @@ void thirstyanimal(const Animal& ) {// rajouter choix de vide
             iswater(wx + 1, wy + 1) == true)
         {
             animal.thirsty + 50;
+            return;
         }
     }
 }
