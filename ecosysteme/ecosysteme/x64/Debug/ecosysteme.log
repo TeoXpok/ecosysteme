@@ -1,11 +1,17 @@
-﻿  class.cpp
-C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\class.cpp(6,27): error C2734: 'tab' : un objet const doit être initialisé s'il n'est pas 'extern'
-C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\class.cpp(53,32): error C2661: 'Animal::Animal' : aucune fonction surchargée ne nécessite 9 arguments
-C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\class.cpp(53,32): message : lors de la tentative de mise en correspondance de la liste des arguments '(std::string, const char [9], char, const char [5], int, int, int, int, int)'
-C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\class.cpp(113,25): error C2059: erreur de syntaxe : '...'
-C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\class.cpp(114,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
+﻿  age.cpp
+  class.cpp
+C:\Users\jayite\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(6,27): error C2734: 'tab' : un objet const doit être initialisé s'il n'est pas 'extern'
+C:\Users\jayite\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(59,32): error C2661: 'Animal::Animal' : aucune fonction surchargée ne nécessite 9 arguments
+C:\Users\jayite\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(59,32): message : lors de la tentative de mise en correspondance de la liste des arguments '(std::string, const char [9], char, const char [5], int, int, int, int, int)'
+C:\Users\jayite\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(123,25): error C2059: erreur de syntaxe : '...'
+C:\Users\jayite\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(124,1): error C2143: erreur de syntaxe : absence de ';' avant '{'
   deplacement.cpp
-C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\deplacement.cpp(5,6): error C2653: 'Animal' : n'est pas un nom de classe ni d'espace de noms
-C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\deplacement.cpp(6,9): error C2065: 'age' : identificateur non déclaré
+C:\Users\jayite\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(6,27): error C2059: erreur de syntaxe : ')'
+C:\Users\jayite\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(10,33): error C2143: erreur de syntaxe : absence de ')' avant '{'
+C:\Users\jayite\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(11,9): error C2065: 'age' : identificateur non déclaré
+C:\Users\jayite\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(14,17): error C2065: 'perso' : identificateur non déclaré
+C:\Users\jayite\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(15,22): error C2065: 'perso' : identificateur non déclaré
+C:\Users\jayite\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(17,17): error C2065: 'perso' : identificateur non déclaré
+C:\Users\jayite\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(18,22): error C2065: 'perso' : identificateur non déclaré
   ecosysteme.cpp
   Génération de code en cours...
