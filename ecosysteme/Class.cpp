@@ -8,7 +8,7 @@ using namespace std;
 protected:
 	// nom, sexe, age, statut, faim, soif, race : attributs
 	string race;
-	bool sexe;// true = homme/false = femme
+	bool sexe; // true = homme/false = femme
 	int age;
 	int speed;
 	int thirsty;
@@ -28,9 +28,8 @@ public:
 	virtual void reproduction(Animal& target) = 0;
 	virtual void hunt(Animal& target) = 0;
 	virtual void talk(Animal& other) = 0;
-	// virtual void die() = 0;
 
-	// bool alive(){}
+	bool alive(){}
 
 	string getRace() const { return race; }
 	bool getSexe() const { return sexe; }
