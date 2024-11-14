@@ -31,10 +31,10 @@ void research(int valeur, const Animal& target) {
     {
         for (int researchx = 0; researchx < 90; researchx++)
         {
-            switch (valeur)// bouf = 1 , water = 2 , bouf =3
+            switch (valeur)// bouf = 1 , water = 2 , bouf arbre =3
             {
                 case 1:
-                    if (board[researchy][researchx]==target.categorie && target.categorie < categorie)
+                    if (board[researchy][researchx].animal.species == target.categorie && target.categorie < categorie)
                     {
                         if (researchx - target.x > 0)
                         {

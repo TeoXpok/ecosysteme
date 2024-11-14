@@ -8,7 +8,8 @@ using namespace std;
 protected:
 	// nom, sexe, age, statut, faim, soif, race : attributs
 	string race;
-	bool sexe;
+	string statut;
+	bool sexe;// true = homme/false = femme
 	int age;
 	int speed;
 	int thirsty;
@@ -18,10 +19,11 @@ protected:
 
 public:
 
-	Animal( string race, bool sexe, int e, int a, int c, int h) : race(race), sexe(sexe), x(rand() % 20), y(rand() % 20), speed(e), age(a),categorie(c), thirsty(h), hungry(h) {}
+	Animal( string Race, bool sexe, int e, int a, int c, int h, int x, int y) : race(Race), sexe(sexe),statut(pos), x(x), y(y), speed(e), age(a), categorie(c), thirsty(h), hungry(h) {}
 
 	// reproduction, manger, boire, chasser, deplacer : methodes
 	int x, y;
+	
 	virtual void eat() = 0;
 	virtual void drink() = 0;
 	virtual void reproduction(Animal& target) = 0;
@@ -33,13 +35,14 @@ public:
 
 	string getRace() const { return race; }
 	bool getSexe() const { return sexe; }
+	string getPos() const { return statut; }
 	int getX() const { return x; }
 	int getY() const { return y; }
 	int getAge() const { return age; }
 	int getSpeed() const { return speed; }
 	int getThirsty() const { return thirsty; }
 	int getHungry() const { return hungry; }
-
+	int getCategorie() const { return categorie; }
 };
 
 class Capybara : public Animal
@@ -47,7 +50,7 @@ class Capybara : public Animal
 public:
 
 	// bool sex { }
-	Capybara() : Animal("Capybara", 'f', "bebe", x, y, 1, 0,1, 100) {}
+	Capybara(bool sexe, int x, int y, int age) : Animal("Capybara", sexe, 1,age, 1,100,x,y) {}
 
 	void eat() override
 	{
@@ -138,7 +141,7 @@ class Hippopotamus : public Animal
 {
 public:
 
-	Hippopotamus(string name) : Animal( "Hippopotame", 'f', "bebe", x, y, 1, 0,2, 100) {}
+	Hippopotamus(bool sexe, int x, int y, int age) : Animal("Hippopotamus", sexe, 1, age, 2, 100, x, y) {}
 
 
 	void eat() override
@@ -223,7 +226,7 @@ class Dragon : public Animal
 {
 public:
 
-	Dragon(string name) : Animal( "Dragon", 'f', "bebe", x, y, 1, 0, 3, 100) {}
+	Dragon(bool sexe, int x, int y, int age) : Animal("Dragon", sexe, 1, age, 3, 100, x, y) {}
 
 	void eat() override
 	{
