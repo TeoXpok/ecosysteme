@@ -12,17 +12,17 @@ protected:
 	string sexe;
 	string pos;
 	int age;
-	int x, y;
 	int speed;
 	int thirsty;
 	int hungry;
+	
 
 public:
 
 	Animal(string name, string race, string sexe, string pos, int e, int a, int h) : name(name), race(race), sexe(sexe), pos(pos), x(rand() % 20), y(rand() % 20), speed(e), age(a), thirsty(h), hungry(h) {}
 
 	// reproduction, manger, boire, chasser, deplacer : methodes
-
+	int x, y;
 	virtual void eat() = 0;
 	virtual void drink() = 0;
 	virtual void reproduction(Animal& target) = 0;
@@ -36,8 +36,6 @@ public:
 	string getRace() const { return race; }
 	string getSexe() const { return sexe; }
 	string getPos() const { return pos; }
-	int getX() const { return x; }
-	int getY() const { return y; }
 	int getAge() const { return age; }
 	int getSpeed() const { return speed; }
 	int getThirsty() const { return thirsty; }
