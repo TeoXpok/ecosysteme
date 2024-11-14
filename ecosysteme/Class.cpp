@@ -8,29 +8,21 @@ using namespace std;
 protected:
 	// nom, sexe, age, statut, faim, soif, race : attributs
 	string race;
-	bool sexe;
 	string statut;
+	bool sexe;
 	int age;
-	int x, y;
 	int speed;
 	int thirsty;
 	int hungry;
-<<<<<<< HEAD
 	int categorie;
 	
 
 public:
 
-	Animal(string name, string race, string sexe, string pos, int e, int a, int h, int categorie) : name(name), race(race), sexe(sexe), pos(pos), x(rand() % 20), y(rand() % 20), speed(e), age(a), thirsty(h), hungry(h),categorie(categorie) {}
-=======
-
-public:
-
-	Animal( string race, bool sexe, string pos, int e, int a, int h) : race(race), sexe(sexe), pos(pos), x(rand() % 20), y(rand() % 20), speed(e), age(a), thirsty(h), hungry(h) {}
->>>>>>> 30555ac5fd7152af7165579187f61504918a26ca
+	Animal( string race, bool sexe, string pos, int e, int a, int c, int h) : race(race), sexe(sexe), x(rand() % 20), y(rand() % 20), speed(e), age(a),categorie(c), thirsty(h), hungry(h) {}
 
 	// reproduction, manger, boire, chasser, deplacer : methodes
-
+	int x, y;
 	virtual void eat() = 0;
 	virtual void drink() = 0;
 	virtual void reproduction(Animal& target) = 0;
@@ -55,13 +47,9 @@ public:
 class Capybara : public Animal
 {
 public:
-<<<<<<< HEAD
-	Capybara(string name) : Animal(name, "Capybara", 'f', "bebe", x, y, 1, 0, 100, 1) {}
-=======
 
 	// bool sex { }
-	Capybara() : Animal("Capybara", 'f', "bebe", x, y, 1, 0, 100) {}
->>>>>>> 30555ac5fd7152af7165579187f61504918a26ca
+	Capybara() : Animal("Capybara", 'f', "bebe", x, y, 1, 0,1, 100) {}
 
 	void eat() override
 	{
@@ -151,11 +139,9 @@ public:
 class Hippopotamus : public Animal
 {
 public:
-<<<<<<< HEAD
-	Hippopotamus(string name) : Animal(name, "capybara", 'f', "bebe", x, y, 1, 0, 100, 2) {}
-=======
-	Hippopotamus(string name) : Animal( "Hippopotame", 'f', "bebe", x, y, 1, 0, 100) {}
->>>>>>> 30555ac5fd7152af7165579187f61504918a26ca
+
+	Hippopotamus(string name) : Animal( "Hippopotame", 'f', "bebe", x, y, 1, 0,2, 100) {}
+
 
 	void eat() override
 	{
@@ -238,11 +224,8 @@ public:
 class Dragon : public Animal
 {
 public:
-<<<<<<< HEAD
-	Dragon(string name) : Animal(name, "capybara", 'f', "bebe", x, y, 1, 0, 100, 3) {}
-=======
-	Dragon(string name) : Animal( "Dragon", 'f', "bebe", x, y, 1, 0, 100) {}
->>>>>>> 30555ac5fd7152af7165579187f61504918a26ca
+
+	Dragon(string name) : Animal( "Dragon", 'f', "bebe", x, y, 1, 0, 3, 100) {}
 
 	void eat() override
 	{

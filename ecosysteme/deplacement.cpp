@@ -34,7 +34,7 @@ void research(int valeur, const Animal& target) {
             switch (valeur)// bouf = 1 , water = 2 , bouf =3
             {
                 case 1:
-                    if (board[researchy][researchx].iswater == true)
+                    if (board[researchy][researchx]==target.categorie && target.categorie < categorie)
                     {
                         if (researchx - target.x > 0)
                         {
