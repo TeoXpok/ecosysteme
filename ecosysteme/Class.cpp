@@ -39,10 +39,8 @@ public:
 
 	
 	string getRace() const { return race; }
-	bool getSexe() const { return sexe; }
 	string getPos() const { return statut; }
-	int getX() const { return x; }
-	int getY() const { return y; }
+	bool getSexe() const { return sexe; }
 	int getAge() const { return age; }
 	int getSpeed() const { return speed; }
 	int getThirsty() const { return thirsty; }
@@ -112,7 +110,7 @@ public:
 		cout << "Position du personnage : (" << x << ", " << y << ")" << std::endl;
 
 		// si sur la meme case mouru
-		if (x == target.getX() && y == target.getY())
+		if (x == target.x && y == target.y)
 		{
 			// appel du destructeur 
 		}
@@ -187,27 +185,30 @@ public:
 		}
 	}
 
-	void reproduction(Animal& target) override
+
+	void reproduction(Animal & target) override
 	{
-		// trouver un animal du sexe opposé et ken : avoir si male / femmelle ou juste deux de la memee spece et on s'en fout dans les attributs de leur sexe
-		// création d'un nouveau bebe
-		
+		if (race == target.getRace())
+		{
+			if (age == 10 && target.getAge() <= 10)
+			{
+				animaux.push_back(new Hippopotamus());
 
-		animaux.push_back(new Hippopotamus());
-		// race de l'animal en question() : Animal(target.getRace(), 'f', "bebe", x(rand() % 20), y(rand() % 20), 1, 0, 100) {}
-
-		cout << " un nouveau " << target.getRace() << " est né ! " << endl;
+				cout << " Un hippopotame est né." << endl;
+			}
+		}
 	}
-
 	void hunt(Animal& target) override
 	{
-		// se deplace en fonction de la position de target : deplacer()
-		// si sur la meme case target mouru
-		if (x == target.getX() && target.getY())
-		{
-			// detruire dans le vecteur
-		}
+		// se deplace en fonction de la position de target : appeler deplacement()
 
+		cout << "Position du personnage : (" << x << ", " << y << ")" << std::endl;
+
+		// si sur la meme case mouru
+		if (x == target.x && y == target.y)
+		{
+			// appel du destructeur 
+		}
 		cout << race << " chasse " << target.getRace() << " ! " << endl;
 
 		cout << target.getRace() << " est mort, mangé par : " << race << " ! " << endl;
@@ -279,20 +280,30 @@ public:
 		}
 	}
 
-	void reproduction(Animal& target) override
+	void reproduction(Animal & target) override
 	{
-		// trouver un animal du sexe opposé et ken : avoir si male / femmelle ou juste deux de la memee spece et on s'en fout dans les attributs de leur sexe
-		// création d'un nouveau bebe
+		if (race == target.getRace())
+		{
+			if (age == 10 && target.getAge() <= 10)
+			{
+				animaux.push_back(new Dragon());
 
-		animaux.push_back(new Dragon());
-		cout << " un nouveau " << target.getRace() << " est né ! " << endl;
+				cout << " Un dragon est né." << endl;
+			}
+		}
 	}
 
 	void hunt(Animal& target) override
 	{
-		// se deplace en fonction de la position de target
-		// si sur la meme case target mouru : a voir si enregistre oou non
+		// se deplace en fonction de la position de target : appeler deplacement()
 
+		cout << "Position du personnage : (" << x << ", " << y << ")" << std::endl;
+
+		// si sur la meme case mouru
+		if (x == target.x && y == target.y)
+		{
+			// appel du destructeur 
+		}
 		cout << race << " chasse " << target.getRace() << " ! " << endl;
 
 		cout << target.getRace() << " est mort, mangé par : " << race << " ! " << endl;
@@ -331,8 +342,6 @@ public:
 		}
 	}
 };
-
-
 
 // instaurer un temps de presence aux animaux si un animal meurt un autre spawn
 
