@@ -1,11 +1,9 @@
 #include<vector>
+#include"ecosysteme.cpp"
 #include<iostream>
 using namespace std;
 
-const int Size = 30;
-const char tab[Size][Size];
-
-class Animal
+;class Animal
 {
 protected:
 	// nom, sexe, age, statut, faim, soif, race : attributs
@@ -50,7 +48,7 @@ public:
 class Capybara : public Animal
 {
 public:
-	Capybara(string name) : Animal(name, "capybara", 'f', "bebe", x, y, 1, 0, 100) {}
+	Capybara(string name) : Animal(name, "Capybara", 'f', "bebe", x, y, 1, 0, 100) {}
 
 	void eat() override
 	{
@@ -105,6 +103,7 @@ public:
 
 	void talk(Animal& other) override
 	{
+
 		// Vérification des cases adjacentes
 		for (int i = -1; i <= 1; i++)
 		{
@@ -115,11 +114,21 @@ public:
 				int ny = y + j;
 
 				// Vérification des limites
-				if (nx >= 0 && nx < Size && ny >= 0 && ny < Size)
+				if (nx >= 0 && nx < 30 && ny >= 0 && ny < 90)
 				{
-					if (tab[nx][ny] == ...  && other.getRace() == race) // ... = parcours de vecteurs et regarder si position correspond
+					if (board[nx][ny].animal.species == 1) 
 					{
-						cout << " le " << race << " discute avec " << other.getRace() << endl;
+						cout << " le " << race << " discute avec " << race << endl;
+					}
+
+					if (board[nx][ny].animal.species == 2)
+					{
+						cout << " le " << race << " discute avec " << race << endl;
+					}
+
+					else
+					{
+						cout << " le " << race << " discute avec " << race << endl;
 					}
 				}
 			}
