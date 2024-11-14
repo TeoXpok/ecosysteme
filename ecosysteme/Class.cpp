@@ -136,6 +136,172 @@ public:
 	}
 };
 
+class Hippopotamus : public Animal
+{
+public:
+	Hippopotamus(string name) : Animal(name, "capybara", 'f', "bebe", x, y, 1, 0, 100) {}
+
+	void eat() override
+	{
+		int max = 100;
+		if (hungry > 90)
+		{
+			hungry = 100;
+		}
+		else
+		{
+			hungry += 10;
+		}
+	}
+
+	void drink() override
+	{
+		int max = 100;
+		if (thirsty > 90)
+		{
+			thirsty = 100;
+		}
+		else
+		{
+			thirsty += 10;
+		}
+	}
+
+	void reproduction(Animal& target) override
+	{
+		// trouver un animal du sexe opposé et ken : avoir si male / femmelle ou juste deux de la memee spece et on s'en fout dans les attributs de leur sexe
+		// création d'un nouveau bebe
+
+		cout << " un nouveau " << target.getRace() << " est né ! " << endl;
+	}
+
+	void hunt(Animal& target) override
+	{
+		// se deplace en fonction de la position de target
+		// si sur la meme case target mouru : a voir si enregistre oou non
+
+		cout << name << " chasse " << target.getName() << " ! " << endl;
+
+		cout << target.getName() << " est mort, mangé par : " << name << " ! " << endl;
+	}
+
+	void talk(Animal& other) override
+	{
+		// Vérification des cases adjacentes
+		for (int i = -1; i <= 1; i++)
+		{
+			for (int j = -1; j <= 1; j++)
+			{
+				if (i == 0 && j == 0) continue; // Ne pas compter la case elle-même
+				int nx = x + i;
+				int ny = y + j;
+
+				// Vérification des limites
+				if (nx >= 0 && nx < 30 && ny >= 0 && ny < 90)
+				{
+					if (board[nx][ny].animal.species == 1)
+					{
+						cout << " le " << race << " discute avec " << race << endl;
+					}
+
+					if (board[nx][ny].animal.species == 2)
+					{
+						cout << " le " << race << " discute avec " << race << endl;
+					}
+
+					else
+					{
+						cout << " le " << race << " discute avec " << race << endl;
+					}
+				}
+			}
+		}
+	}
+};
+
+class Dragon : public Animal
+{
+public:
+	Dragon(string name) : Animal(name, "capybara", 'f', "bebe", x, y, 1, 0, 100) {}
+
+	void eat() override
+	{
+		int max = 100;
+		if (hungry > 90)
+		{
+			hungry = 100;
+		}
+		else
+		{
+			hungry += 10;
+		}
+	}
+
+	void drink() override
+	{
+		int max = 100;
+		if (thirsty > 90)
+		{
+			thirsty = 100;
+		}
+		else
+		{
+			thirsty += 10;
+		}
+	}
+
+	void reproduction(Animal& target) override
+	{
+		// trouver un animal du sexe opposé et ken : avoir si male / femmelle ou juste deux de la memee spece et on s'en fout dans les attributs de leur sexe
+		// création d'un nouveau bebe
+
+		cout << " un nouveau " << target.getRace() << " est né ! " << endl;
+	}
+
+	void hunt(Animal& target) override
+	{
+		// se deplace en fonction de la position de target
+		// si sur la meme case target mouru : a voir si enregistre oou non
+
+		cout << name << " chasse " << target.getName() << " ! " << endl;
+
+		cout << target.getName() << " est mort, mangé par : " << name << " ! " << endl;
+	}
+
+	void talk(Animal& other) override
+	{
+		// Vérification des cases adjacentes
+		for (int i = -1; i <= 1; i++)
+		{
+			for (int j = -1; j <= 1; j++)
+			{
+				if (i == 0 && j == 0) continue; // Ne pas compter la case elle-même
+				int nx = x + i;
+				int ny = y + j;
+
+				// Vérification des limites
+				if (nx >= 0 && nx < 30 && ny >= 0 && ny < 90)
+				{
+					if (board[nx][ny].animal.species == 1)
+					{
+						cout << " le " << race << " discute avec " << race << endl;
+					}
+
+					if (board[nx][ny].animal.species == 2)
+					{
+						cout << " le " << race << " discute avec " << race << endl;
+					}
+
+					else
+					{
+						cout << " le " << race << " discute avec " << race << endl;
+					}
+				}
+			}
+		}
+	}
+};
+
 // instaurer un temps de presence aux animaux si un animal meurt un autre spawn
 
 /* void init(int nombreAniamux)
