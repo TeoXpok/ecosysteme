@@ -250,8 +250,8 @@ void choix(Animal& target) {
                 
 
             }
+        
         }
-    }
     else
     {
         void thirstyanimal(Animal& target); {
