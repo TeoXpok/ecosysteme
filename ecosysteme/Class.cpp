@@ -55,7 +55,8 @@ class Capybara : public Animal
 public:
 
 	// bool sex { }
-	Capybara(bool sexe, int x, int y, int age) : Animal("Capybara", sexe, 1,age, 1,100,x,y) {}
+	// bool sexe, int x, int y, int age
+	Capybara() : Animal("Capybara", sexe, 1,age, 1,100,x,y) {}
 
 	void eat() override
 	{
@@ -151,7 +152,7 @@ class Hippopotamus : public Animal
 {
 public:
 
-	Hippopotamus(bool sexe, int x, int y, int age) : Animal("Hippopotamus", sexe, 1, age, 2, 100, x, y) {}
+	Hippopotamus() : Animal("Hippopotamus", sexe, 1, age, 2, 100, x, y) {}
 
 	void eat() override
 	{
@@ -181,7 +182,6 @@ public:
 
 	void reproduction(Animal& target) override
 	{
-		// trouver un animal du sexe opposé et ken
 		// trouver un animal du sexe opposé et ken : avoir si male / femmelle ou juste deux de la memee spece et on s'en fout dans les attributs de leur sexe
 		// création d'un nouveau bebe
 		
@@ -200,8 +200,6 @@ public:
 		{
 			// detruire dans le vecteur
 		}
-		// se deplace en fonction de la position de target
-		// si sur la meme case target mouru : a voir si enregistre oou non
 
 		cout << race << " chasse " << target.getRace() << " ! " << endl;
 
@@ -246,7 +244,7 @@ class Dragon : public Animal
 {
 public:
 
-	Dragon(bool sexe, int x, int y, int age) : Animal("Dragon", sexe, 1, age, 3, 100, x, y) {}
+	Dragon() : Animal("Dragon", sexe, 1, age, 3, 100, x, y) {}
 
 	void eat() override
 	{
@@ -328,34 +326,62 @@ public:
 
 // instaurer un temps de presence aux animaux si un animal meurt un autre spawn
 
-/* void init(int nombreAniamux)
+int nbAnimaux;
+
+void intNbAnimaux()
 {
-	srand(time(0));
-	for (int i = 0; i < nombreAnimaux; ++i)
+	cout << " voulez choisir un nb d'animaux ? " << endl << " oui : 1, non : 0 " << endl; // demander au joueur si il veut donner un nb d'animaux precis ou un nb predefinit 
+	int choix;
+	cin >> choix;
+	switch (choix)
 	{
-		int classe = rand() % 3;
-		switch (classe)
+		case 0:
+			nbAnimaux = 10;
+			break;
+		case 1:
+			cout << " Choissisez le nb d'animaux : " << endl;
+			int nb;
+			cin >> nb;
+			nbAnimaux = nb;
+	}
+}
+
+// quand nb animaux sur map < au nombre dans la variable : creer un nouvel animal
+class Jeu 
+{
+private:
+
+	std::vector<Animal*> animaux;
+
+public:
+
+	~Jeu() 
+	{
+		for (auto animal : animaux)
+			delete animal;
+	}
+
+	void init(int nombreAniamux)
+	{
+		srand(time(0));
+		for (int i = 0; i < nbAnimaux; ++i)
 		{
+			int classe = rand() % 3;
+			switch (classe)
+			{
 			case 0: animaux.push_back(new Capybara()); break;
 			case 1: animaux.push_back(new Hippopotamus()); break;
 			case 2: animaux.push_back(new Dragon()); break;
+			}
 		}
 	}
-}*/
+};
+void spawn()
+{
 
-// demander au joueur si il veut donner un nb d'animaux precis ou un nb predefinit 
+}
 
-// cout << " voulez choisir un nb d'animaux ? " << endl << " oui : 1, non : 0 " << endl;
-// int choix;
-// cin >> choix;
-// switch (choix)
-// case 0 :
-// break;
-// nbAnimaux = 10;
-// case 1 :
-// cout << " Choissisez le nb d'animaux : " << endl;
-// int nb;
-// cin >> nb;
-// nbAnimaux = nb;
-
-// quand nb animaux sur map < au nombre dans la variable : creer un nouvel animal
+int main()
+{
+	return 0;
+}
