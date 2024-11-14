@@ -34,8 +34,6 @@ public:
 
 	string getRace() const { return race; }
 	bool getSexe() const { return sexe; }
-	int getX() const { return x; }
-	int getY() const { return y; }
 	int getAge() const { return age; }
 	int getSpeed() const { return speed; }
 	int getThirsty() const { return thirsty; }
@@ -92,7 +90,7 @@ public:
 		cout << "Position du personnage : (" << x << ", " << y << ")" << std::endl;
 
 		// si sur la meme case mouru
-		if (x == target.getX() && y == target.getY())
+		if (x == target.x && y == target.y)
 		{
 			// appel du destructeur 
 		}
