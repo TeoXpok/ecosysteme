@@ -1,3 +1,4 @@
+#pragma once
 // lier les fichiers cpp
 #include <iostream>
 #include "ecosysteme.cpp"

@@ -1,6 +1,6 @@
 // ConsoleApplication1.cpp : Ce fichier contient la fonction 'main'. L'exécution du programme commence et se termine à cet endroit.
 //
-
+#pragma once
 #include <iostream>
 using namespace std;
 
@@ -22,9 +22,10 @@ struct cell
 	animal animal;
 
 };
+
 cell board[30][90];
 
-void clear(int obj = 0) {
+void clear() {
 	for (size_t i = 0; i < 30; i++)
 	{
 		for (size_t j = 0; j < 90; j++)
@@ -39,10 +40,10 @@ void display() {
 	cout << endl;
 	string sexe = "";
 	int bg = 0;
-	for (size_t i = 0; i < 30; i++)
+	for (size_t i = 0; i < 29; i++)
 	{
 		cout << "\t\t\t\t\t\t\t";
-		for (size_t j = 0; j < 90; j++)
+		for (size_t j = 0; j < 89; j++)
 		{
 			if (board[i][j].iswater) bg = 104;
 			else if (board[i][j].issand) bg = 103;
