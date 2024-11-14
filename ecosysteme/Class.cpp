@@ -12,6 +12,7 @@ protected:
 	// nom, sexe, age, faim, soif, race : attributs
 	string race;
 	int age;
+	int maxAge;
 	int speed;
 	int thirsty;
 	int hungry;
@@ -47,7 +48,29 @@ public:
 	virtual void hunt(Animal& target) = 0;
 	virtual void talk(Animal& other) = 0;
 
-	
+	void agee() 
+	{
+		int debut = 0;
+
+		if (debut != 1)
+		{
+			cout << " Choisissez l'age maximum des animaux : " << endl;
+			int nbMax;
+			cin >> nbMax;
+		}
+
+		if (alive) 
+		{
+			age++;
+			if (age >= maxAge) 
+			{
+				alive = false;
+				cout << getRace() << "  est mort vieillesse." << endl;
+			}
+		}
+	}
+
+
 	string getRace() const { return race; }
 	bool getSexe() const { return sexe; }
 	bool getAlive() const { return alive; }
@@ -412,7 +435,3 @@ public:
 		}
 	}
 };
-/*void spawn()
-{
-	 pas besoin vecteur mis a l'exterieur normlement c'est bon
-}*/
