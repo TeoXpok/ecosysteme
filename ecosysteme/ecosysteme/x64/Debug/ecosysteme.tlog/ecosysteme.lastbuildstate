@@ -1,2 +1,6 @@
 PlatformToolSet=v143:VCToolArchitecture=Native64Bit:VCToolsVersion=14.36.32532:TargetPlatformVersion=10.0.26100.0:
+<<<<<<< HEAD
+Debug|x64|C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\|
+=======
 Debug|x64|C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\|
+>>>>>>> 30555ac5fd7152af7165579187f61504918a26ca

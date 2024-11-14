@@ -8,20 +8,21 @@ using namespace std;
 protected:
 	// nom, sexe, age, statut, faim, soif, race : attributs
 	string race;
-	bool sexe;
 	string statut;
+	bool sexe;
 	int age;
-	int x, y;
 	int speed;
 	int thirsty;
 	int hungry;
+	int categorie;
+	
 
 public:
 
-	Animal( string race, bool sexe, string pos, int e, int a, int h) : race(race), sexe(sexe), pos(pos), x(rand() % 20), y(rand() % 20), speed(e), age(a), thirsty(h), hungry(h) {}
+	Animal( string race, bool sexe, string pos, int e, int a, int c, int h) : race(race), sexe(sexe), x(rand() % 20), y(rand() % 20), speed(e), age(a),categorie(c), thirsty(h), hungry(h) {}
 
 	// reproduction, manger, boire, chasser, deplacer : methodes
-
+	int x, y;
 	virtual void eat() = 0;
 	virtual void drink() = 0;
 	virtual void reproduction(Animal& target) = 0;
@@ -48,7 +49,7 @@ class Capybara : public Animal
 public:
 
 	// bool sex { }
-	Capybara() : Animal("Capybara", 'f', "bebe", x, y, 1, 0, 100) {}
+	Capybara() : Animal("Capybara", 'f', "bebe", x, y, 1, 0,1, 100) {}
 
 	void eat() override
 	{
@@ -138,7 +139,9 @@ public:
 class Hippopotamus : public Animal
 {
 public:
-	Hippopotamus(string name) : Animal( "Hippopotame", 'f', "bebe", x, y, 1, 0, 100) {}
+
+	Hippopotamus(string name) : Animal( "Hippopotame", 'f', "bebe", x, y, 1, 0,2, 100) {}
+
 
 	void eat() override
 	{
@@ -221,7 +224,8 @@ public:
 class Dragon : public Animal
 {
 public:
-	Dragon(string name) : Animal( "Dragon", 'f', "bebe", x, y, 1, 0, 100) {}
+
+	Dragon(string name) : Animal( "Dragon", 'f', "bebe", x, y, 1, 0, 3, 100) {}
 
 	void eat() override
 	{

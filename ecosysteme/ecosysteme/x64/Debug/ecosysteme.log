@@ -1,4 +1,172 @@
 ﻿  age.cpp
+<<<<<<< HEAD
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\age.cpp(3,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'ecosysteme.cpp' : No such file or directory
+  class.cpp
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(124,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(50,32): error C2661: 'Animal::Animal' : aucune fonction surchargée ne nécessite 10 arguments
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(50,32): message : lors de la tentative de mise en correspondance de la liste des arguments '(std::string, const char [9], char, const char [5], int, int, int, int, int, int)'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(94,19): error C2039: 'getX' n'est pas membre de 'Animal'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(6,8): message : voir la déclaration de 'Animal'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(94,41): error C2039: 'getY' n'est pas membre de 'Animal'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(6,8): message : voir la déclaration de 'Animal'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(141,36): error C2661: 'Animal::Animal' : aucune fonction surchargée ne nécessite 10 arguments
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(141,36): message : lors de la tentative de mise en correspondance de la liste des arguments '(std::string, const char [9], char, const char [5], int, int, int, int, int, int)'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(224,30): error C2661: 'Animal::Animal' : aucune fonction surchargée ne nécessite 10 arguments
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(224,30): message : lors de la tentative de mise en correspondance de la liste des arguments '(std::string, const char [9], char, const char [5], int, int, int, int, int, int)'
+  deplacement.cpp
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(124,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(8,15): error C2011: 'animal' : redéfinition du type 'struct'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(8,8): message : voir la déclaration de 'animal'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(16,1): error C2011: 'cell' : redéfinition du type 'struct'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(25,6): error C2079: 'board' utilise une struct de 'cell' non défini
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(25,6): error C2040: 'board' : les niveaux d'indirection de 'int' et de 'cell [30][90]' sont différents
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(27,22): error C2572: 'clear' : redéfinition de l'argument par défaut : paramètre 1
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(27,6): message : voir la déclaration de 'clear'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(27,6): error C2084: la fonction 'void clear(int)' a déjà un corps
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(27,6): message : voir la définition précédente de 'clear'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(32): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(33,16): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(38,6): error C2084: la fonction 'void display(void)' a déjà un corps
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(38,6): message : voir la définition précédente de 'display'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(47): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(48): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(51): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(52): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(54): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(57): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(60): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(64): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(68): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(84,6): error C2084: la fonction 'void water(int,int,int)' a déjà un corps
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(84,6): message : voir la définition précédente de 'water'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(85): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(90,14): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(91,3): error C2065: 'water' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(92,3): error C2065: 'water' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(93,3): error C2065: 'water' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(94,3): error C2065: 'water' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(95,3): error C2065: 'water' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(96,3): error C2065: 'water' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(97,3): error C2065: 'water' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(98,3): error C2065: 'water' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(101,14): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(104,6): error C2084: la fonction 'void tree(int,int,int)' a déjà un corps
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(104,6): message : voir la définition précédente de 'tree'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(105): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(110,14): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(111,3): error C2065: 'tree' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(112,3): error C2065: 'tree' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(113,3): error C2065: 'tree' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(114,3): error C2065: 'tree' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(115,3): error C2065: 'tree' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(116,3): error C2065: 'tree' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(117,3): error C2065: 'tree' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(118,3): error C2065: 'tree' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(121,5): error C2084: la fonction 'int main(void)' a déjà un corps
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(121,5): message : voir la définition précédente de 'main'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(123,15): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(124,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(130,3): error C2065: 'display' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(133,3): error C2065: 'water' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(134,3): error C2065: 'water' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(135,3): error C2065: 'tree' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(50,32): error C2661: 'Animal::Animal' : aucune fonction surchargée ne nécessite 10 arguments
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(50,32): message : lors de la tentative de mise en correspondance de la liste des arguments '(std::string, const char [9], char, const char [5], int, int, int, int, int, int)'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(94,19): error C2039: 'getX' n'est pas membre de 'Animal'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(6,8): message : voir la déclaration de 'Animal'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(94,41): error C2039: 'getY' n'est pas membre de 'Animal'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(6,8): message : voir la déclaration de 'Animal'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(118): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(123): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(141,36): error C2661: 'Animal::Animal' : aucune fonction surchargée ne nécessite 10 arguments
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(141,36): message : lors de la tentative de mise en correspondance de la liste des arguments '(std::string, const char [9], char, const char [5], int, int, int, int, int, int)'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(201): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(206): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(224,30): error C2661: 'Animal::Animal' : aucune fonction surchargée ne nécessite 10 arguments
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(224,30): message : lors de la tentative de mise en correspondance de la liste des arguments '(std::string, const char [9], char, const char [5], int, int, int, int, int, int)'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(284): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\class.cpp(289): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(20,5): error C2086: 'int nbCase' : redéfinition
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(14,27): message : voir la déclaration de 'nbCase'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(37): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(50,39): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(54,39): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(67): error C2027: utilisation du type non défini 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(15,8): message : voir la déclaration de 'cell'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(80,39): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(84,39): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(121,9): error C2660: 'research' : la fonction ne prend pas 1 arguments
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(25,6): message : voir la déclaration de 'research'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(121,9): message : lors de la tentative de mise en correspondance de la liste des arguments '(int)'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(126,29): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(127,28): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(132,29): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(133,28): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(139,29): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(140,28): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(145,29): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(146,28): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(149,10): error C2065: 'wx' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(149,18): error C2065: 'wy' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(150,12): error C2065: 'wx' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(150,20): error C2065: 'wy' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(150,5): error C3861: 'hungry' : identificateur introuvable
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(151,12): error C2065: 'wx' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(151,20): error C2065: 'wy' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(151,5): error C3861: 'hungry' : identificateur introuvable
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(152,12): error C2065: 'wx' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(152,16): error C2065: 'wy' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(152,5): error C3861: 'hungry' : identificateur introuvable
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(153,12): error C2065: 'wx' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(153,16): error C2065: 'wy' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(153,5): error C3861: 'hungry' : identificateur introuvable
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(154,12): error C2065: 'wx' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(154,20): error C2065: 'wy' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(154,5): error C3861: 'hungry' : identificateur introuvable
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(155,12): error C2065: 'wx' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(155,20): error C2065: 'wy' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(155,5): error C3861: 'hungry' : identificateur introuvable
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(156,12): error C2065: 'wx' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(156,20): error C2065: 'wy' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(156,5): error C3861: 'hungry' : identificateur introuvable
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(156,31): warning C4805: '==' : mélange risqué de type 'unknown-type' et de type 'bool' dans l'opération
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(158,13): error C2065: 'wx' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(158,24): error C2065: 'wx' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(158,35): error C2065: 'wy' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(158,46): error C2065: 'wy' : identificateur non déclaré
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(160,32): error C2059: erreur de syntaxe : ';'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(163,1): error C2059: erreur de syntaxe : '}'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(163,1): error C2143: erreur de syntaxe : absence de ';' avant '}'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(166,36): error C2143: erreur de syntaxe : absence de ';' avant '{'
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(166,36): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
+  ecosysteme.cpp
+C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(124,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+=======
 C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\age.cpp(3,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'ecosysteme.cpp' : No such file or directory
   class.cpp
 C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\ecosysteme.cpp(141,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
@@ -12,4 +180,5 @@ C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\class.cpp(225,30): messag
 C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\deplacement.cpp(3,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'ecosysteme' : No such file or directory
   ecosysteme.cpp
 C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\ecosysteme.cpp(141,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+>>>>>>> 30555ac5fd7152af7165579187f61504918a26ca
   Génération de code en cours...
