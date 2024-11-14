@@ -5,6 +5,7 @@ using namespace std;
 
 const int Size = 30;
 // const char tab[Size][Size];
+vector<Animal*> animaux;
 
 class Animal
 {
@@ -37,7 +38,6 @@ public:
 	// virtual void die() = 0;
 
 	
-
 	string getRace() const { return race; }
 	bool getSexe() const { return sexe; }
 	string getPos() const { return statut; }
@@ -55,7 +55,8 @@ class Capybara : public Animal
 public:
 
 	// bool sex { }
-	// bool sexe, int x, int y, int age
+	// bool sexe, int x, int y, int age : pas besoin dans constructeur
+
 	Capybara() : Animal("Capybara", sexe, 1,age, 1,100,x,y) {}
 
 	void eat() override
@@ -85,12 +86,18 @@ public:
 	}
 
 	
-	void reproduction(Animal& target) override {
-		if (race == target.getRace()) {
-			if (age <= 10 && target.getAge() <= 10) {
-			Capybara: ("Capybara", "f", "Bebe", x, y, 1, 0, 100); {}
-				if (age == 10 && target.getAge() <= 10) {
-				Capybara: ("Capybara", "f", "Bebe", x, y, 1, 0, 100); {}
+	void reproduction(Animal& target) override 
+	{
+		if (race == target.getRace()) 
+		{
+			if (age <= 10 && target.getAge() <= 10)
+			{
+				new Capybara();
+
+				if (age == 10 && target.getAge() <= 10) 
+				{
+					animaux.push_back(new Capybara());
+
 					cout << " Un Capybara est né." << endl;
 				}
 			}
@@ -186,7 +193,7 @@ public:
 		// création d'un nouveau bebe
 		
 
-
+		animaux.push_back(new Hippopotamus());
 		// race de l'animal en question() : Animal(target.getRace(), 'f', "bebe", x(rand() % 20), y(rand() % 20), 1, 0, 100) {}
 
 		cout << " un nouveau " << target.getRace() << " est né ! " << endl;
@@ -277,6 +284,7 @@ public:
 		// trouver un animal du sexe opposé et ken : avoir si male / femmelle ou juste deux de la memee spece et on s'en fout dans les attributs de leur sexe
 		// création d'un nouveau bebe
 
+		animaux.push_back(new Dragon());
 		cout << " un nouveau " << target.getRace() << " est né ! " << endl;
 	}
 
@@ -324,9 +332,12 @@ public:
 	}
 };
 
+
+
 // instaurer un temps de presence aux animaux si un animal meurt un autre spawn
 
-int nbAnimaux;
+
+int nbAnimaux; // besoin de ca si qq1 bouge le programme de fichier ca initialise la variables pour la suite du code
 
 void intNbAnimaux()
 {
@@ -349,10 +360,6 @@ void intNbAnimaux()
 // quand nb animaux sur map < au nombre dans la variable : creer un nouvel animal
 class Jeu 
 {
-private:
-
-	std::vector<Animal*> animaux;
-
 public:
 
 	~Jeu() 
@@ -376,12 +383,7 @@ public:
 		}
 	}
 };
-void spawn()
+/*void spawn()
 {
-
-}
-
-int main()
-{
-	return 0;
-}
+	 pas besoin vecteur mis a l'exterieur normlement c'est bon
+}*/
