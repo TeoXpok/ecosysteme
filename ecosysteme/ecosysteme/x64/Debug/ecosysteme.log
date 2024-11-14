@@ -1,4 +1,5 @@
 ﻿  age.cpp
+<<<<<<< HEAD
 C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\age.cpp(3,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'ecosysteme.cpp' : No such file or directory
   class.cpp
 C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(124,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
@@ -165,4 +166,19 @@ C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(166,3
 C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\deplacement.cpp(166,36): error C2447: '{' : en-tête de fonction manquant (liste formelle à l'ancien format ?)
   ecosysteme.cpp
 C:\Users\malvesgama\Documents\GitHub\ecosysteme\ecosysteme\ecosysteme.cpp(124,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+=======
+C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\age.cpp(3,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'ecosysteme.cpp' : No such file or directory
+  class.cpp
+C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\ecosysteme.cpp(141,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\class.cpp(51,32): error C2661: 'Animal::Animal' : aucune fonction surchargée ne nécessite 9 arguments
+C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\class.cpp(51,32): message : lors de la tentative de mise en correspondance de la liste des arguments '(std::string, const char [9], char, const char [5], int, int, int, int, int)'
+C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\class.cpp(142,36): error C2661: 'Animal::Animal' : aucune fonction surchargée ne nécessite 9 arguments
+C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\class.cpp(142,36): message : lors de la tentative de mise en correspondance de la liste des arguments '(std::string, const char [9], char, const char [5], int, int, int, int, int)'
+C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\class.cpp(225,30): error C2661: 'Animal::Animal' : aucune fonction surchargée ne nécessite 9 arguments
+C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\class.cpp(225,30): message : lors de la tentative de mise en correspondance de la liste des arguments '(std::string, const char [9], char, const char [5], int, int, int, int, int)'
+  deplacement.cpp
+C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\deplacement.cpp(3,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'ecosysteme' : No such file or directory
+  ecosysteme.cpp
+C:\Users\tgoncalves\source\repos\ecosysteme\ecosysteme\ecosysteme.cpp(141,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+>>>>>>> 30555ac5fd7152af7165579187f61504918a26ca
   Génération de code en cours...
