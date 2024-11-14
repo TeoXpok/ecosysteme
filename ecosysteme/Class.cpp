@@ -8,7 +8,6 @@ using namespace std;
 protected:
 	// nom, sexe, age, statut, faim, soif, race : attributs
 	string race;
-	string statut;
 	bool sexe;// true = homme/false = femme
 	int age;
 	int speed;
@@ -19,7 +18,7 @@ protected:
 
 public:
 
-	Animal( string Race, bool sexe, int e, int a, int c, int h, int x, int y) : race(Race), sexe(sexe),statut(pos), x(x), y(y), speed(e), age(a), categorie(c), thirsty(h), hungry(h) {}
+	Animal( string Race, bool sexe, int e, int a, int c, int h, int x, int y) : race(Race), sexe(sexe), x(x), y(y), speed(e), age(a), categorie(c), thirsty(h), hungry(h) {}
 
 	// reproduction, manger, boire, chasser, deplacer : methodes
 	int x, y;
@@ -35,7 +34,6 @@ public:
 
 	string getRace() const { return race; }
 	bool getSexe() const { return sexe; }
-	string getPos() const { return statut; }
 	int getX() const { return x; }
 	int getY() const { return y; }
 	int getAge() const { return age; }
