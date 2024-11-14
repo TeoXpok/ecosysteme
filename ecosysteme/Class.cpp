@@ -3,7 +3,7 @@
 #include<iostream>
 using namespace std;
 
-;class Animal
+class Animal
 {
 protected:
 	// nom, sexe, age, statut, faim, soif, race : attributs
@@ -15,15 +15,17 @@ protected:
 	int thirsty;
 	int hungry;
 	int categorie;
+	bool alive = true;
 	
 
 public:
 
-	Animal( string Race, bool sexe, int e, int a, int c, int h, int x, int y) : race(Race), sexe(sexe),statut(pos), x(x), y(y), speed(e), age(a), categorie(c), thirsty(h), hungry(h) {}
+	Animal( string Race, bool sexe, int e, int a, int c, int h, int x, int y) : race(Race), sexe(sexe), x(x), y(y), speed(e), age(a), categorie(c), thirsty(h), hungry(h) {}
 
 	// reproduction, manger, boire, chasser, deplacer : methodes
 	int x, y;
 	
+
 	virtual void eat() = 0;
 	virtual void drink() = 0;
 	virtual void reproduction(Animal& target) = 0;
@@ -31,7 +33,7 @@ public:
 	virtual void talk(Animal& other) = 0;
 	// virtual void die() = 0;
 
-	// bool alive(){}
+	
 
 	string getRace() const { return race; }
 	bool getSexe() const { return sexe; }
