@@ -3,12 +3,9 @@
 #include<iostream>
 using namespace std;
 
-<<<<<<< HEAD
 const int Size = 30;
 // const char tab[Size][Size];
 
-=======
->>>>>>> fadf2623e52c9aff066417887817bb5395783be3
 class Animal
 {
 protected:
@@ -26,11 +23,7 @@ protected:
 
 public:
 
-<<<<<<< HEAD
-	Animal( string race, string sexe, string pos, int e, int a, int h) : race(race), sexe(sexe), pos(pos), x(rand() % 20), y(rand() % 20), speed(e), age(a), thirsty(h), hungry(h) {}
-=======
 	Animal( string Race, bool sexe, int e, int a, int c, int h, int x, int y) : race(Race), sexe(sexe), x(x), y(y), speed(e), age(a), categorie(c), thirsty(h), hungry(h) {}
->>>>>>> fadf2623e52c9aff066417887817bb5395783be3
 
 	// reproduction, manger, boire, chasser, deplacer : methodes
 	int x, y;
@@ -60,9 +53,6 @@ public:
 class Capybara : public Animal
 {
 public:
-<<<<<<< HEAD
-	Capybara() : Animal("capybara", 'f', "bebe", x, y, 1, 0, 100) {} // a voir male femelle
-=======
 
 	// bool sex { }
 	Capybara(bool sexe, int x, int y, int age) : Animal("Capybara", sexe, 1,age, 1,100,x,y) {}
@@ -94,7 +84,7 @@ public:
 	}
 
 	
-	void reproduction(Animal & target) override {
+	void reproduction(Animal& target) override {
 		if (race == target.getRace()) {
 			if (age <= 10 && target.getAge() <= 10) {
 			Capybara: ("Capybara", "f", "Bebe", x, y, 1, 0, 100); {}
@@ -104,7 +94,8 @@ public:
 				}
 			}
 		}
-		
+
+	}
 
 	void hunt(Animal& target) override
 	{
@@ -162,8 +153,6 @@ public:
 
 	Hippopotamus(bool sexe, int x, int y, int age) : Animal("Hippopotamus", sexe, 1, age, 2, 100, x, y) {}
 
->>>>>>> fadf2623e52c9aff066417887817bb5395783be3
-
 	void eat() override
 	{
 		int max = 100;
@@ -192,14 +181,8 @@ public:
 
 	void reproduction(Animal& target) override
 	{
-<<<<<<< HEAD
 		// trouver un animal du sexe opposé et ken
-		
-
-
-=======
 		// trouver un animal du sexe opposé et ken : avoir si male / femmelle ou juste deux de la memee spece et on s'en fout dans les attributs de leur sexe
->>>>>>> fadf2623e52c9aff066417887817bb5395783be3
 		// création d'un nouveau bebe
 		
 
@@ -211,17 +194,14 @@ public:
 
 	void hunt(Animal& target) override
 	{
-<<<<<<< HEAD
 		// se deplace en fonction de la position de target : deplacer()
 		// si sur la meme case target mouru
 		if (x == target.getX() && target.getY())
 		{
 			// detruire dans le vecteur
 		}
-=======
 		// se deplace en fonction de la position de target
 		// si sur la meme case target mouru : a voir si enregistre oou non
->>>>>>> fadf2623e52c9aff066417887817bb5395783be3
 
 		cout << race << " chasse " << target.getRace() << " ! " << endl;
 
@@ -242,11 +222,7 @@ public:
 				// Vérification des limites
 				if (nx >= 0 && nx < 30 && ny >= 0 && ny < 90)
 				{
-<<<<<<< HEAD
-					if ( ...  && other.getRace() == race) // ... = parcours de vecteur  et regarder si position correspond
-=======
 					if (board[nx][ny].animal.species == 1)
->>>>>>> fadf2623e52c9aff066417887817bb5395783be3
 					{
 						cout << " le " << race << " discute avec " << race << endl;
 					}

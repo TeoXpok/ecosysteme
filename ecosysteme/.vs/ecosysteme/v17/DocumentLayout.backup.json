@@ -1,6 +1,16 @@
 {
   "Version": 1,
-<<<<<<< Updated upstream
+<<<<<<< HEAD
+  "WorkspaceRootPath": "C:\\Users\\ayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\ayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\deplacement.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|solutionrelative:deplacement.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\ayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\class.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|solutionrelative:class.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+=======
   "WorkspaceRootPath": "C:\\Users\\jgrumiaux\\Documents\\GitHub\\ecosysteme\\ecosysteme\\",
   "Documents": [
     {
@@ -18,13 +28,7 @@
     {
       "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\jgrumiaux\\Documents\\GitHub\\ecosysteme\\ecosysteme\\ecosysteme.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|solutionrelative:ecosysteme.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-=======
-  "WorkspaceRootPath": "C:\\Users\\ayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|C:\\Users\\ayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\class.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{746A1943-FEFF-4385-A084-4302273C8E28}|ecosysteme.vcxproj|solutionrelative:class.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
->>>>>>> Stashed changes
+>>>>>>> fadf2623e52c9aff066417887817bb5395783be3
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +38,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< Updated upstream
+<<<<<<< HEAD
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "deplacement.cpp",
+              "DocumentMoniker": "C:\\Users\\ayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\deplacement.cpp",
+              "RelativeDocumentMoniker": "deplacement.cpp",
+              "ToolTip": "C:\\Users\\ayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\deplacement.cpp",
+              "RelativeToolTip": "deplacement.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-14T19:01:15.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "class.cpp",
+              "DocumentMoniker": "C:\\Users\\ayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\Class.cpp",
+              "RelativeDocumentMoniker": "Class.cpp",
+              "ToolTip": "C:\\Users\\ayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\Class.cpp",
+              "RelativeToolTip": "Class.cpp",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAIAAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-13T18:41:15.594Z",
+              "EditorCaption": ""
+=======
           "SelectedChildIndex": 2,
           "Children": [
             {
@@ -69,7 +101,7 @@
               "RelativeDocumentMoniker": "Class.cpp",
               "ToolTip": "C:\\Users\\jgrumiaux\\Documents\\GitHub\\ecosysteme\\ecosysteme\\Class.cpp",
               "RelativeToolTip": "Class.cpp",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFUAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFwAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-14T16:25:40.419Z",
               "EditorCaption": ""
@@ -85,22 +117,7 @@
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-14T16:25:40.464Z"
-=======
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "class.cpp",
-              "DocumentMoniker": "C:\\Users\\ayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\Class.cpp",
-              "RelativeDocumentMoniker": "Class.cpp",
-              "ToolTip": "C:\\Users\\ayite\\Documents\\GitHub\\ecosysteme\\ecosysteme\\Class.cpp",
-              "RelativeToolTip": "Class.cpp",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAowHsAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-13T18:41:15.594Z",
-              "EditorCaption": ""
->>>>>>> Stashed changes
+>>>>>>> fadf2623e52c9aff066417887817bb5395783be3
             }
           ]
         }
