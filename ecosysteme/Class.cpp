@@ -9,7 +9,7 @@ class Animal
 {
 protected:
 	// nom, sexe, age, statut, faim, soif, race : attributs
-	string name;
+	string name; // a voir si gardé ou non
 	string race;
 	string sexe;
 	string pos;
@@ -81,16 +81,23 @@ public:
 	void reproduction(Animal& target) override
 	{
 		// trouver un animal du sexe opposé et ken
-		// création d'un nouveau bebe
+		
+		// création d'un nouveau bebe : avoir avec manager
 
 		cout << " un nouveau " << target.getRace() << " est né ! " << endl;
 	}
 
 	void hunt(Animal& target) override
 	{
-		// se deplace en fonction de la position de target
-		// si sur la meme case ou case adjacente target mouru
+		// se deplace en fonction de la position de target : appeler deplacement()
 
+		cout << "Position du personnage : (" << x << ", " << y << ")" << std::endl;
+
+		// si sur la meme case mouru
+		if (x == target.getX() && y == target.getY())
+		{
+			// appel du destructeur 
+		}
 		cout << name << " chasse " << target.getName() << " ! " << endl;
 
 		cout << target.getName() << " est mort, mangé par : " << name << " ! " << endl;
@@ -119,3 +126,37 @@ public:
 		}
 	}
 };
+
+// instaurer un temps de presence aux animaux si un animal meurt un autre spawn
+
+/* void init(int nombreAniamux)
+{
+	srand(time(0));
+	for (int i = 0; i < nombreAnimaux; ++i)
+	{
+		int classe = rand() % 3;
+		switch (classe)
+		{
+			case 0: animaux.push_back(new Capybara()); break;
+			case 1: animaux.push_back(new Hippopotamus()); break;
+			case 2: animaux.push_back(new Dragon()); break;
+		}
+	}
+}*/
+
+// demander au joueur si il veut donner un nb d'animaux precis ou un nb predefinit 
+
+// cout << " voulez choisir un nb d'animaux ? " << endl << " oui : 1, non : 0 " << endl;
+// int choix;
+// cin >> choix;
+// switch (choix)
+// case 0 :
+// break;
+// nbAnimaux = 10;
+// case 1 :
+// cout << " Choissisez le nb d'animaux : " << endl;
+// int nb;
+// cin >> nb;
+// nbAnimaux = nb;
+
+// quand nb animaux sur map < au nombre dans la variable : creer un nouvel animal
