@@ -11,7 +11,7 @@ protected:
 	// nom, sexe, age, statut, faim, soif, race : attributs
 	string name; // a voir si gardé ou non
 	string race;
-	string sexe;
+	bool sexe;
 	string pos;
 	int age;
 	int x, y;
@@ -36,7 +36,7 @@ public:
 
 	string getName() const { return name; }
 	string getRace() const { return race; }
-	string getSexe() const { return sexe; }
+	bool getSexe() const { return sexe; }
 	string getPos() const { return pos; }
 	int getX() const { return x; }
 	int getY() const { return y; }
@@ -80,7 +80,12 @@ public:
 
 	void reproduction(Animal& target) override
 	{
-		// trouver un animal du sexe opposé et ken
+		if (race == target.getRace()) {
+			if (age <= 10 &&  target.getAge() <= 10) {
+			Capybara: (name, "Capybara", "f", "Bébé", x, y, 1, 0, 100) {}
+
+			}
+		}
 		
 		// création d'un nouveau bebe : avoir avec manager
 
