@@ -9,52 +9,76 @@ vector<Animal*> animaux;
 class Animal
 {
 protected:
-	// nom, sexe, age, statut, faim, soif, race : attributs
+	// nom, sexe, age, faim, soif, race : attributs
 	string race;
-	string statut;
-	bool sexe;// true = homme/false = femme
 	int age;
 	int speed;
 	int thirsty;
 	int hungry;
 	int categorie;
-	bool alive = true;
+	bool alive;
+	bool sexe;// true = homme/false = femme
 	
 
 public:
 
-	Animal( string Race, bool sexe, int e, int a, int c, int h, int x, int y) : race(Race), sexe(sexe), x(x), y(y), speed(e), age(a), categorie(c), thirsty(h), hungry(h) {}
+	Animal( string race, bool s, int e, int a, int c, int h, int x, int y) : race(race), sexe(s), x(x), y(y), speed(e), age(a), categorie(c), thirsty(h), hungry(h) {}
 
 	// reproduction, manger, boire, chasser, deplacer : methodes
 	int x, y;
 	
+	bool sex()
+	{
+		int alea = rand() % 1;
+		if (alea == 0)
+		{
+			sexe = true;
+		}
+
+		else
+		{
+			sexe = false;
+		}
+	}
 
 	virtual void eat() = 0;
 	virtual void drink() = 0;
 	virtual void reproduction(Animal& target) = 0;
 	virtual void hunt(Animal& target) = 0;
 	virtual void talk(Animal& other) = 0;
-	// virtual void die() = 0;
 
 	
 	string getRace() const { return race; }
-	string getPos() const { return statut; }
 	bool getSexe() const { return sexe; }
+	bool getAlive() const { return alive; }
 	int getAge() const { return age; }
 	int getSpeed() const { return speed; }
 	int getThirsty() const { return thirsty; }
 	int getHungry() const { return hungry; }
 	int getCategorie() const { return categorie; }
+
 };
 
 class Capybara : public Animal
 {
 public:
 
-	// bool sex { }
+	bool sex()
+	{
+		int alea = rand() % 1;
+		if ( alea == 0 )
+		{
+			sexe = true;
+		}
+
+		else
+		{
+			sexe = false;
+		}
+	}
 	// bool sexe, int x, int y, int age : pas besoin dans constructeur
 
-	Capybara() : Animal("Capybara", sexe, 1,age, 1,100,x,y) {}
+	Capybara() : Animal("Capybara", sex(), 1, age, 1, 100, x, y) {}
 
 	void eat() override
 	{
@@ -85,21 +109,19 @@ public:
 	
 	void reproduction(Animal& target) override 
 	{
-		if (race == target.getRace()) 
+		if (race == target.getRace())
 		{
-			if (age <= 10 && target.getAge() <= 10)
+			if (sexe == target.getSexe())
 			{
-				new Capybara();
-
-				if (age == 10 && target.getAge() <= 10) 
+				if (age == 10 && target.getAge() <= 10)
 				{
 					animaux.push_back(new Capybara());
 
 					cout << " Un Capybara est né." << endl;
+
 				}
 			}
 		}
-
 	}
 
 	void hunt(Animal& target) override
@@ -156,7 +178,7 @@ class Hippopotamus : public Animal
 {
 public:
 
-	Hippopotamus() : Animal("Hippopotamus", sexe, 1, age, 2, 100, x, y) {}
+	Hippopotamus() : Animal("Hippopotamus", sex(), 1, age, 2, 100, x, y) {}
 
 	void eat() override
 	{
@@ -203,8 +225,7 @@ public:
 
 		cout << "Position du personnage : (" << x << ", " << y << ")" << std::endl;
 
-		// si sur la meme case mouru
-		if (x == target.x && y == target.y)
+		if (x == target.x && y == target.y) // si sur la meme case mouru
 		{
 			// appel du destructeur 
 		}
