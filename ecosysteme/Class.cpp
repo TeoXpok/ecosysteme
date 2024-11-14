@@ -8,13 +8,7 @@ using namespace std;
 protected:
 	// nom, sexe, age, statut, faim, soif, race : attributs
 	string race;
-<<<<<<< HEAD
-	bool sexe;
-	string pos;
-	string statut;
-=======
 	bool sexe;// true = homme/false = femme
->>>>>>> 962bf36a74bfbef93247cd4c78f6cd2636c81cc5
 	int age;
 	int speed;
 	int thirsty;
@@ -34,21 +28,12 @@ public:
 	virtual void reproduction(Animal& target) = 0;
 	virtual void hunt(Animal& target) = 0;
 	virtual void talk(Animal& other) = 0;
-	virtual void agee() = 0;
-	
-	
 	// virtual void die() = 0;
+
 	// bool alive(){}
 
 	string getRace() const { return race; }
 	bool getSexe() const { return sexe; }
-<<<<<<< HEAD
-	string getPos() const { return pos; }
-	string getPos() const { return statut; }
-=======
->>>>>>> 962bf36a74bfbef93247cd4c78f6cd2636c81cc5
-	int getX() const { return x; }
-	int getY() const { return y; }
 	int getAge() const { return age; }
 	int getSpeed() const { return speed; }
 	int getThirsty() const { return thirsty; }
@@ -89,26 +74,13 @@ public:
 		}
 	}
 
-
-	void agee() override {
-
-	}
-
-
 	void reproduction(Animal& target) override
 	{
-		if (race == target.getRace()) {
-			if (age == 10 &&  target.getAge() <= 10) {
-				Capybara: ( "Capybara", "f", "Bï¿½bï¿½", x, y, 1, 0, 100) {
-					cout << " Un Capybara est nÃ©." << endl;
-				}
-
-			}
-		}
+		// trouver un animal du sexe opposé et ken
 		
-		// crï¿½ation d'un nouveau bebe : avoir avec manager
+		// création d'un nouveau bebe : avoir avec manager
 
-		cout << " un nouveau " << target.getRace() << " est nï¿½ ! " << endl;
+		cout << " un nouveau " << target.getRace() << " est né ! " << endl;
 	}
 
 	void hunt(Animal& target) override
@@ -118,27 +90,27 @@ public:
 		cout << "Position du personnage : (" << x << ", " << y << ")" << std::endl;
 
 		// si sur la meme case mouru
-		if (x == target.getX() && y == target.getY())
+		if (x == target.x && y == target.y)
 		{
 			// appel du destructeur 
 		}
 		cout << race << " chasse " << target.getRace() << " ! " << endl;
 
-		cout << target.getRace() << " est mort, mangï¿½ par : " << race << " ! " << endl;
+		cout << target.getRace() << " est mort, mangé par : " << race << " ! " << endl;
 	}
 
 	void talk(Animal& other) override
 	{
-		// Vï¿½rification des cases adjacentes
+		// Vérification des cases adjacentes
 		for (int i = -1; i <= 1; i++)
 		{
 			for (int j = -1; j <= 1; j++)
 			{
-				if (i == 0 && j == 0) continue; // Ne pas compter la case elle-mï¿½me
+				if (i == 0 && j == 0) continue; // Ne pas compter la case elle-même
 				int nx = x + i;
 				int ny = y + j;
 
-				// Vï¿½rification des limites
+				// Vérification des limites
 				if (nx >= 0 && nx < 30 && ny >= 0 && ny < 90)
 				{
 					if (board[nx][ny].animal.species == 1) 
@@ -196,10 +168,10 @@ public:
 
 	void reproduction(Animal& target) override
 	{
-		// trouver un animal du sexe opposï¿½ et ken : avoir si male / femmelle ou juste deux de la memee spece et on s'en fout dans les attributs de leur sexe
-		// crï¿½ation d'un nouveau bebe
+		// trouver un animal du sexe opposé et ken : avoir si male / femmelle ou juste deux de la memee spece et on s'en fout dans les attributs de leur sexe
+		// création d'un nouveau bebe
 
-		cout << " un nouveau " << target.getRace() << " est nï¿½ ! " << endl;
+		cout << " un nouveau " << target.getRace() << " est né ! " << endl;
 	}
 
 	void hunt(Animal& target) override
@@ -209,21 +181,21 @@ public:
 
 		cout << race << " chasse " << target.getRace() << " ! " << endl;
 
-		cout << target.getRace() << " est mort, mangï¿½ par : " << race << " ! " << endl;
+		cout << target.getRace() << " est mort, mangé par : " << race << " ! " << endl;
 	}
 
 	void talk(Animal& other) override
 	{
-		// Vï¿½rification des cases adjacentes
+		// Vérification des cases adjacentes
 		for (int i = -1; i <= 1; i++)
 		{
 			for (int j = -1; j <= 1; j++)
 			{
-				if (i == 0 && j == 0) continue; // Ne pas compter la case elle-mï¿½me
+				if (i == 0 && j == 0) continue; // Ne pas compter la case elle-même
 				int nx = x + i;
 				int ny = y + j;
 
-				// Vï¿½rification des limites
+				// Vérification des limites
 				if (nx >= 0 && nx < 30 && ny >= 0 && ny < 90)
 				{
 					if (board[nx][ny].animal.species == 1)
@@ -280,10 +252,10 @@ public:
 
 	void reproduction(Animal& target) override
 	{
-		// trouver un animal du sexe opposï¿½ et ken : avoir si male / femmelle ou juste deux de la memee spece et on s'en fout dans les attributs de leur sexe
-		// crï¿½ation d'un nouveau bebe
+		// trouver un animal du sexe opposé et ken : avoir si male / femmelle ou juste deux de la memee spece et on s'en fout dans les attributs de leur sexe
+		// création d'un nouveau bebe
 
-		cout << " un nouveau " << target.getRace() << " est nï¿½ ! " << endl;
+		cout << " un nouveau " << target.getRace() << " est né ! " << endl;
 	}
 
 	void hunt(Animal& target) override
@@ -293,21 +265,21 @@ public:
 
 		cout << race << " chasse " << target.getRace() << " ! " << endl;
 
-		cout << target.getRace() << " est mort, mangï¿½ par : " << race << " ! " << endl;
+		cout << target.getRace() << " est mort, mangé par : " << race << " ! " << endl;
 	}
 
 	void talk(Animal& other) override
 	{
-		// Vï¿½rification des cases adjacentes
+		// Vérification des cases adjacentes
 		for (int i = -1; i <= 1; i++)
 		{
 			for (int j = -1; j <= 1; j++)
 			{
-				if (i == 0 && j == 0) continue; // Ne pas compter la case elle-mï¿½me
+				if (i == 0 && j == 0) continue; // Ne pas compter la case elle-même
 				int nx = x + i;
 				int ny = y + j;
 
-				// Vï¿½rification des limites
+				// Vérification des limites
 				if (nx >= 0 && nx < 30 && ny >= 0 && ny < 90)
 				{
 					if (board[nx][ny].animal.species == 1)
