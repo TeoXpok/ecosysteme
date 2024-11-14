@@ -7,22 +7,21 @@ using namespace std;
 {
 protected:
 	// nom, sexe, age, statut, faim, soif, race : attributs
-	string name; // a voir si gardé ou non
 	string race;
-	string sexe;
-	string pos;
+	bool sexe;
+	string statut;
 	int age;
+	int x, y;
 	int speed;
 	int thirsty;
 	int hungry;
-	
 
 public:
 
-	Animal(string name, string race, string sexe, string pos, int e, int a, int h) : name(name), race(race), sexe(sexe), pos(pos), x(rand() % 20), y(rand() % 20), speed(e), age(a), thirsty(h), hungry(h) {}
+	Animal( string race, bool sexe, string pos, int e, int a, int h) : race(race), sexe(sexe), pos(pos), x(rand() % 20), y(rand() % 20), speed(e), age(a), thirsty(h), hungry(h) {}
 
 	// reproduction, manger, boire, chasser, deplacer : methodes
-	int x, y;
+
 	virtual void eat() = 0;
 	virtual void drink() = 0;
 	virtual void reproduction(Animal& target) = 0;
@@ -32,10 +31,11 @@ public:
 
 	// bool alive(){}
 
-	string getName() const { return name; }
 	string getRace() const { return race; }
-	string getSexe() const { return sexe; }
-	string getPos() const { return pos; }
+	bool getSexe() const { return sexe; }
+	string getPos() const { return statut; }
+	int getX() const { return x; }
+	int getY() const { return y; }
 	int getAge() const { return age; }
 	int getSpeed() const { return speed; }
 	int getThirsty() const { return thirsty; }
@@ -46,7 +46,9 @@ public:
 class Capybara : public Animal
 {
 public:
-	Capybara(string name) : Animal(name, "Capybara", 'f', "bebe", x, y, 1, 0, 100) {}
+
+	// bool sex { }
+	Capybara() : Animal("Capybara", 'f', "bebe", x, y, 1, 0, 100) {}
 
 	void eat() override
 	{
@@ -94,14 +96,13 @@ public:
 		{
 			// appel du destructeur 
 		}
-		cout << name << " chasse " << target.getName() << " ! " << endl;
+		cout << race << " chasse " << target.getRace() << " ! " << endl;
 
-		cout << target.getName() << " est mort, mangé par : " << name << " ! " << endl;
+		cout << target.getRace() << " est mort, mangé par : " << race << " ! " << endl;
 	}
 
 	void talk(Animal& other) override
 	{
-
 		// Vérification des cases adjacentes
 		for (int i = -1; i <= 1; i++)
 		{
@@ -137,7 +138,7 @@ public:
 class Hippopotamus : public Animal
 {
 public:
-	Hippopotamus(string name) : Animal(name, "capybara", 'f', "bebe", x, y, 1, 0, 100) {}
+	Hippopotamus(string name) : Animal( "Hippopotame", 'f', "bebe", x, y, 1, 0, 100) {}
 
 	void eat() override
 	{
@@ -178,9 +179,9 @@ public:
 		// se deplace en fonction de la position de target
 		// si sur la meme case target mouru : a voir si enregistre oou non
 
-		cout << name << " chasse " << target.getName() << " ! " << endl;
+		cout << race << " chasse " << target.getRace() << " ! " << endl;
 
-		cout << target.getName() << " est mort, mangé par : " << name << " ! " << endl;
+		cout << target.getRace() << " est mort, mangé par : " << race << " ! " << endl;
 	}
 
 	void talk(Animal& other) override
@@ -220,7 +221,7 @@ public:
 class Dragon : public Animal
 {
 public:
-	Dragon(string name) : Animal(name, "capybara", 'f', "bebe", x, y, 1, 0, 100) {}
+	Dragon(string name) : Animal( "Dragon", 'f', "bebe", x, y, 1, 0, 100) {}
 
 	void eat() override
 	{
@@ -261,9 +262,9 @@ public:
 		// se deplace en fonction de la position de target
 		// si sur la meme case target mouru : a voir si enregistre oou non
 
-		cout << name << " chasse " << target.getName() << " ! " << endl;
+		cout << race << " chasse " << target.getRace() << " ! " << endl;
 
-		cout << target.getName() << " est mort, mangé par : " << name << " ! " << endl;
+		cout << target.getRace() << " est mort, mangé par : " << race << " ! " << endl;
 	}
 
 	void talk(Animal& other) override
