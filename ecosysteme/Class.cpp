@@ -4,8 +4,6 @@
 #include<iostream>
 using namespace std;
 
-const int Size = 30;
-// const char tab[Size][Size];
 vector<Animal*> animaux;
 
 class Animal
