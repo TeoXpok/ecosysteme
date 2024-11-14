@@ -1,46 +1,68 @@
 // lier les fichiers cpp
 #include <iostream>
-#include "ecosysteme"
+#include "ecosysteme.cpp"
+#include "class.cpp"
 
 //Catégorie herbi ou carni
 //Suite de chaîne alimentaire
 
-int x, y,researchx, researchy, nbCase;
+// 0 = pas d'animal / 1 = Capybara / 2 = Hippopotame / 3 = Dragon
 // ajouter position animal pour suivre déplacement
 // animal (int posX, int posY) : x(posX), y(posY){}
-void deplacer(int deltax, int deltay){}
+
+
+int researchx, researchy, nbCase;
+
+
 int besoin;
 int posx,posy;
 int nbCasex;
 int nbCasey;
-int nbCase = 30 * 90;
+int nbCase;
 int valeur;
 
 
 // rajouter une consommation // se déplacer (*2) ou ne rien faire consomme de l'énergie et de la faim
-void research() {
+void research(int valeur, const Animal& target) {
+    int min = 30 * 90;
+
+
+
     for (int researchy = 0; researchy < 30; researchy++)
     {
         for (int researchx = 0; researchx < 90; researchx++)
         {
-            switch (valeur)
+            switch (valeur)// bouf = 1 , water = 2 , bouf =3
             {
                 case 1:
-                    if (tab[researchy][researchx].iswater == true)// changer la recherche
+                    if (board[researchy][researchx].iswater == true)
                     {
-                        nbCasex = tab[researchx] - x;
-                        nbCasey = tab[researchy] - y;
+                        nbCasex = researchx - target.getX();
+                        nbCasey = researchy - target.getY();
                         nbCase = nbCasex + nbCasey;
                         
-                        if ()
+                        if (nbCase<min)
                         {
-
-
+                            min = nbCase;
+                            posx = researchx;
+                            posy = researchy;
                         }
                     }
                     break;
                 case 2:
+                    if (board[researchy][researchx].iswater == true)
+                    {
+                        nbCasex = researchx - target.getX();
+                        nbCasey = researchy - target.getY();
+                        nbCase = nbCasex + nbCasey;
 
+                        if (nbCase < min)
+                        {
+                            min = nbCase;
+                            posx = researchx;
+                            posy = researchy;
+                        }
+                    }
                     break;
                 case 3:
 
@@ -59,52 +81,54 @@ void research() {
 
 
 
-void suivreAnimal(int x, int y) {
-    if (age < 3)
-    {
-        // relier les bébés avec la mère
-        if (x < animal.x)x++;
-        else if (x > animal.x)x--;
-
-        if (y < animal.y) y++;
-        else if (y > animal.y)y--;
-    }
-};
+//void suivreAnimal(const Animal& target, int x, int y) {
+//    if (age < 3)
+//    {
+//        // relier les bébés avec la mère
+//        if (x < animal.x)x++;
+//        else if (x > animal.x)x--;
+//
+//        if (y < animal.y) y++;
+//        else if (y > animal.y)y--;
+//    }
+//};
 //BOUF < SOIF
 
 //=================BOUF=======================
-void hungryanimal(const Animal&) {// rajouter choix de vide en fonction chaine alimentaire
-    if (animal.hungry < 50)
+void hungryanimal(Animal& target) {// rajouter choix de vide en fonction chaine alimentaire
+    if (target.getHungry() < 50)
     {
-        research();
+        valeur = 1;
+        research(valeur);
     }
-    if (x < animal.x)
+    if (target.x < posx)
     {
-        x++;
-        animal.thirsty - 2;
-        animal.hungry - 4;
+        target.x++;
+        target.getThirsty() - 2;
+        target.getHungry() - 4;
     }
-    else if (x > iswater.x)
+    else if (target.x > posx)
     {
-        x--;
-        animal.thirsty - 2;
-        animal.hungry - 4;
-    }
-
-    if (y < iswater.y)
-    {
-        y++;
-        animal.thirsty - 2;
-        animal.hungry - 4;
-    }
-    else if (y > iswater.y)
-    {
-        y--;
-        animal.thirsty - 2;
-        animal.hungry - 4;
+        target.x--;
+        target.getThirsty() - 2;
+        target.getHungry() - 4;
     }
 
-    if (hungry(wx - 1, wy - 1) ||
+    if (target.y < posy)
+    {
+        target.y++;
+        target.getThirsty() - 2;
+        target.getHungry() - 4;
+    }
+    else if (target.y > posy)
+    {
+        target.y--;
+        target.getThirsty() - 2;
+        target.getHungry() - 4;
+    }
+    if ()
+    {
+        if ((wx - 1, wy - 1) ||
         hungry(wx - 1, wy) ||
         hungry(wx - 1, wy + 1) ||
         hungry(wx, wy + 1) ||
@@ -112,8 +136,10 @@ void hungryanimal(const Animal&) {// rajouter choix de vide en fonction chaine a
         hungry(wx + 1, wy - 1) ||
         hungry(wx + 1, wy) ||
         hungry(wx + 1, wy + 1) == true)
+
+            wx >= 0 && wx < 30 && wy >= 0 && wy < 90
     {
-        animal.hungry + 50;
+        target.getHungry() + 50;
         return;
     }
 }
@@ -122,6 +148,7 @@ void hungryanimal(const Animal&) {// rajouter choix de vide en fonction chaine a
 void thirstyanimal(const Animal& ) {// rajouter choix de vide
     if (animal.thirsty < 50)
     {
+        valeur = 2;
         research();
     }
     while (animal.thirsty < 50)
