@@ -150,7 +150,7 @@ bool check(int x, int y, Animal& target) {
 void choix(Animal& target) {
     if (target.getHungry() < target.getThirsty())
     {
- //======================CARNIVORE=======================
+        //======================CARNIVORE=======================
         if (target.getAliment() == 1)
         {
             void hungryanimal(Animal & target); {
@@ -186,56 +186,6 @@ void choix(Animal& target) {
                 }
 
                 if (check(target.x - 1, target.y - 1, target) ||
-                    check(target.x - 1, target.y    , target) ||
-                    check(target.x - 1, target.y + 1, target) ||
-                    check(target.x    , target.y + 1, target) ||
-                    check(target.x    , target.y - 1, target) ||
-                    check(target.x + 1, target.y - 1, target) ||
-                    check(target.x + 1, target.y    , target) ||
-                    check(target.x + 1, target.y + 1, target))
-                {
-                    target.getHungry() + 50;
-                    return;
-                }
-            }
-//=======================HERBIVORE=============================
-        if (target.getAliment() == 2)
-        {
-            void hungryanimal(Animal & target); {
-                
-                if (target.getHungry() < 50)
-                {
-                    valeur = 2;
-                    research(valeur, target);
-                }
-                if (target.x < posx)
-                {
-                    target.x++;
-                    target.getThirsty() - 2;
-                    target.getHungry() - 4;
-                }
-                else if (target.x > posx)
-                {
-                    target.x--;
-                    target.getThirsty() - 2;
-                    target.getHungry() - 4;
-                }
-
-                if (target.y < posy)
-                {
-                    target.y++;
-                    target.getThirsty() - 2;
-                    target.getHungry() - 4;
-                }
-                else if (target.y > posy)
-                {
-                    target.y--;
-                    target.getThirsty() - 2;
-                    target.getHungry() - 4;
-                }
-
-                if (
-                    check(target.x - 1, target.y - 1, target) ||
                     check(target.x - 1, target.y, target) ||
                     check(target.x - 1, target.y + 1, target) ||
                     check(target.x, target.y + 1, target) ||
@@ -247,62 +197,113 @@ void choix(Animal& target) {
                     target.getHungry() + 50;
                     return;
                 }
-                
+            }
+            //=======================HERBIVORE=============================
+            if (target.getAliment() == 2)
+            {
+                void hungryanimal(Animal & target); {
+
+                    if (target.getHungry() < 50)
+                    {
+                        valeur = 2;
+                        research(valeur, target);
+                    }
+                    if (target.x < posx)
+                    {
+                        target.x++;
+                        target.getThirsty() - 2;
+                        target.getHungry() - 4;
+                    }
+                    else if (target.x > posx)
+                    {
+                        target.x--;
+                        target.getThirsty() - 2;
+                        target.getHungry() - 4;
+                    }
+
+                    if (target.y < posy)
+                    {
+                        target.y++;
+                        target.getThirsty() - 2;
+                        target.getHungry() - 4;
+                    }
+                    else if (target.y > posy)
+                    {
+                        target.y--;
+                        target.getThirsty() - 2;
+                        target.getHungry() - 4;
+                    }
+
+                    if (
+                        check(target.x - 1, target.y - 1, target) ||
+                        check(target.x - 1, target.y, target) ||
+                        check(target.x - 1, target.y + 1, target) ||
+                        check(target.x, target.y + 1, target) ||
+                        check(target.x, target.y - 1, target) ||
+                        check(target.x + 1, target.y - 1, target) ||
+                        check(target.x + 1, target.y, target) ||
+                        check(target.x + 1, target.y + 1, target))
+                    {
+                        target.getHungry() + 50;
+                        return;
+                    }
+
+
+                }
 
             }
-        
+            else
+            {
+                void thirstyanimal(Animal & target); {
+
+                    if (target.getThirsty() < 50)
+                    {
+                        valeur = 2;
+                        research(valeur, target);
+                    }
+                    if (target.x < posx)
+                    {
+                        target.x++;
+                        target.getThirsty() - 2;
+                        target.getHungry() - 4;
+                    }
+                    else if (target.x > posx)
+                    {
+                        target.x--;
+                        target.getThirsty() - 2;
+                        target.getHungry() - 4;
+                    }
+
+                    if (target.y < posy)
+                    {
+                        target.y++;
+                        target.getThirsty() - 2;
+                        target.getHungry() - 4;
+                    }
+                    else if (target.y > posy)
+                    {
+                        target.y--;
+                        target.getThirsty() - 2;
+                        target.getHungry() - 4;
+                    }
+
+                    if (
+                        check(target.x - 1, target.y - 1, target) ||
+                        check(target.x - 1, target.y, target) ||
+                        check(target.x - 1, target.y + 1, target) ||
+                        check(target.x, target.y + 1, target) ||
+                        check(target.x, target.y - 1, target) ||
+                        check(target.x + 1, target.y - 1, target) ||
+                        check(target.x + 1, target.y, target) ||
+                        check(target.x + 1, target.y + 1, target))
+                    {
+                        target.getHungry() + 50;
+                        return;
+                    }
+                }
+            }
         }
-    else
-    {
-        void thirstyanimal(Animal& target); {
-
-            if (target.getThirsty() < 50)
-            {
-                valeur = 2;
-                research(valeur, target);
-            }
-            if (target.x < posx)
-            {
-                target.x++;
-                target.getThirsty() - 2;
-                target.getHungry() - 4;
-            }
-            else if (target.x > posx)
-            {
-                target.x--;
-                target.getThirsty() - 2;
-                target.getHungry() - 4;
-            }
-
-            if (target.y < posy)
-            {
-                target.y++;
-                target.getThirsty() - 2;
-                target.getHungry() - 4;
-            }
-            else if (target.y > posy)
-            {
-                target.y--;
-                target.getThirsty() - 2;
-                target.getHungry() - 4;
-            }
-
-            if (
-                check(target.x - 1, target.y - 1, target) ||
-                check(target.x - 1, target.y, target) ||
-                check(target.x - 1, target.y + 1, target) ||
-                check(target.x, target.y + 1, target) ||
-                check(target.x, target.y - 1, target) ||
-                check(target.x + 1, target.y - 1, target) ||
-                check(target.x + 1, target.y, target) ||
-                check(target.x + 1, target.y + 1, target))
-            {
-                target.getHungry() + 50;
-                return;
-            }
     }
-}
-
 
 
 //=================SOIF=======================
