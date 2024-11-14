@@ -75,7 +75,7 @@ public:
 	}
 
 
-
+	void agee ()
 
 	void reproduction(Animal& target) override{
 		if (race == target.getRace()) {
