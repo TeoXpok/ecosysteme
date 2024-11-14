@@ -64,7 +64,39 @@ void research(int valeur, const Animal& target) {
                         }
                     }
                     break;
+
                 case 2:
+                    if (board[researchy][researchx].istree == true)
+                    {
+                        if (researchx - target.x > 0)
+                        {
+                            nbCasex = researchx - target.x;
+                        }
+                        else
+                        {
+                            nbCasex = target.x - researchx;
+                        }
+
+                        if (researchy - target.y > 0)
+                        {
+                            researchx - target.x;
+                        }
+                        else
+                        {
+                            researchx - target.x;
+                        }
+                        nbCase = nbCasex + nbCasey;
+
+                        if (nbCase < min)
+                        {
+                            min = nbCase;
+                            posx = researchx;
+                            posy = researchy;
+                        }
+                    }
+                    break;
+
+                case 3:
                     if (board[researchy][researchx].iswater == true)
                     {
                         if (researchx - target.x > 0)
@@ -94,20 +126,16 @@ void research(int valeur, const Animal& target) {
                         }
                     }
                     break;
-                case 3:
-
-                    break;
                 default:
                     break;
             }
-           
         }  
     }
 }
 
-void suppr(int x, int y) {
+void suppr(int x, int y) {// supprimer l'élément
 
-
+    board[10][10].fruits--;
 }
 
 bool check(int x, int y, Animal& target) {
@@ -119,18 +147,170 @@ bool check(int x, int y, Animal& target) {
     }
 }
 
+void choix(Animal& target) {
+    if (target.getHungry() < target.getThirsty())
+    {
+ //======================CARNIVORE=======================
+        if (target.getAliment() == 1)
+        {
+            void hungryanimal(Animal & target); {
+                if (target.getHungry() < 50)
+                {
+                    valeur = 1;
+                    research(valeur, target);
+                }
+                if (target.x < posx)
+                {
+                    target.x++;
+                    target.getThirsty() - 2;
+                    target.getHungry() - 4;
+                }
+                else if (target.x > posx)
+                {
+                    target.x--;
+                    target.getThirsty() - 2;
+                    target.getHungry() - 4;
+                }
+
+                if (target.y < posy)
+                {
+                    target.y++;
+                    target.getThirsty() - 2;
+                    target.getHungry() - 4;
+                }
+                else if (target.y > posy)
+                {
+                    target.y--;
+                    target.getThirsty() - 2;
+                    target.getHungry() - 4;
+                }
+
+                if (check(target.x - 1, target.y - 1, target) ||
+                    check(target.x - 1, target.y    , target) ||
+                    check(target.x - 1, target.y + 1, target) ||
+                    check(target.x    , target.y + 1, target) ||
+                    check(target.x    , target.y - 1, target) ||
+                    check(target.x + 1, target.y - 1, target) ||
+                    check(target.x + 1, target.y    , target) ||
+                    check(target.x + 1, target.y + 1, target))
+                {
+                    target.getHungry() + 50;
+                    return;
+                }
+            }
+//=======================HERBIVORE=============================
+        if (target.getAliment() == 2)
+        {
+            void hungryanimal(Animal & target); {
+                
+                if (target.getHungry() < 50)
+                {
+                    valeur = 2;
+                    research(valeur, target);
+                }
+                if (target.x < posx)
+                {
+                    target.x++;
+                    target.getThirsty() - 2;
+                    target.getHungry() - 4;
+                }
+                else if (target.x > posx)
+                {
+                    target.x--;
+                    target.getThirsty() - 2;
+                    target.getHungry() - 4;
+                }
+
+                if (target.y < posy)
+                {
+                    target.y++;
+                    target.getThirsty() - 2;
+                    target.getHungry() - 4;
+                }
+                else if (target.y > posy)
+                {
+                    target.y--;
+                    target.getThirsty() - 2;
+                    target.getHungry() - 4;
+                }
+
+                if (
+                    check(target.x - 1, target.y - 1, target) ||
+                    check(target.x - 1, target.y, target) ||
+                    check(target.x - 1, target.y + 1, target) ||
+                    check(target.x, target.y + 1, target) ||
+                    check(target.x, target.y - 1, target) ||
+                    check(target.x + 1, target.y - 1, target) ||
+                    check(target.x + 1, target.y, target) ||
+                    check(target.x + 1, target.y + 1, target))
+                {
+                    target.getHungry() + 50;
+                    return;
+                }
+                
+
+            }
+        }
+    }
+    else
+    {
+        void thirstyanimal(Animal& target); {
+
+            if (target.getThirsty() < 50)
+            {
+                valeur = 2;
+                research(valeur, target);
+            }
+            if (target.x < posx)
+            {
+                target.x++;
+                target.getThirsty() - 2;
+                target.getHungry() - 4;
+            }
+            else if (target.x > posx)
+            {
+                target.x--;
+                target.getThirsty() - 2;
+                target.getHungry() - 4;
+            }
+
+            if (target.y < posy)
+            {
+                target.y++;
+                target.getThirsty() - 2;
+                target.getHungry() - 4;
+            }
+            else if (target.y > posy)
+            {
+                target.y--;
+                target.getThirsty() - 2;
+                target.getHungry() - 4;
+            }
+
+            if (
+                check(target.x - 1, target.y - 1, target) ||
+                check(target.x - 1, target.y, target) ||
+                check(target.x - 1, target.y + 1, target) ||
+                check(target.x, target.y + 1, target) ||
+                check(target.x, target.y - 1, target) ||
+                check(target.x + 1, target.y - 1, target) ||
+                check(target.x + 1, target.y, target) ||
+                check(target.x + 1, target.y + 1, target))
+            {
+                target.getHungry() + 50;
+                return;
+            }
+    }
+}
 
 
 
-
-//BOUF < SOIF
-
-//=================BOUF=======================
-void hungryanimal(Animal& target) {// rajouter choix de vide en fonction chaine alimentaire
+//=================SOIF=======================
+void thirstyanimal(const Animal& target) {// rajouter choix de vide
     if (target.getHungry() < 50)
     {
         valeur = 1;
-        research(valeur,target);
+        research(valeur, target);
     }
     if (target.x < posx)
     {
@@ -157,7 +337,7 @@ void hungryanimal(Animal& target) {// rajouter choix de vide en fonction chaine 
         target.getThirsty() - 2;
         target.getHungry() - 4;
     }
-    
+
     if (
         check(target.x - 1, target.y - 1, target) ||
         check(target.x - 1, target.y, target) ||
@@ -166,15 +346,15 @@ void hungryanimal(Animal& target) {// rajouter choix de vide en fonction chaine 
         check(target.x, target.y - 1, target) ||
         check(target.x + 1, target.y - 1, target) ||
         check(target.x + 1, target.y, target) ||
-        check(target.x + 1, target.y + 1, target))     
+        check(target.x + 1, target.y + 1, target))
     {
         target.getHungry() + 50;
         return;
     }
-}
 
-//=================SOIF=======================
-void thirstyanimal(const Animal& ) {// rajouter choix de vide
+
+
+
 
 }
 

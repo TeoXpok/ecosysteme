@@ -16,12 +16,18 @@ protected:
 	int thirsty;
 	int hungry;
 	int categorie;
+<<<<<<< Updated upstream
 	bool alive;
 	bool sexe;// true = homme/false = femme
+=======
+	bool alive = true;
+	int aliment;// 1 = carnivore, 2 = herbivore
+>>>>>>> Stashed changes
 	
 
 public:
 
+<<<<<<< Updated upstream
 	Animal( string race, bool s, int e, int a, int c, int h, int x, int y) : race(race), sexe(s), x(x), y(y), speed(e), age(a), categorie(c), thirsty(h), hungry(h) {}
 
 	// reproduction, manger, boire, chasser, deplacer : methodes
@@ -41,6 +47,14 @@ public:
 		}
 	}
 
+=======
+	Animal( string Race, bool sexe, int e, int a, int c, int h, int x, int y, int l) : race(Race), sexe(sexe), x(x), y(y), speed(e), age(a), categorie(c), thirsty(h), hungry(h), aliment(l) {}
+	
+	int x, y;
+	
+	// reproduction, manger, boire, chasser, deplacer : methodes
+	
+>>>>>>> Stashed changes
 	virtual void eat() = 0;
 	virtual void drink() = 0;
 	virtual void reproduction(Animal& target) = 0;
@@ -56,7 +70,11 @@ public:
 	int getThirsty() const { return thirsty; }
 	int getHungry() const { return hungry; }
 	int getCategorie() const { return categorie; }
+<<<<<<< Updated upstream
 
+=======
+	int getAliment() const { return aliment; }
+>>>>>>> Stashed changes
 };
 
 class Capybara : public Animal
@@ -78,7 +96,11 @@ public:
 	}
 	// bool sexe, int x, int y, int age : pas besoin dans constructeur
 
+<<<<<<< Updated upstream
 	Capybara() : Animal("Capybara", sex(), 1, age, 1, 100, x, y) {}
+=======
+	Capybara() : Animal("Capybara", sexe, 1,age, 1,100,x,y,1) {}
+>>>>>>> Stashed changes
 
 	void eat() override
 	{
@@ -178,7 +200,11 @@ class Hippopotamus : public Animal
 {
 public:
 
+<<<<<<< Updated upstream
 	Hippopotamus() : Animal("Hippopotamus", sex(), 1, age, 2, 100, x, y) {}
+=======
+	Hippopotamus() : Animal("Hippopotamus", sexe, 1, age, 2, 100, x, y,1) {}
+>>>>>>> Stashed changes
 
 	void eat() override
 	{
@@ -272,7 +298,7 @@ class Dragon : public Animal
 {
 public:
 
-	Dragon() : Animal("Dragon", sexe, 1, age, 3, 100, x, y) {}
+	Dragon() : Animal("Dragon", sexe, 1, age, 3, 100, x, y,2) {}
 
 	void eat() override
 	{
