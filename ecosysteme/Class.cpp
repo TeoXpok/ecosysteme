@@ -3,17 +3,19 @@
 #include<iostream>
 using namespace std;
 
-;class Animal
+class Animal
 {
 protected:
 	// nom, sexe, age, statut, faim, soif, race : attributs
 	string race;
+	string statut;
 	bool sexe;// true = homme/false = femme
 	int age;
 	int speed;
 	int thirsty;
 	int hungry;
 	int categorie;
+	bool alive = true;
 	
 
 public:
@@ -23,6 +25,7 @@ public:
 	// reproduction, manger, boire, chasser, deplacer : methodes
 	int x, y;
 	
+
 	virtual void eat() = 0;
 	virtual void drink() = 0;
 	virtual void reproduction(Animal& target) = 0;
@@ -30,10 +33,13 @@ public:
 	virtual void talk(Animal& other) = 0;
 	// virtual void die() = 0;
 
-	// bool alive(){}
+	
 
 	string getRace() const { return race; }
 	bool getSexe() const { return sexe; }
+	string getPos() const { return statut; }
+	int getX() const { return x; }
+	int getY() const { return y; }
 	int getAge() const { return age; }
 	int getSpeed() const { return speed; }
 	int getThirsty() const { return thirsty; }
@@ -74,19 +80,13 @@ public:
 		}
 	}
 
+	void reproduction(Animal& target) override
+	{
+		// trouver un animal du sexe opposé et ken
+		
+		// création d'un nouveau bebe : avoir avec manager
 
-	void agee ()
-
-	void reproduction(Animal& target) override{
-		if (race == target.getRace()) {
-			if (age <= 10 && target.getAge() <= 10) {
-				Capybara: ("Capybara", "f", "Bebe", x, y, 1, 0, 100); {}
-				if (age == 10 && target.getAge() <= 10) {
-				Capybara: ("Capybara", "f", "Bebe", x, y, 1, 0, 100); {}
-							cout << " Un Capybara est né." << endl;
-				}
-			}
-		}
+		cout << " un nouveau " << target.getRace() << " est né ! " << endl;
 	}
 
 	void hunt(Animal& target) override
@@ -96,7 +96,7 @@ public:
 		cout << "Position du personnage : (" << x << ", " << y << ")" << std::endl;
 
 		// si sur la meme case mouru
-		if (x == target.x && y == target.y)
+		if (x == target.getX() && y == target.getY())
 		{
 			// appel du destructeur 
 		}

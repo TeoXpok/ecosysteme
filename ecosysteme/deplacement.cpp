@@ -34,7 +34,7 @@ void research(int valeur, const Animal& target) {
             switch (valeur)// bouf = 1 , water = 2 , bouf arbre =3
             {
                 case 1:
-                    if (board[researchy][researchx].animal.species == target.categorie && target.categorie < categorie)
+                    if (board[researchy][researchx].animal.species > target.getCategorie())
                     {
                         if (researchx - target.x > 0)
                         {
@@ -104,8 +104,19 @@ void research(int valeur, const Animal& target) {
     }
 }
 
+void suppr(int x, int y) {
 
 
+}
+
+bool check(int x, int y, Animal& target) {
+    if (x >= 0 || x < 30 || y >= 0 || y < 90) { return false; }
+    if (board[y][x].animal.species > target.getCategorie())
+    {
+        suppr(x, y);
+        return true;
+    }
+}
 
 
 
@@ -118,7 +129,7 @@ void hungryanimal(Animal& target) {// rajouter choix de vide en fonction chaine 
     if (target.getHungry() < 50)
     {
         valeur = 1;
-        research(valeur);
+        research(valeur,target);
     }
     if (target.x < posx)
     {
@@ -146,16 +157,15 @@ void hungryanimal(Animal& target) {// rajouter choix de vide en fonction chaine 
         target.getHungry() - 4;
     }
     
-    if ((wx - 1, wy - 1) ||
-    hungry(wx - 1, wy) ||
-    hungry(wx - 1, wy + 1) ||
-    hungry(wx, wy + 1) ||
-    hungry(wx, wy - 1) ||
-    hungry(wx + 1, wy - 1) ||
-    hungry(wx + 1, wy) ||
-    hungry(wx + 1, wy + 1) == true)
-
-            wx >= 0 && wx < 30 && wy >= 0 && wy < 90
+    if (
+        check(target.x - 1, target.y - 1, target) ||
+        check(target.x - 1, target.y, target) ||
+        check(target.x - 1, target.y + 1, target) ||
+        check(target.x, target.y + 1, target) ||
+        check(target.x, target.y - 1, target) ||
+        check(target.x + 1, target.y - 1, target) ||
+        check(target.x + 1, target.y, target) ||
+        check(target.x + 1, target.y + 1, target))     
     {
         target.getHungry() + 50;
         return;
@@ -164,52 +174,7 @@ void hungryanimal(Animal& target) {// rajouter choix de vide en fonction chaine 
 
 //=================SOIF=======================
 void thirstyanimal(const Animal& ) {// rajouter choix de vide
-    if (animal.thirsty < 50)
-    {
-        valeur = 2;
-        research();
-    }
-    while (animal.thirsty < 50)
-    {   // déplacement
-        if (x < iswater.x)
-        {
-            x++;
-            animal.thirsty - 2;
-            animal.hungry - 4;
-        }
-        else if (x > iswater.x)
-        {
-            x--;
-            animal.thirsty - 2;
-            animal.hungry - 4;
-        }
 
-        if (y < iswater.y) 
-        {
-            y++;
-            animal.thirsty - 2;
-            animal.hungry - 4;
-        }
-
-        else if (y > iswater.y)
-        {
-            y--;
-            animal.thirsty - 2;
-            animal.hungry - 4;
-        }
-        if (iswater(wx - 1, wy - 1) ||
-            iswater(wx - 1, wy) ||
-            iswater(wx - 1, wy + 1) ||
-            iswater(wx, wy + 1) ||
-            iswater(wx, wy - 1) ||
-            iswater(wx + 1, wy - 1) ||
-            iswater(wx + 1, wy) ||
-            iswater(wx + 1, wy + 1) == true)
-        {
-            animal.thirsty + 50;
-            return;
-        }
-    }
 }
 
 
