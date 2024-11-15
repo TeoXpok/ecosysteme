@@ -47,13 +47,18 @@ public:
 	
 	
 	// reproduction, manger, boire, chasser, deplacer : methodes
+<<<<<<< HEAD
+=======
 
+>>>>>>> df7655e0e5bb6e6a35b9b9505ab14b7267786474
 	virtual void eat() = 0;
 	virtual void drink() = 0;
 	virtual void reproduction(Animal& target) = 0;
 	virtual void hunt(Animal& target) = 0;
 	virtual void talk(Animal& other) = 0;
 
+<<<<<<< HEAD
+=======
 	void agee() 
 	{
 		int debut = 0;
@@ -77,6 +82,7 @@ public:
 	}
 
 
+>>>>>>> df7655e0e5bb6e6a35b9b9505ab14b7267786474
 	string getRace() const { return race; }
 	bool getSexe() const { return sexe; }
 	bool getAlive() const { return alive; }
@@ -86,7 +92,10 @@ public:
 	int getHungry() const { return hungry; }
 	int getCategorie() const { return categorie; }
 	int getAliment() const { return aliment; }
+<<<<<<< HEAD
+=======
 
+>>>>>>> df7655e0e5bb6e6a35b9b9505ab14b7267786474
 };
 vector<Animal*> animaux;
 class Capybara : public Animal
@@ -95,8 +104,12 @@ public:
 
 	// bool sexe, int x, int y, int age : pas besoin dans constructeur
 
+<<<<<<< HEAD
+	Capybara() : Animal("Capybara", sexe, 1,age, 1,100,x,y,1) {}
+=======
 	Capybara() : Animal("Capybara", sex(), 1, age, 1, 100, x, y) {}
 
+>>>>>>> df7655e0e5bb6e6a35b9b9505ab14b7267786474
 
 	void eat() override
 	{
@@ -214,7 +227,12 @@ class Hippopotamus : public Animal
 {
 public:
 
+<<<<<<< HEAD
+	Hippopotamus() : Animal("Hippopotamus", sexe, 1, age, 2, 100, x, y,1) {}
+
+=======
 	Hippopotamus() : Animal("Hippopotamus", sex(), 1, age, 2, 100, x, y) {}
+>>>>>>> df7655e0e5bb6e6a35b9b9505ab14b7267786474
 
 	void eat() override
 	{
