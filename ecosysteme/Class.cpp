@@ -4,7 +4,7 @@
 #include<iostream>
 using namespace std;
 
-vector<Animal*> animaux;
+
 
 class Animal
 {
@@ -17,10 +17,9 @@ protected:
 	int thirsty;
 	int hungry;
 	int categorie;
-	bool alive;
 	bool sexe;// true = homme/false = femme
 	bool alive = true;
-	int aliment;// 1 = carnivore, 2 = herbivore
+	int aliment=0;// 1 = carnivore, 2 = herbivore
 	
 
 public:
@@ -46,7 +45,6 @@ public:
 
 	Animal( string Race, bool sexe, int e, int a, int c, int h, int x, int y, int l) : race(Race), sexe(sexe), x(x), y(y), speed(e), age(a), categorie(c), thirsty(h), hungry(h), aliment(l) {}
 	
-	int x, y;
 	
 	// reproduction, manger, boire, chasser, deplacer : methodes
 
@@ -90,7 +88,7 @@ public:
 	int getAliment() const { return aliment; }
 
 };
-
+vector<Animal*> animaux;
 class Capybara : public Animal
 {
 public:
@@ -141,7 +139,7 @@ public:
 				// Vérification des limites
 				if (nx >= 0 && nx < 30 && ny >= 0 && ny < 90)
 				{
-					if (board[nx][ny] == )
+					if (board[nx][ny].fruits == 5)
 					{ 
 						if (race == target.getRace())
 						{

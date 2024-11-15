@@ -12,7 +12,7 @@
 // animal (int posX, int posY) : x(posX), y(posY){}
 
 
-int researchx, researchy, nbCase;
+int researchx, researchy;
 
 int besoin;
 int posx,posy;
@@ -304,10 +304,11 @@ void choix(Animal& target) {
             }
         }
     }
+}
 
 
 //=================SOIF=======================
-void thirstyanimal(const Animal& target) {// rajouter choix de vide
+void thirstyanimal(Animal& target) {// rajouter choix de vide
     if (target.getHungry() < 50)
     {
         valeur = 1;
@@ -383,9 +384,3 @@ void thirstyanimal(const Animal& target) {// rajouter choix de vide
 // chasser déplacement plus rapide
 
 // dormir (a voir)
-
-int main()
-{
-
-
-}
