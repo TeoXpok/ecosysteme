@@ -2,18 +2,11 @@
 #include<iostream>
 using namespace std;
 
-// ConsoleApplication1.cpp : Ce fichier contient la fonction 'main'. L'exécution du programme commence et se termine à cet endroit.
-//
-#include <iostream>
-using namespace std;
-
-
 struct animal {
 	int species = 0; // 0 = pas d'animal / 1 = Capybara / 2 = Hippopotame / 3 = Dragon
 	bool sexe = true; // true = male / false = female
 	bool isadulte = true;
 };
-
 
 struct cell
 {
@@ -28,142 +21,30 @@ struct cell
 
 cell board[30][90];
 
-void clear() {
-	for (size_t i = 0; i < 30; i++)
-	{
-		for (size_t j = 0; j < 90; j++)
-		{
-			if (board[i][j].animal.species != 0)
-				board[i][j].animal.species = 0;
-		}
-	}
-}
-
-void display() {
-	cout << endl;
-	string sexe = "";
-	int bg = 0;
-	for (size_t i = 0; i < 29; i++)
-	{
-		cout << "\t\t\t\t\t\t\t";
-		for (size_t j = 0; j < 89; j++)
-		{
-			if (board[i][j].iswater) bg = 104;
-			else if (board[i][j].issand) bg = 103;
-			else bg = 102;
-
-			if (board[i][j].istree) cout << "\033[2;30;" << (bg - 60) << "mT\033[0m";
-			else if (board[i][j].animal.species != 0)
-			{
-				if (board[i][j].animal.sexe) sexe = "96";
-				else sexe = "31";
-
-				switch (board[i][j].animal.species)
-				{
-				case 1:
-					if (board[i][j].animal.isadulte) cout << "\033[2;" + sexe + ";" << bg << "mC\033[0m";
-					else cout << "\033[1;" << sexe << ";" << bg << "mc\033[0m";
-					break;
-				case 2:
-					if (board[i][j].animal.isadulte) cout << "\033[1;" << sexe << ";" << bg << "mH\033[0m";
-					else cout << "\033[1;" << sexe << ";" << bg << "mh\033[0m";
-					break;
-				case 3:
-					if (board[i][j].animal.isadulte) cout << "\033[1;" << sexe << ";" << bg << "mD\033[0m";
-					else cout << "\033[1;" << sexe << ";" << bg << "md\033[0m";
-					break;
-				default:
-					cout << "\033[" << bg << "m \033[0m";
-					break;
-				}
-			}
-
-			else cout << "\033[" << bg << "m \033[0m";
-
-		}
-		cout << endl;
-	}
-}
-
-void water(int x, int y, int taux) {
-	if (x < 0 || y < 0 || x > 89 || y > 29 || board[y][x].iswater) return;
-
-	int chance = rand() % 100;
-	if (chance <= taux)
-	{
-		board[y][x].iswater = true;
-		water(x, y - 1, taux - 8);
-		water(x, y + 1, taux - 8);
-		water(x - 1, y - 1, taux - 8);
-		water(x - 1, y, taux - 3);
-		water(x - 1, y + 1, taux - 8);
-		water(x + 1, y - 1, taux - 8);
-		water(x + 1, y, taux - 3);
-		water(x + 1, y + 1, taux - 8);
-	}
-	else
-		board[y][x].issand = true;
-
-}
-
-void tree(int x, int y, int taux) {
-	if (x < 0 || y < 0 || x > 89 || y > 29 || board[y][x].iswater || board[y][x].istree) return;
-
-	int chance = rand() % 100;
-	if (chance <= taux)
-	{
-		board[y][x].istree = true;
-		tree(x, y - 1, taux - 25);
-		tree(x, y + 1, taux - 25);
-		tree(x - 1, y - 1, taux - 25);
-		tree(x - 1, y, taux - 15);
-		tree(x - 1, y + 1, taux - 25);
-		tree(x + 1, y - 1, taux - 25);
-		tree(x + 1, y, taux - 15);
-		tree(x + 1, y + 1, taux - 25);
-	}
-}
-
-void generate() {
-
-	int x;
-	int y;
-
-	for (size_t i = 0; i < 3; i++)
-	{
-		x = rand() % 89;
-		y = rand() % 29;
-		if (board[y][x].iswater) i--;
-		else water(x, y, 100);
-	}
-
-}
-
-
 class Animal
 {
 protected:
 	// nom, sexe, age, faim, soif, race : attributs
 	string race;
 	int age;
-	int maxAge;
 	int speed;
 	int thirsty;
 	int hungry;
 	int categorie;
+	int maxAge = 50;
 	bool sexe;// true = homme/false = femme
 	int aliment;// 1 = carnivore, 2 = herbivore
 
 
 public:
 
-	Animal(string race, bool s, int e, int a, int c, int h, int x, int y) : race(race), sexe(s), x(x), y(y), speed(e), age(a), categorie(c), thirsty(h), hungry(h) {}
+	Animal(string Race, int e, int a, int c, int h, int x, int y, int l) : race(Race), x(x), y(y), speed(e), age(a), categorie(c), thirsty(h), hungry(h), aliment(l) {}
 
 	// reproduction, manger, boire, chasser, deplacer : methodes
 	int x, y;
 	bool alive = true;
 
-	bool sex()
+	void sex()
 	{
 		int alea = rand() % 1;
 		if (alea == 0)
@@ -176,9 +57,6 @@ public:
 			sexe = false;
 		}
 	}
-
-	Animal(string Race, bool sexe, int e, int a, int c, int h, int x, int y, int l) : race(Race), sexe(sexe), x(x), y(y), speed(e), age(a), categorie(c), thirsty(h), hungry(h), aliment(l) {}
-
 	// reproduction, manger, boire, chasser, deplacer : methodes
 
 	virtual void eat() = 0;
@@ -228,7 +106,7 @@ public:
 
 	// bool sexe, int x, int y, int age : pas besoin dans constructeur
 
-	Capybara() : Animal("Capybara", sexe, 1, age, 1, 100, x, y, 1) {}
+	Capybara(int x, int y) : Animal("Capybara", 1, age, 1, 100, x, y, 1) {}
 
 
 	void eat() override
@@ -280,7 +158,7 @@ public:
 							{
 								if (age >= 10 && target.getAge() >= 10)
 								{
-									animaux.push_back(new Capybara());
+									animaux.push_back(new Capybara(nx, ny));
 
 									cout << " Un Capybara est né." << endl;
 								}
@@ -347,7 +225,7 @@ class Hippopotamus : public Animal
 {
 public:
 
-	Hippopotamus() : Animal("Hippopotamus", sexe, 1, age, 2, 100, x, y, 1) {}
+	Hippopotamus(int x, int y) : Animal("Hippopotamus", 1, age, 2, 100, x, y, 1) {}
 
 	void eat() override
 	{
@@ -382,7 +260,7 @@ public:
 		{
 			if (age == 10 && target.getAge() <= 10)
 			{
-				animaux.push_back(new Hippopotamus());
+				animaux.push_back(new Hippopotamus(5, 5));
 
 				cout << " Un hippopotame est né." << endl;
 			}
@@ -441,7 +319,7 @@ class Dragon : public Animal
 {
 public:
 
-	Dragon() : Animal("Dragon", sexe, 1, age, 3, 100, x, y, 2) {}
+	Dragon(int x, int y) : Animal("Dragon", 1, age, 3, 100, x, y, 2) {}
 
 	void eat() override
 	{
@@ -475,7 +353,7 @@ public:
 		{
 			if (age == 10 && target.getAge() <= 10)
 			{
-				animaux.push_back(new Dragon());
+				animaux.push_back(new Dragon(5, 5));
 
 				cout << " Un dragon est né." << endl;
 			}
@@ -532,13 +410,146 @@ public:
 	}
 };
 
+void clear() {
+	for (size_t i = 0; i < 30; i++)
+	{
+		for (size_t j = 0; j < 90; j++)
+		{
+			if (board[i][j].animal.species != 0)
+				board[i][j].animal.species = 0;
+		}
+	}
+}
+
+void add() {
+
+	for (auto& animal : animaux) {
+		int x = animal->x;
+		int y = animal->y;
+		board[y][x].animal.sexe = animal->getSexe();
+		board[y][x].animal.species = animal->getCategorie();
+		if (animal->getAge() > 10) board[y][x].animal.isadulte = true;
+		else board[y][x].animal.isadulte = false;
+	}
+}
+
+void display() {
+	cout << endl;
+	string sexe = "";
+	int bg = 0;
+	clear();
+	add();
+	for (size_t i = 0; i < 29; i++)
+	{
+		cout << "\t\t\t\t\t\t\t";
+		for (size_t j = 0; j < 89; j++)
+		{
+			if (board[i][j].iswater) bg = 104;
+			else if (board[i][j].issand) bg = 103;
+			else bg = 102;
+
+			if (board[i][j].istree) cout << "\033[2;30;" << (bg - 60) << "mT\033[0m";
+			else if (board[i][j].animal.species != 0)
+			{
+				if (board[i][j].animal.sexe) sexe = "34";
+				else sexe = "31";
+
+				switch (board[i][j].animal.species)
+				{
+				case 1:
+					if (board[i][j].animal.isadulte) cout << "\033[2;" + sexe + ";" << bg << "mC\033[0m";
+					else cout << "\033[2;" << sexe << ";" << bg << "mc\033[0m";
+					break;
+				case 2:
+					if (board[i][j].animal.isadulte) cout << "\033[2;" << sexe << ";" << bg << "mH\033[0m";
+					else cout << "\033[2;" << sexe << ";" << bg << "mh\033[0m";
+					break;
+				case 3:
+					if (board[i][j].animal.isadulte) cout << "\033[2;" << sexe << ";" << bg << "mD\033[0m";
+					else cout << "\033[2;" << sexe << ";" << bg << "md\033[0m";
+					break;
+				default:
+					cout << "\033[" << bg << "m \033[0m";
+					break;
+				}
+			}
+
+			else cout << "\033[" << bg << "m \033[0m";
+
+		}
+		cout << endl;
+	}
+}
+
+void water(int x, int y, int taux) {
+	if (x < 0 || y < 0 || x > 89 || y > 29 || board[y][x].iswater) return;
+
+	int chance = rand() % 100;
+	if (chance <= taux)
+	{
+		board[y][x].iswater = true;
+		water(x, y - 1, taux - 8);
+		water(x, y + 1, taux - 8);
+		water(x - 1, y - 1, taux - 8);
+		water(x - 1, y, taux - 3);
+		water(x - 1, y + 1, taux - 8);
+		water(x + 1, y - 1, taux - 8);
+		water(x + 1, y, taux - 3);
+		water(x + 1, y + 1, taux - 8);
+	}
+	else
+		board[y][x].issand = true;
+
+}
+
+void tree(int x, int y, int taux) {
+	if (x < 0 || y < 0 || x > 89 || y > 29 || board[y][x].iswater || board[y][x].istree) return;
+
+	int chance = rand() % 100;
+	if (chance <= taux)
+	{
+		board[y][x].istree = true;
+		tree(x, y - 1, taux - 25);
+		tree(x, y + 1, taux - 25);
+		tree(x - 1, y - 1, taux - 25);
+		tree(x - 1, y, taux - 15);
+		tree(x - 1, y + 1, taux - 25);
+		tree(x + 1, y - 1, taux - 25);
+		tree(x + 1, y, taux - 15);
+		tree(x + 1, y + 1, taux - 25);
+	}
+}
+
+void generate() {
+
+	int x;
+	int y;
+
+	for (size_t i = 0; i < 4; i++)
+	{
+		x = rand() % 89;
+		y = rand() % 29;
+		if (board[y][x].iswater) i--;
+		else water(x, y, 100);
+	}
+	for (size_t i = 0; i < 10; i++)
+	{
+		x = rand() % 89;
+		y = rand() % 29;
+		if (board[y][x].iswater || board[y][x].istree) i--;
+		else tree(x, y, 100);
+	}
+}
+
+
+
+
 // instaurer un temps de presence aux animaux si un animal meurt un autre spawn
 
 
 int nbAnimaux; // besoin de ca si qq1 bouge le programme de fichier ca initialise la variables pour la suite du code : dans main ?
 
 // quand nb animaux sur map < au nombre dans la variable : creer un nouvel animal
-
 
 class Jeu
 {
@@ -550,7 +561,7 @@ public:
 			delete animal;
 	}
 
-	void NbAnimaux()
+	int NbAnimaux()
 	{
 		cout << " voulez choisir un nb d'animaux ? " << endl << " oui : 1, non : 0 " << endl; // demander au joueur si il veut donner un nb d'animaux precis ou un nb predefinit 
 		int choix;
@@ -564,27 +575,28 @@ public:
 			cout << " Choissisez le nb d'animaux : " << endl;
 			int nb;
 			cin >> nb;
-			nbAnimaux = nb;
+			return nb;
 		}
 	}
 
 	void init(int nombreAniamux)
 	{
-		srand(time(0));
-		for (int i = 0; i < nbAnimaux; ++i)
+		int x;
+		int y;
+		for (int i = 0; i < nombreAniamux; ++i)
 		{
 			int classe = rand() % 3;
+			x = rand() % 89;
+			y = rand() % 29;
 			switch (classe)
 			{
-			case 0: animaux.push_back(new Capybara()); break;
-			case 1: animaux.push_back(new Hippopotamus()); break;
-			case 2: animaux.push_back(new Dragon()); break;
+			case 0: animaux.push_back(new Capybara(x, y)); break;
+			case 1: animaux.push_back(new Hippopotamus(x, y)); break;
+			case 2: animaux.push_back(new Dragon(x, y)); break;
 			}
 		}
 	}
 };
-
-
 
 // 0 = pas d'animal / 1 = Capybara / 2 = Hippopotame / 3 = Dragon
 // ajouter position animal pour suivre déplacement
@@ -1013,21 +1025,18 @@ void choix(Animal& target)
 
 int main()
 {
-	board[15][30].animal.species = 1;
 	srand(time(0));
 	int x;
 	generate();
-	tree(20, 20, 100);
+	Jeu jeu;
+	int nb = jeu.NbAnimaux();
+	jeu.init(nb);
 	while (true)
 	{
-
 		system("cls");
 		display();
 		cin >> x;
 		if (x == 0)break;
 		cin.ignore(1000, '\n');
-
-
 	}
-
 }
