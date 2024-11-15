@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\Eco fichier\\",
+  "WorkspaceRootPath": "C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\Eco fichier\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0EAD6DA6-AF47-4949-84C0-865B966EFE65}|Eco fichier\\Eco fichier.vcxproj|C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\Eco fichier\\Eco fichier\\Eco fichier.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{0EAD6DA6-AF47-4949-84C0-865B966EFE65}|Eco fichier\\Eco fichier.vcxproj|C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\Eco fichier\\Eco fichier\\Eco fichier.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0EAD6DA6-AF47-4949-84C0-865B966EFE65}|Eco fichier\\Eco fichier.vcxproj|solutionrelative:Eco fichier\\Eco fichier.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Eco fichier.cpp",
-              "DocumentMoniker": "C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\Eco fichier\\Eco fichier\\Eco fichier.cpp",
+              "DocumentMoniker": "C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\Eco fichier\\Eco fichier\\Eco fichier.cpp",
               "RelativeDocumentMoniker": "Eco fichier\\Eco fichier.cpp",
-              "ToolTip": "C:\\Users\\jayite\\Documents\\GitHub\\ecosysteme\\Eco fichier\\Eco fichier\\Eco fichier.cpp",
+              "ToolTip": "C:\\Users\\tgoncalves\\source\\repos\\ecosysteme\\Eco fichier\\Eco fichier\\Eco fichier.cpp",
               "RelativeToolTip": "Eco fichier\\Eco fichier.cpp",
-              "ViewState": "AgIAALICAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFUCAAAAAAAAAAAtwG0CAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-15T01:11:57.721Z",
               "EditorCaption": ""
