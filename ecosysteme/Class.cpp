@@ -127,22 +127,40 @@ public:
 	}
 
 	
-	void reproduction(Animal& target) override 
+	void reproduction(Animal& target) override
 	{
-		if (race == target.getRace())
+		// Vérification des cases adjacentes
+		for (int i = -1; i <= 1; i++)
 		{
-			if (sexe == target.getSexe())
+			for (int j = -1; j <= 1; j++)
 			{
-				if (age == 10 && target.getAge() <= 10)
+				if (i == 0 && j == 0) continue; // Ne pas compter la case elle-même
+				int nx = x + i;
+				int ny = y + j;
+
+				// Vérification des limites
+				if (nx >= 0 && nx < 30 && ny >= 0 && ny < 90)
 				{
-					animaux.push_back(new Capybara());
+					if (board[nx][ny] == )
+					{ 
+						if (race == target.getRace())
+						{
+							if (sexe == target.getSexe())
+							{
+								if (age == 10 && target.getAge() <= 10)
+								{
+									animaux.push_back(new Capybara());
 
-					cout << " Un Capybara est né." << endl;
-
+									cout << " Un Capybara est né." << endl;
+								}
+							}
+						}
+					}
 				}
 			}
 		}
 	}
+
 
 	void hunt(Animal& target) override
 	{
@@ -386,27 +404,11 @@ public:
 // instaurer un temps de presence aux animaux si un animal meurt un autre spawn
 
 
-int nbAnimaux; // besoin de ca si qq1 bouge le programme de fichier ca initialise la variables pour la suite du code
-
-void intNbAnimaux()
-{
-	cout << " voulez choisir un nb d'animaux ? " << endl << " oui : 1, non : 0 " << endl; // demander au joueur si il veut donner un nb d'animaux precis ou un nb predefinit 
-	int choix;
-	cin >> choix;
-	switch (choix)
-	{
-		case 0:
-			nbAnimaux = 10;
-			break;
-		case 1:
-			cout << " Choissisez le nb d'animaux : " << endl;
-			int nb;
-			cin >> nb;
-			nbAnimaux = nb;
-	}
-}
+int nbAnimaux; // besoin de ca si qq1 bouge le programme de fichier ca initialise la variables pour la suite du code : dans main ?
 
 // quand nb animaux sur map < au nombre dans la variable : creer un nouvel animal
+
+
 class Jeu 
 {
 public:
@@ -415,6 +417,24 @@ public:
 	{
 		for (auto animal : animaux)
 			delete animal;
+	}
+
+	void NbAnimaux()
+	{
+		cout << " voulez choisir un nb d'animaux ? " << endl << " oui : 1, non : 0 " << endl; // demander au joueur si il veut donner un nb d'animaux precis ou un nb predefinit 
+		int choix;
+		cin >> choix;
+		switch (choix)
+		{
+		case 0:
+			nbAnimaux = 10;
+			break;
+		case 1:
+			cout << " Choissisez le nb d'animaux : " << endl;
+			int nb;
+			cin >> nb;
+			nbAnimaux = nb;
+		}
 	}
 
 	void init(int nombreAniamux)
