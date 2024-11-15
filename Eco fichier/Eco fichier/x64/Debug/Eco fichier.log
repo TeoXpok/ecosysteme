@@ -1,0 +1,56 @@
+﻿  Eco fichier.cpp
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(573,13): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(627,17): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(631,17): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(658,17): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(662,17): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(689,17): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(693,17): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(757,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(758,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(763,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(764,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(770,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(771,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(776,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(777,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(789,25): warning C4552: '+' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(806,27): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(807,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(812,27): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(813,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(819,27): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(820,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(825,27): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(826,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(839,26): warning C4552: '+' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(860,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(861,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(866,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(867,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(873,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(874,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(879,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(880,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(894,26): warning C4552: '+' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(915,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(916,24): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(921,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(922,24): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(928,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(929,24): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(934,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(935,24): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(948,24): warning C4552: '+' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(968,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(969,24): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(974,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(975,24): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(981,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(982,24): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(987,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(988,24): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(1001,24): warning C4552: '+' : résultat de l'expression non utilisé
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(1017,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\Eco fichier\Eco fichier.cpp(738,1): warning C4715: 'check' : les chemins de contrôle ne retournent pas tous une valeur
+  Eco fichier.vcxproj -> C:\Users\alves\Documents\Cours\03 - programmation orientée objet\Eco fichier\Eco fichier\x64\Debug\Eco fichier.exe
