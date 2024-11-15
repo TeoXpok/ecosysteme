@@ -570,7 +570,8 @@ public:
 		switch (choix)
 		{
 		case 0:
-			nbAnimaux = 10;
+			nbAnimaux = 44;
+			return  nbAnimaux;
 			break;
 		case 1:
 			cout << " Choissisez le nb d'animaux : " << endl;
