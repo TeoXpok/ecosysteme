@@ -793,7 +793,7 @@ void choix(Animal& target)
 				check(target.x + 1, target.y, target) ||
 				check(target.x + 1, target.y + 1, target))
 			{
-				target.getHungry() + 50;
+				target.eat();
 				return;
 			}
 		}
@@ -814,7 +814,7 @@ void choix(Animal& target)
 				check(target.x + 1, target.y, target) ||
 				check(target.x + 1, target.y + 1, target))
 			{
-				target.getHungry() + 50;
+				target.eat();
 				return;
 			}
 		}
@@ -828,7 +828,6 @@ void choix(Animal& target)
 
 		if (
 			check(target.x - 1, target.y - 1, target) ||
-
 			check(target.x - 1, target.y, target) ||
 			check(target.x - 1, target.y + 1, target) ||
 			check(target.x, target.y + 1, target) ||
@@ -837,11 +836,15 @@ void choix(Animal& target)
 			check(target.x + 1, target.y, target) ||
 			check(target.x + 1, target.y + 1, target))
 		{
-			target.getThirsty() + 50;
+			target.eat();
 			return;
 		}
 	}
 	//=================DEPLACEMENT ALEATOIRE===================
+	else if (true)
+	{
+		target.reproduction(target);
+	}
 	else switch (depCase)// vérifier déplacement
 	{
 	case 0:
