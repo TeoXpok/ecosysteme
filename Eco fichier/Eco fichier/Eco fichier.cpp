@@ -1,6 +1,5 @@
 #include<vector>
 #include<iostream>
-#include<ctime>
 using namespace std;
 
 struct animal {
@@ -39,7 +38,7 @@ protected:
 
 public:
 
-	Animal(string Race, bool s,  int e, int a, int c, int h, int x, int y, int l) : race(Race), sexe (s), x(x), y(y), speed(e), age(a), categorie(c), thirsty(h), hungry(h), aliment(l) {}
+	Animal(string Race, int e, int a, int c, int h, int x, int y, int l) : race(Race), x(x), y(y), speed(e), age(a), categorie(c), thirsty(h), hungry(h), aliment(l) {}
 
 	// reproduction, manger, boire, chasser, deplacer : methodes
 	int x, y;
