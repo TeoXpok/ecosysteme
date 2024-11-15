@@ -243,7 +243,6 @@ public:
 
 	void reproduction(Animal& target) override
 	{
-
 		// Vérification des cases adjacentes
 		for (int i = -1; i <= 1; i++)
 		{
@@ -252,15 +251,24 @@ public:
 				if (i == 0 && j == 0) continue; // Ne pas compter la case elle-même
 				int nx = x + i;
 				int ny = y + j;
-				
-				// Vérification des limites
-				if (race == target.getRace())
-				{
-					if (age == 10 && target.getAge() <= 10)
-					{
-						animaux.push_back(new Hippopotamus(5, 5, 0));
 
-						cout << " Un hippopotame est né." << endl;
+				// Vérification des limites
+				if (nx >= 0 && nx < 30 && ny >= 0 && ny < 90)
+				{
+					if (board[nx][ny].animal.species != 0)
+					{
+						if (race == target.getRace())
+						{
+							if (sexe != target.getSexe())
+							{
+								if (age >= 10 && target.getAge() >= 10)
+								{
+									animaux.push_back(new Hippopotamus(nx, ny, 0));
+
+									cout << " Un Hippopotame est né." << endl;
+								}
+							}
+						}
 					}
 				}
 			}
@@ -348,6 +356,7 @@ public:
 		}
 	}
 
+
 	void reproduction(Animal& target) override
 	{
 		// Vérification des cases adjacentes
@@ -360,13 +369,22 @@ public:
 				int ny = y + j;
 
 				// Vérification des limites
-				if (race == target.getRace())
+				if (nx >= 0 && nx < 30 && ny >= 0 && ny < 90)
 				{
-					if (age == 10 && target.getAge() <= 10)
+					if (board[nx][ny].animal.species != 0)
 					{
-						animaux.push_back(new Dragon(5, 5, 0));
+						if (race == target.getRace())
+						{
+							if (sexe != target.getSexe())
+							{
+								if (age >= 10 && target.getAge() >= 10)
+								{
+									animaux.push_back(new Dragon(nx, ny, 0));
 
-						cout << " Un dragon est né." << endl;
+									cout << " Un Dragon est né." << endl;
+								}
+							}
+						}
 					}
 				}
 			}

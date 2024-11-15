@@ -1,4 +1,5 @@
 ﻿  Eco fichier.cpp
+<<<<<<< Updated upstream
 C:\Users\tgoncalves\source\repos\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(652,17): warning C4552: '-' : résultat de l'expression non utilisé
 C:\Users\tgoncalves\source\repos\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(656,17): warning C4552: '-' : résultat de l'expression non utilisé
 C:\Users\tgoncalves\source\repos\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(683,17): warning C4552: '-' : résultat de l'expression non utilisé
@@ -54,3 +55,61 @@ C:\Users\tgoncalves\source\repos\ecosysteme\Eco fichier\Eco fichier\Eco fichier.
 C:\Users\tgoncalves\source\repos\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(763): warning C4715: 'check' : les chemins de contrôle ne retournent pas tous une valeur
 C:\Users\tgoncalves\source\repos\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(593): warning C4715: 'Jeu::NbAnimaux' : les chemins de contrôle ne retournent pas tous une valeur
   Eco fichier.vcxproj -> C:\Users\tgoncalves\source\repos\ecosysteme\Eco fichier\x64\Debug\Eco fichier.exe
+=======
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(666,17): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(670,17): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(697,17): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(701,17): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(728,17): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(732,17): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(796,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(797,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(802,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(803,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(809,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(810,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(815,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(816,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(828,25): warning C4552: '+' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(845,27): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(846,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(851,27): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(852,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(858,27): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(859,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(864,27): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(865,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(878,26): warning C4552: '+' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(899,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(900,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(905,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(906,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(912,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(913,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(918,26): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(919,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(933,26): warning C4552: '+' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(954,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(955,24): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(960,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(961,24): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(967,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(968,24): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(973,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(974,24): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(987,24): warning C4552: '+' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(1007,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(1008,24): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(1013,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(1014,24): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(1020,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(1021,24): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(1026,25): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(1027,24): warning C4552: '-' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(1040,24): warning C4552: '+' : résultat de l'expression non utilisé
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(1055,12): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(777): warning C4715: 'check' : les chemins de contrôle ne retournent pas tous une valeur
+C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\Eco fichier\Eco fichier.cpp(607): warning C4715: 'Jeu::NbAnimaux' : les chemins de contrôle ne retournent pas tous une valeur
+  LINK : C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\x64\Debug\Eco fichier.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
+  Eco fichier.vcxproj -> C:\Users\jgrumiaux\Documents\GitHub\ecosysteme\Eco fichier\x64\Debug\Eco fichier.exe
+>>>>>>> Stashed changes
