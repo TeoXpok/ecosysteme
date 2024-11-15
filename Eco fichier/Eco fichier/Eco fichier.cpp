@@ -33,9 +33,9 @@ protected:
 	int hungry;
 	int categorie;
 	int maxAge = 50;
-	bool sexe;// true = homme / false = femme
+	bool sexe = rand() % 2;// true = homme / false = femme
 	int aliment;// 1 = carnivore, 2 = herbivore
-
+	
 
 public:
 
@@ -44,20 +44,6 @@ public:
 	// reproduction, manger, boire, chasser, deplacer : methodes
 	int x, y;
 	bool alive = true;
-
-	void sex()
-	{
-		int alea = rand() % 1;
-		if (alea == 0)
-		{
-			sexe = true;
-		}
-
-		else
-		{
-			sexe = false;
-		}
-	}
 	// reproduction, manger, boire, chasser, deplacer : methodes
 
 	virtual void eat() = 0;
