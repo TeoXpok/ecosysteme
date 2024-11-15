@@ -32,7 +32,7 @@ protected:
 	int hungry;
 	int categorie;
 	int maxAge = 50;
-	bool sexe;// true = homme/false = femme
+	bool sexe;// true = homme / false = femme
 	int aliment;// 1 = carnivore, 2 = herbivore
 
 
@@ -256,16 +256,30 @@ public:
 
 	void reproduction(Animal& target) override
 	{
-		if (race == target.getRace())
-		{
-			if (age == 10 && target.getAge() <= 10)
-			{
-				animaux.push_back(new Hippopotamus(5, 5));
 
-				cout << " Un hippopotame est né." << endl;
+		// Vérification des cases adjacentes
+		for (int i = -1; i <= 1; i++)
+		{
+			for (int j = -1; j <= 1; j++)
+			{
+				if (i == 0 && j == 0) continue; // Ne pas compter la case elle-même
+				int nx = x + i;
+				int ny = y + j;
+				
+				// Vérification des limites
+				if (race == target.getRace())
+				{
+					if (age == 10 && target.getAge() <= 10)
+					{
+						animaux.push_back(new Hippopotamus(5, 5));
+
+						cout << " Un hippopotame est né." << endl;
+					}
+				}
 			}
 		}
 	}
+
 	void hunt(Animal& target) override
 	{
 		// se deplace en fonction de la position de target : appeler deplacement()
@@ -349,13 +363,25 @@ public:
 
 	void reproduction(Animal& target) override
 	{
-		if (race == target.getRace())
+		// Vérification des cases adjacentes
+		for (int i = -1; i <= 1; i++)
 		{
-			if (age == 10 && target.getAge() <= 10)
+			for (int j = -1; j <= 1; j++)
 			{
-				animaux.push_back(new Dragon(5, 5));
+				if (i == 0 && j == 0) continue; // Ne pas compter la case elle-même
+				int nx = x + i;
+				int ny = y + j;
 
-				cout << " Un dragon est né." << endl;
+				// Vérification des limites
+				if (race == target.getRace())
+				{
+					if (age == 10 && target.getAge() <= 10)
+					{
+						animaux.push_back(new Dragon(5, 5));
+
+						cout << " Un dragon est né." << endl;
+					}
+				}
 			}
 		}
 	}
