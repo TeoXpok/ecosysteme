@@ -46,8 +46,8 @@ public:
 	bool alive = true;
 	// reproduction, manger, boire, chasser, deplacer : methodes
 
-	virtual void eat() = 0;
-	virtual void drink() = 0;
+	virtual void eat(int nb) = 0;
+	virtual void drink(int nb) = 0;
 	virtual void reproduction(Animal& target) = 0;
 	virtual void hunt(Animal& target) = 0;
 	virtual void talk(Animal& other) = 0;
@@ -96,30 +96,14 @@ public:
 	Capybara(int x, int y, int age) : Animal("Capybara", 1, age, 1, 100, x, y, 1) {}
 
 
-	void eat() override
+	void eat(int nb) override
 	{
-		int max = 100;
-		if (hungry > 90)
-		{
-			hungry = 100;
-		}
-		else
-		{
-			hungry += 10;
-		}
+		hungry += nb;
 	}
 
-	void drink() override
+	void drink(int nb) override
 	{
-		int max = 100;
-		if (thirsty > 90)
-		{
-			thirsty = 100;
-		}
-		else
-		{
-			thirsty += 10;
-		}
+		thirsty += nb;
 	}
 
 	void reproduction(Animal& target) override// A revoir
@@ -203,30 +187,14 @@ public:
 
 	Hippopotamus(int x, int y, int age) : Animal("Hippopotamus", 1, age, 2, 100, x, y, 1) {}
 
-	void eat() override
+	void eat(int nb) override
 	{
-		int max = 100;
-		if (hungry > 90)
-		{
-			hungry = 100;
-		}
-		else
-		{
-			hungry += 10;
-		}
+		hungry += nb;
 	}
 
-	void drink() override
+	void drink(int nb) override
 	{
-		int max = 100;
-		if (thirsty > 90)
-		{
-			thirsty = 100;
-		}
-		else
-		{
-			thirsty += 10;
-		}
+		thirsty += nb;
 	}
 
 
@@ -310,30 +278,14 @@ public:
 
 	Dragon(int x, int y, int age) : Animal("Dragon", 1, age, 3, 100, x, y, 2) {}
 
-	void eat() override
+	void eat(int nb) override
 	{
-		int max = 100;
-		if (hungry > 90)
-		{
-			hungry = 100;
-		}
-		else
-		{
-			hungry += 10;
-		}
+		hungry += nb;
 	}
 
-	void drink() override
+	void drink(int nb) override
 	{
-		int max = 100;
-		if (thirsty > 90)
-		{
-			thirsty = 100;
-		}
-		else
-		{
-			thirsty += 10;
-		}
+		thirsty += nb;
 	}
 
 	void reproduction(Animal& target) override// A revoir
