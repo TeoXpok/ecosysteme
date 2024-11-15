@@ -12,6 +12,7 @@ protected:
 	// nom, sexe, age, faim, soif, race : attributs
 	string race;
 	int age;
+	int maxAge;
 	int speed;
 	int thirsty;
 	int hungry;
@@ -48,12 +49,42 @@ public:
 	int x, y;
 	
 	// reproduction, manger, boire, chasser, deplacer : methodes
+<<<<<<< HEAD
+=======
+
+>>>>>>> df7655e0e5bb6e6a35b9b9505ab14b7267786474
 	virtual void eat() = 0;
 	virtual void drink() = 0;
 	virtual void reproduction(Animal& target) = 0;
 	virtual void hunt(Animal& target) = 0;
 	virtual void talk(Animal& other) = 0;
 
+<<<<<<< HEAD
+=======
+	void agee() 
+	{
+		int debut = 0;
+
+		if (debut != 1)
+		{
+			cout << " Choisissez l'age maximum des animaux : " << endl;
+			int nbMax;
+			cin >> nbMax;
+		}
+
+		if (alive) 
+		{
+			age++;
+			if (age >= maxAge) 
+			{
+				alive = false;
+				cout << getRace() << "  est mort vieillesse." << endl;
+			}
+		}
+	}
+
+
+>>>>>>> df7655e0e5bb6e6a35b9b9505ab14b7267786474
 	string getRace() const { return race; }
 	bool getSexe() const { return sexe; }
 	bool getAlive() const { return alive; }
@@ -63,28 +94,24 @@ public:
 	int getHungry() const { return hungry; }
 	int getCategorie() const { return categorie; }
 	int getAliment() const { return aliment; }
+<<<<<<< HEAD
+=======
+
+>>>>>>> df7655e0e5bb6e6a35b9b9505ab14b7267786474
 };
 
 class Capybara : public Animal
 {
 public:
 
-	bool sex()
-	{
-		int alea = rand() % 1;
-		if ( alea == 0 )
-		{
-			sexe = true;
-		}
-
-		else
-		{
-			sexe = false;
-		}
-	}
 	// bool sexe, int x, int y, int age : pas besoin dans constructeur
 
+<<<<<<< HEAD
 	Capybara() : Animal("Capybara", sexe, 1,age, 1,100,x,y,1) {}
+=======
+	Capybara() : Animal("Capybara", sex(), 1, age, 1, 100, x, y) {}
+
+>>>>>>> df7655e0e5bb6e6a35b9b9505ab14b7267786474
 
 	void eat() override
 	{
@@ -113,22 +140,40 @@ public:
 	}
 
 	
-	void reproduction(Animal& target) override 
+	void reproduction(Animal& target) override
 	{
-		if (race == target.getRace())
+		// Vérification des cases adjacentes
+		for (int i = -1; i <= 1; i++)
 		{
-			if (sexe == target.getSexe())
+			for (int j = -1; j <= 1; j++)
 			{
-				if (age == 10 && target.getAge() <= 10)
+				if (i == 0 && j == 0) continue; // Ne pas compter la case elle-même
+				int nx = x + i;
+				int ny = y + j;
+
+				// Vérification des limites
+				if (nx >= 0 && nx < 30 && ny >= 0 && ny < 90)
 				{
-					animaux.push_back(new Capybara());
+					if (board[nx][ny] == )
+					{ 
+						if (race == target.getRace())
+						{
+							if (sexe == target.getSexe())
+							{
+								if (age == 10 && target.getAge() <= 10)
+								{
+									animaux.push_back(new Capybara());
 
-					cout << " Un Capybara est né." << endl;
-
+									cout << " Un Capybara est né." << endl;
+								}
+							}
+						}
+					}
 				}
 			}
 		}
 	}
+
 
 	void hunt(Animal& target) override
 	{
@@ -184,8 +229,12 @@ class Hippopotamus : public Animal
 {
 public:
 
+<<<<<<< HEAD
 	Hippopotamus() : Animal("Hippopotamus", sexe, 1, age, 2, 100, x, y,1) {}
 
+=======
+	Hippopotamus() : Animal("Hippopotamus", sex(), 1, age, 2, 100, x, y) {}
+>>>>>>> df7655e0e5bb6e6a35b9b9505ab14b7267786474
 
 	void eat() override
 	{
@@ -373,27 +422,11 @@ public:
 // instaurer un temps de presence aux animaux si un animal meurt un autre spawn
 
 
-int nbAnimaux; // besoin de ca si qq1 bouge le programme de fichier ca initialise la variables pour la suite du code
-
-void intNbAnimaux()
-{
-	cout << " voulez choisir un nb d'animaux ? " << endl << " oui : 1, non : 0 " << endl; // demander au joueur si il veut donner un nb d'animaux precis ou un nb predefinit 
-	int choix;
-	cin >> choix;
-	switch (choix)
-	{
-		case 0:
-			nbAnimaux = 10;
-			break;
-		case 1:
-			cout << " Choissisez le nb d'animaux : " << endl;
-			int nb;
-			cin >> nb;
-			nbAnimaux = nb;
-	}
-}
+int nbAnimaux; // besoin de ca si qq1 bouge le programme de fichier ca initialise la variables pour la suite du code : dans main ?
 
 // quand nb animaux sur map < au nombre dans la variable : creer un nouvel animal
+
+
 class Jeu 
 {
 public:
@@ -402,6 +435,24 @@ public:
 	{
 		for (auto animal : animaux)
 			delete animal;
+	}
+
+	void NbAnimaux()
+	{
+		cout << " voulez choisir un nb d'animaux ? " << endl << " oui : 1, non : 0 " << endl; // demander au joueur si il veut donner un nb d'animaux precis ou un nb predefinit 
+		int choix;
+		cin >> choix;
+		switch (choix)
+		{
+		case 0:
+			nbAnimaux = 10;
+			break;
+		case 1:
+			cout << " Choissisez le nb d'animaux : " << endl;
+			int nb;
+			cin >> nb;
+			nbAnimaux = nb;
+		}
 	}
 
 	void init(int nombreAniamux)
@@ -419,7 +470,3 @@ public:
 		}
 	}
 };
-/*void spawn()
-{
-	 pas besoin vecteur mis a l'exterieur normlement c'est bon
-}*/
