@@ -56,7 +56,7 @@ public:
 
 	virtual void eat(int nb) = 0;
 	virtual void drink(int nb) = 0;
-	virtual void reproduction(Animal& target) = 0;
+	virtual void reproduction() = 0;
 	virtual void talk(Animal& other) = 0;
 
 	void agee()
