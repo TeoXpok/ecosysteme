@@ -3,6 +3,8 @@
 #include<ctime>
 using namespace std;
 
+int nbMax;
+
 struct animal {
 	int species = 0; // 0 = pas d'animal / 1 = Capybara / 2 = Hippopotame / 3 = Dragon
 	bool sexe = true; // true = male / false = female
@@ -32,7 +34,6 @@ protected:
 	int thirsty;
 	int hungry;
 	int categorie;
-	int maxAge = 50;
 	bool sexe = rand() % 2;// true = homme / false = femme
 	int aliment;// 1 = carnivore, 2 = herbivore
 	
@@ -54,22 +55,13 @@ public:
 
 	void agee()
 	{
-		int debut = 0;
-
-		if (debut != 1)
-		{
-			cout << " Choisissez l'age maximum des animaux : " << endl;
-			int nbMax;
-			cin >> nbMax;
-		}
-
 		if (alive)
 		{
 			age++;
-			if (age >= maxAge)
+			if (age >= nbMax)
 			{
 				alive = false;
-				cout << getRace() << "  est mort vieillesse." << endl;
+				cout << getRace() << "  est mort de vieillesse. " << endl;
 			}
 		}
 	}
@@ -549,6 +541,11 @@ public:
 			case 2: animaux.push_back(new Dragon(x, y, 11)); break;
 			}
 		}
+
+		int debut = 0;
+
+			cout << " Choisissez l'age maximum des animaux : " << endl;
+			cin >> nbMax;
 	}
 };
 
@@ -728,6 +725,8 @@ void deplacement(int x, int y, int posx, int posy, Animal& target)
 
 void choix(Animal& target)
 {
+	target.agee();
+
 	if (target.getHungry() < target.getThirsty() && target.getHungry() < 50)
 	{
 		//======================CARNIVORE==========================
