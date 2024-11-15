@@ -13,7 +13,6 @@
 
 
 int researchx, researchy, nbCase;
-
 int besoin;
 int posx,posy;
 int nbCasex;
@@ -32,7 +31,7 @@ void research(int valeur, const Animal& target) {
     {
         for (int researchx = 0; researchx < 90; researchx++)
         {
-            switch (valeur)// bouf = 1 , water = 2 , bouf arbre =3
+            switch (valeur)// recherche proie = 1 , recherche arbre = 2 , recherche eau =3
             {
                 case 1:
                     if (board[researchy][researchx].animal.species > target.getCategorie())
@@ -133,16 +132,30 @@ void research(int valeur, const Animal& target) {
     }
 }
 
-void suppr(int x, int y) {// supprimer l'élément
-
-    board[10][10].fruits--;
+void suppr(int x, int y, Animal& target) {// supprimer l'élément
+    if (target.getHungry() < target.getThirsty())
+    {
+        if (target.getAliment() == 1)
+        {
+            target.getAlive = false;//atomisation de la cible
+        }
+        else
+        {
+            board[10][10].fruits--;
+        }
+    }
+    else
+    {
+        //boire mais ne se passera rien
+    }
+    
 }
 
 bool check(int x, int y, Animal& target) {
     if (x >= 0 || x < 30 || y >= 0 || y < 90) { return false; }
-    if (board[y][x].animal.species > target.getCategorie())
+    if (board[y][x].animal.species > target.getCategorie())// voir pour categorie 3 pour arbre
     {
-        suppr(x, y);
+        suppr(x, y, target);
         return true;
     }
 }
@@ -150,7 +163,7 @@ bool check(int x, int y, Animal& target) {
 void choix(Animal& target) {
     if (target.getHungry() < target.getThirsty())
     {
- //======================CARNIVORE=======================
+        //======================CARNIVORE=======================
         if (target.getAliment() == 1)
         {
             void hungryanimal(Animal & target); {
@@ -186,26 +199,80 @@ void choix(Animal& target) {
                 }
 
                 if (check(target.x - 1, target.y - 1, target) ||
-                    check(target.x - 1, target.y    , target) ||
+                    check(target.x - 1, target.y, target) ||
                     check(target.x - 1, target.y + 1, target) ||
-                    check(target.x    , target.y + 1, target) ||
-                    check(target.x    , target.y - 1, target) ||
+                    check(target.x, target.y + 1, target) ||
+                    check(target.x, target.y - 1, target) ||
                     check(target.x + 1, target.y - 1, target) ||
-                    check(target.x + 1, target.y    , target) ||
+                    check(target.x + 1, target.y, target) ||
                     check(target.x + 1, target.y + 1, target))
                 {
                     target.getHungry() + 50;
                     return;
                 }
             }
-//=======================HERBIVORE=============================
-        if (target.getAliment() == 2)
+            //=======================HERBIVORE=============================
+            if (target.getAliment() == 2)
+            {
+                void hungryanimal(Animal & target); {
+
+                    if (target.getHungry() < 50)
+                    {
+                        valeur = 2;
+                        research(valeur, target);
+                    }
+                    if (target.x < posx)
+                    {
+                        target.x++;
+                        target.getThirsty() - 2;
+                        target.getHungry() - 4;
+                    }
+                    else if (target.x > posx)
+                    {
+                        target.x--;
+                        target.getThirsty() - 2;
+                        target.getHungry() - 4;
+                    }
+
+                    if (target.y < posy)
+                    {
+                        target.y++;
+                        target.getThirsty() - 2;
+                        target.getHungry() - 4;
+                    }
+                    else if (target.y > posy)
+                    {
+                        target.y--;
+                        target.getThirsty() - 2;
+                        target.getHungry() - 4;
+                    }
+
+                    if (
+                        check(target.x - 1, target.y - 1, target) ||
+                        check(target.x - 1, target.y, target) ||
+                        check(target.x - 1, target.y + 1, target) ||
+                        check(target.x, target.y + 1, target) ||
+                        check(target.x, target.y - 1, target) ||
+                        check(target.x + 1, target.y - 1, target) ||
+                        check(target.x + 1, target.y, target) ||
+                        check(target.x + 1, target.y + 1, target))
+                    {
+                        target.getHungry() + 50;
+                        return;
+                    }
+
+
+                }
+            }
+        }
+        //========================SOIF=============================
+        else
         {
-            void hungryanimal(Animal & target); {
-                
-                if (target.getHungry() < 50)
+            void thirstyanimal(Animal & target);
+            {
+                if (target.getThirsty() < 50)
                 {
-                    valeur = 2;
+                    valeur = 3;
                     research(valeur, target);
                 }
                 if (target.x < posx)
@@ -244,147 +311,16 @@ void choix(Animal& target) {
                     check(target.x + 1, target.y, target) ||
                     check(target.x + 1, target.y + 1, target))
                 {
-                    target.getHungry() + 50;
+                    target.getThirsty() + 50;
                     return;
                 }
-                
-
             }
         }
     }
-    else
-    {
-        void thirstyanimal(Animal& target); {
-
-            if (target.getThirsty() < 50)
-            {
-                valeur = 2;
-                research(valeur, target);
-            }
-            if (target.x < posx)
-            {
-                target.x++;
-                target.getThirsty() - 2;
-                target.getHungry() - 4;
-            }
-            else if (target.x > posx)
-            {
-                target.x--;
-                target.getThirsty() - 2;
-                target.getHungry() - 4;
-            }
-
-            if (target.y < posy)
-            {
-                target.y++;
-                target.getThirsty() - 2;
-                target.getHungry() - 4;
-            }
-            else if (target.y > posy)
-            {
-                target.y--;
-                target.getThirsty() - 2;
-                target.getHungry() - 4;
-            }
-
-            if (
-                check(target.x - 1, target.y - 1, target) ||
-                check(target.x - 1, target.y, target) ||
-                check(target.x - 1, target.y + 1, target) ||
-                check(target.x, target.y + 1, target) ||
-                check(target.x, target.y - 1, target) ||
-                check(target.x + 1, target.y - 1, target) ||
-                check(target.x + 1, target.y, target) ||
-                check(target.x + 1, target.y + 1, target))
-            {
-                target.getHungry() + 50;
-                return;
-            }
-    }
 }
 
 
-
-//=================SOIF=======================
-void thirstyanimal(const Animal& target) {// rajouter choix de vide
-    if (target.getHungry() < 50)
-    {
-        valeur = 1;
-        research(valeur, target);
-    }
-    if (target.x < posx)
-    {
-        target.x++;
-        target.getThirsty() - 2;
-        target.getHungry() - 4;
-    }
-    else if (target.x > posx)
-    {
-        target.x--;
-        target.getThirsty() - 2;
-        target.getHungry() - 4;
-    }
-
-    if (target.y < posy)
-    {
-        target.y++;
-        target.getThirsty() - 2;
-        target.getHungry() - 4;
-    }
-    else if (target.y > posy)
-    {
-        target.y--;
-        target.getThirsty() - 2;
-        target.getHungry() - 4;
-    }
-
-    if (
-        check(target.x - 1, target.y - 1, target) ||
-        check(target.x - 1, target.y, target) ||
-        check(target.x - 1, target.y + 1, target) ||
-        check(target.x, target.y + 1, target) ||
-        check(target.x, target.y - 1, target) ||
-        check(target.x + 1, target.y - 1, target) ||
-        check(target.x + 1, target.y, target) ||
-        check(target.x + 1, target.y + 1, target))
-    {
-        target.getHungry() + 50;
-        return;
-    }
-
-
-
-
-
-}
-
-
-
-
-//void suivreAnimal(const Animal& target, int x, int y) {
-//    if (age < 3)
-//    {
-//        // relier les bébés avec la mère
-//        if (x < animal.x)x++;
-//        else if (x > animal.x)x--;
-//
-//        if (y < animal.y) y++;
-//        else if (y > animal.y)y--;
-//    }
-//};
-
-
-
-// bébé se déplace en groupe avec mère, si mère chasse alors groupe éloigner
-// une fois chasser les bébés doivent se nourrir avec mère
-
-// chasser ou se nourrir augmente
+// déplacement aléatoire
+// vérifier s'il peut se reproduire
 // chasser déplacement plus rapide
-
-// dormir (a voir)
-
-int main()
-{
-
-
-}
+// ne rien faire fait consommer faim et soif
