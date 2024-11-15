@@ -4,6 +4,13 @@
 using namespace std;
 
 int nbMax;
+int researchx, researchy, nbCase;
+int besoin;
+int posx, posy;
+int nbCasex;
+int nbCasey;
+int valeur;
+int depCase = rand() % 5 + 1;
 
 struct animal {
 	int species = 0; // 0 = pas d'animal / 1 = Capybara / 2 = Hippopotame / 3 = Dragon
@@ -49,7 +56,7 @@ public:
 
 	virtual void eat(int nb) = 0;
 	virtual void drink(int nb) = 0;
-	virtual void reproduction(Animal& target) = 0;
+	virtual void reproduction() = 0;
 	virtual void hunt(Animal& target) = 0;
 	virtual void talk(Animal& other) = 0;
 
@@ -65,7 +72,245 @@ public:
 			}
 		}
 	}
+	void research(int valeur) {
+		int min = 30 * 90;
 
+
+		for (int researchy = 0; researchy < 30; researchy++)
+		{
+			for (int researchx = 0; researchx < 90; researchx++)
+			{
+				switch (valeur)// recherche proie = 1 , recherche arbre = 2 , recherche eau =3
+				{
+				case 1:
+					if (board[researchy][researchx].animal.species > categorie)
+					{
+						if (researchx - x > 0)
+						{
+							nbCasex = researchx -x;
+						}
+						else
+						{
+							nbCasex = x - researchx;
+						}
+
+						if (researchy - y > 0)
+						{
+							researchx - x;
+						}
+						else
+						{
+							researchx - x;
+						}
+						nbCase = nbCasex + nbCasey;
+
+						if (nbCase < min)
+						{
+							min = nbCase;
+							posx = researchx;
+							posy = researchy;
+						}
+					}
+					break;
+
+				case 2:
+					if (board[researchy][researchx].istree == true)
+					{
+						if (researchx - x > 0)
+						{
+							nbCasex = researchx - x;
+						}
+						else
+						{
+							nbCasex = x - researchx;
+						}
+
+						if (researchy - y > 0)
+						{
+							researchx - x;
+						}
+						else
+						{
+							researchx - x;
+						}
+						nbCase = nbCasex + nbCasey;
+
+						if (nbCase < min)
+						{
+							min = nbCase;
+							posx = researchx;
+							posy = researchy;
+						}
+					}
+					break;
+
+				case 3:
+					if (board[researchy][researchx].iswater == true)
+					{
+						if (researchx - x > 0)
+						{
+							nbCasex = researchx - x;
+						}
+						else
+						{
+							nbCasex = x - researchx;
+						}
+
+						if (researchy - y > 0)
+						{
+							researchx - x;
+						}
+						else
+						{
+							researchx - x;
+						}
+						nbCase = nbCasex + nbCasey;
+
+						if (nbCase < min)
+						{
+							min = nbCase;
+							posx = researchx;
+							posy = researchy;
+						}
+					}
+					break;
+				default:
+					break;
+				}
+			}
+		}
+	}
+
+	void suppr(int x, int y) {//a revoir, supprimer l'élément
+		if (hungry < thirsty)
+		{
+			if (aliment == 1)
+			{
+				alive = false;
+			}
+			else
+			{
+				board[10][10].fruits--;
+			}
+		}
+		else
+		{
+			//boire mais ne se passera rien
+		}
+
+	}
+
+	bool check(int x, int y) {
+		if (x >= 0 || x < 30 || y >= 0 || y < 90) { return false; }
+		if (board[y][x].animal.species > categorie)// voir pour categorie 3 pour arbre
+		{
+			suppr(x, y);
+			return true;
+		}
+	}
+
+	void deplacement(int posx, int posy)
+	{
+		if (x < posx)
+		{
+			x++;
+			drink(-2);
+			eat(-4);
+		}
+		else if (x > posx)
+		{
+			x--;
+			drink(-2);
+			eat(-4);
+		}
+
+		if (y < posy)
+		{
+			y++;
+			drink(-2);
+			eat(-4);
+		}
+		else if (y > posy)
+		{
+			y--;
+			drink(-2);
+			eat(-4);
+		}
+	}
+
+	void choix()
+	{
+		agee();
+
+		if (hungry < thirsty && hungry < 50)
+		{
+			//======================CARNIVORE==========================
+			if (aliment == 1)
+			{
+				valeur = 1;
+				research(valeur);
+				deplacement( posx, posy);
+
+				if (check(x - 1, y - 1) ||
+					check(x - 1, y) ||
+					check(x - 1, y + 1) ||
+					check(x, y + 1) ||
+					check(x, y - 1) ||
+					check(x + 1, y - 1) ||
+					check(x + 1, y) ||
+					check(x + 1, y + 1))
+				{
+					eat(50);
+					return;
+				}
+			}
+			//=======================HERBIVORE=========================
+			else if (aliment == 2)
+			{
+				valeur = 2;
+				research(valeur);
+				deplacement(posx, posy);
+
+				if (check(x - 1, y - 1) ||
+					check(x - 1, y) ||
+					check(x - 1, y + 1) ||
+					check(x, y + 1) ||
+					check(x, y - 1) ||
+					check(x + 1, y - 1) ||
+					check(x + 1, y) ||
+					check(x + 1, y + 1))
+				{
+					eat(30);
+					return;
+				}
+			}
+		}
+		//========================SOIF=============================
+		else if (aliment == 3)
+		{
+			valeur = 3;
+			research(valeur);
+			deplacement(posx, posy);
+
+			if (check(x - 1, y - 1) ||
+				check(x - 1, y) ||
+				check(x - 1, y + 1) ||
+				check(x, y + 1) ||
+				check(x, y - 1) ||
+				check(x + 1, y - 1) ||
+				check(x + 1, y) ||
+				check(x + 1, y + 1))
+			{
+				drink(50);
+				return;
+			}
+		}
+		//=================DEPLACEMENT ALEATOIRE===================
+		else if (true)
+		{
+			reproduction();
+		}
+	}
 
 	string getRace() const { return race; }
 	bool getSexe() const { return sexe; }
@@ -98,7 +343,7 @@ public:
 		thirsty += nb;
 	}
 
-	void reproduction(Animal& target) override// A revoir
+	void reproduction() override// A revoir
 	{
 		for (int i = -1; i <= 1; i++)
 		{
@@ -107,11 +352,11 @@ public:
 				if (i == 0 && j == 0) continue; // Ne pas compter la case elle-même
 				if (i >= 0 && i < 30 && j >= 0 && j < 90)
 				{
-					if (board[i][j].animal.species == target.getCategorie())
+					if (board[i][j].animal.species == categorie)
 					{
-						if (board[i][j].animal.sexe != target.getSexe())
+						if (board[i][j].animal.sexe != sexe)
 						{
-							if (age > 10 && target.getAge() > 11)
+							if (age > 10 && board[i][j].animal.isadulte)
 							{
 								animaux.push_back(new Capybara(i,j,0));
 								cout << " Un Capybara est né." << endl;
@@ -190,7 +435,7 @@ public:
 	}
 
 
-	void reproduction(Animal& target) override// A revoir
+	void reproduction() override// A revoir
 	{
 		for (int i = -1; i <= 1; i++)
 		{
@@ -199,11 +444,11 @@ public:
 				if (i == 0 && j == 0) continue; // Ne pas compter la case elle-même
 				if (i >= 0 && i < 30 && j >= 0 && j < 90)
 				{
-					if (board[i][j].animal.species == target.getCategorie())
+					if (board[i][j].animal.species == categorie)
 					{
-						if (board[i][j].animal.sexe != target.getSexe())
+						if (board[i][j].animal.sexe != sexe)
 						{
-							if (age > 10 && target.getAge() > 11)
+							if (age > 10 && board[i][j].animal.isadulte)
 							{
 								animaux.push_back(new Hippopotamus(i, j, 0));
 								cout << " Un Hippopotamus est né." << endl;
@@ -280,7 +525,7 @@ public:
 		thirsty += nb;
 	}
 
-	void reproduction(Animal& target) override// A revoir
+	void reproduction() override// A revoir
 	{
 		for (int i = -1; i <= 1; i++)
 		{
@@ -289,11 +534,11 @@ public:
 				if (i == 0 && j == 0) continue; // Ne pas compter la case elle-même
 				if (i >= 0 && i < 30 && j >= 0 && j < 90)
 				{
-					if (board[i][j].animal.species == target.getCategorie())
+					if (board[i][j].animal.species == categorie)
 					{
-						if (board[i][j].animal.sexe != target.getSexe())
+						if (board[i][j].animal.sexe != sexe)
 						{
-							if (age > 10 && target.getAge() > 11)
+							if (age > 10 && board[i][j].animal.isadulte)
 							{
 								animaux.push_back(new Dragon(i, j, 0));
 								cout << " Un Dragon est né." << endl;
@@ -549,300 +794,15 @@ public:
 	}
 };
 
-int researchx, researchy, nbCase;
-int besoin;
-int posx, posy;
-int nbCasex;
-int nbCasey;
-int valeur;
-int depCase = rand() % 5 + 1;
-
-void research(int valeur, const Animal& target) {
-	int min = 30 * 90;
 
 
-	for (int researchy = 0; researchy < 30; researchy++)
-	{
-		for (int researchx = 0; researchx < 90; researchx++)
-		{
-			switch (valeur)// recherche proie = 1 , recherche arbre = 2 , recherche eau =3
-			{
-			case 1:
-				if (board[researchy][researchx].animal.species > target.getCategorie())
-				{
-					if (researchx - target.x > 0)
-					{
-						nbCasex = researchx - target.x;
-					}
-					else
-					{
-						nbCasex = target.x - researchx;
-					}
 
-					if (researchy - target.y > 0)
-					{
-						researchx - target.x;
-					}
-					else
-					{
-						researchx - target.x;
-					}
-					nbCase = nbCasex + nbCasey;
-
-					if (nbCase < min)
-					{
-						min = nbCase;
-						posx = researchx;
-						posy = researchy;
-					}
-				}
-				break;
-
-			case 2:
-				if (board[researchy][researchx].istree == true)
-				{
-					if (researchx - target.x > 0)
-					{
-						nbCasex = researchx - target.x;
-					}
-					else
-					{
-						nbCasex = target.x - researchx;
-					}
-
-					if (researchy - target.y > 0)
-					{
-						researchx - target.x;
-					}
-					else
-					{
-						researchx - target.x;
-					}
-					nbCase = nbCasex + nbCasey;
-
-					if (nbCase < min)
-					{
-						min = nbCase;
-						posx = researchx;
-						posy = researchy;
-					}
-				}
-				break;
-
-			case 3:
-				if (board[researchy][researchx].iswater == true)
-				{
-					if (researchx - target.x > 0)
-					{
-						nbCasex = researchx - target.x;
-					}
-					else
-					{
-						nbCasex = target.x - researchx;
-					}
-
-					if (researchy - target.y > 0)
-					{
-						researchx - target.x;
-					}
-					else
-					{
-						researchx - target.x;
-					}
-					nbCase = nbCasex + nbCasey;
-
-					if (nbCase < min)
-					{
-						min = nbCase;
-						posx = researchx;
-						posy = researchy;
-					}
-				}
-				break;
-			default:
-				break;
-			}
-		}
+void update() {
+	
+	for (auto& animal : animaux) {
+		animal->choix();
 	}
 }
-
-void suppr(int x, int y, Animal& target) {//a revoir, supprimer l'élément
-	if (target.getHungry() < target.getThirsty())
-	{
-		if (target.getAliment() == 1)
-		{
-			target.alive = false;
-		}
-		else
-		{
-			board[10][10].fruits--;
-		}
-	}
-	else
-	{
-		//boire mais ne se passera rien
-	}
-
-}
-
-bool check(int x, int y, Animal& target) {
-	if (x >= 0 || x < 30 || y >= 0 || y < 90) { return false; }
-	if (board[y][x].animal.species > target.getCategorie())// voir pour categorie 3 pour arbre
-	{
-		suppr(x, y, target);
-		return true;
-	}
-}
-
-void deplacement(int x, int y, int posx, int posy, Animal& target)
-{
-	if (target.x < posx)
-	{
-		target.x++;
-		target.drink(-2);
-		target.eat(-4);
-	}
-	else if (target.x > posx)
-	{
-		target.x--;
-		target.drink(-2);
-		target.eat(-4);
-	}
-
-	if (target.y < posy)
-	{
-		target.y++;
-		target.drink(-2);
-		target.eat(-4);
-	}
-	else if (target.y > posy)
-	{
-		target.y--;
-		target.drink(-2);
-		target.eat(-4);
-	}
-}
-
-void choix(Animal& target)
-{
-	target.agee();
-
-	if (target.getHungry() < target.getThirsty() && target.getHungry() < 50)
-	{
-		//======================CARNIVORE==========================
-		if (target.getAliment() == 1)
-		{
-			valeur = 1;
-			research(valeur, target);
-			deplacement(target.x, target.y, posx, posy, target);
-
-			if (check(target.x - 1, target.y - 1, target) ||
-				check(target.x - 1, target.y, target) ||
-				check(target.x - 1, target.y + 1, target) ||
-				check(target.x, target.y + 1, target) ||
-				check(target.x, target.y - 1, target) ||
-				check(target.x + 1, target.y - 1, target) ||
-				check(target.x + 1, target.y, target) ||
-				check(target.x + 1, target.y + 1, target))
-			{
-				target.eat(50);
-				return;
-			}
-		}
-		//=======================HERBIVORE=========================
-		if (target.getAliment() == 2)
-		{
-			valeur = 2;
-			research(valeur, target);
-			deplacement(target.x, target.y, posx, posy, target);
-
-			if (
-				check(target.x - 1, target.y - 1, target) ||
-				check(target.x - 1, target.y, target) ||
-				check(target.x - 1, target.y + 1, target) ||
-				check(target.x, target.y + 1, target) ||
-				check(target.x, target.y - 1, target) ||
-				check(target.x + 1, target.y - 1, target) ||
-				check(target.x + 1, target.y, target) ||
-				check(target.x + 1, target.y + 1, target))
-			{
-				target.eat(30);
-				return;
-			}
-		}
-	}
-	//========================SOIF=============================
-	else if (target.getThirsty() < 50)
-	{
-		valeur = 3;
-		research(valeur, target);
-		deplacement(target.x, target.y, posx, posy, target);
-
-		if (
-			check(target.x - 1, target.y - 1, target) ||
-			check(target.x - 1, target.y, target) ||
-			check(target.x - 1, target.y + 1, target) ||
-			check(target.x, target.y + 1, target) ||
-			check(target.x, target.y - 1, target) ||
-			check(target.x + 1, target.y - 1, target) ||
-			check(target.x + 1, target.y, target) ||
-			check(target.x + 1, target.y + 1, target))
-		{
-			target.drink(50);
-			return;
-		}
-	}
-	//=================DEPLACEMENT ALEATOIRE===================
-	else if (true)
-	{
-		target.reproduction(target);
-	}
-	else switch (depCase)// vérifier déplacement
-	{
-	case 0:
-		target.x++;
-		if (target.x >= 0 || target.x < 30 || target.y >= 0 || target.y < 90)
-		{
-			target.x--;
-		}
-		target.drink(-2);
-		target.eat(-4);
-		break;
-	case 1:
-		target.x--;
-		if (target.x >= 0 || target.x < 30 || target.y >= 0 || target.y < 90)
-		{
-			target.x++;
-		}
-		target.drink(-2);
-		target.eat(-4);
-		break;
-	case 2:
-		target.y++;
-		if (target.x >= 0 || target.x < 30 || target.y >= 0 || target.y < 90)
-		{
-			target.y--;
-		}
-		target.drink(-2);
-		target.eat(-4);
-		break;
-	case 3:
-		target.y--;
-		if (target.x >= 0 || target.x < 30 || target.y >= 0 || target.y < 90)
-		{
-			target.y++;
-		}
-		target.drink(-2);
-		target.eat(-4);
-		break;
-	case 4:
-		target.drink(-2);
-		target.eat(-4);
-	default:
-		break;
-	}
-}
-
 // vérifier s'il peut se reproduire
 
 
@@ -861,5 +821,7 @@ int main()
 		cin >> x;
 		if (x == 0)break;
 		cin.ignore(1000, '\n');
+		update();
+
 	}
 }
