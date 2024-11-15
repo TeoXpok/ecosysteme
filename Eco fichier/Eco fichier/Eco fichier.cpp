@@ -241,7 +241,7 @@ public:
 	{
 		agee();
 
-		if (hungry < thirsty && hungry < 50)
+		if (hungry <= thirsty && hungry < 50)
 		{
 			//======================CARNIVORE==========================
 			if (aliment == 1)
@@ -329,7 +329,7 @@ public:
 
 	// bool sexe, int x, int y, int age : pas besoin dans constructeur
 
-	Capybara(int x, int y, int age) : Animal("Capybara", 1, age, 1, 100, x, y, 1) {}
+	Capybara(int x, int y, int age) : Animal("Capybara", 1, age, 1, 40, x, y, 1) {}
 
 
 	void eat(int nb) override
@@ -405,7 +405,7 @@ class Hippopotamus : public Animal
 {
 public:
 
-	Hippopotamus(int x, int y, int age) : Animal("Hippopotamus", 1, age, 2, 100, x, y, 1) {}
+	Hippopotamus(int x, int y, int age) : Animal("Hippopotamus", 1, age, 2, 40, x, y, 1) {}
 
 	void eat(int nb) override
 	{
@@ -481,7 +481,7 @@ class Dragon : public Animal
 {
 public:
 
-	Dragon(int x, int y, int age) : Animal("Dragon", 1, age, 3, 100, x, y, 2) {}
+	Dragon(int x, int y, int age) : Animal("Dragon", 1, age, 3, 40, x, y, 2) {}
 
 	void eat(int nb) override
 	{
