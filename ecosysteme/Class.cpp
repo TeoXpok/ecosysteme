@@ -4,7 +4,6 @@
 #include<iostream>
 using namespace std;
 
-vector<Animal*> animaux;
 
 class Animal
 {
@@ -17,9 +16,7 @@ protected:
 	int thirsty;
 	int hungry;
 	int categorie;
-	bool alive;
 	bool sexe;// true = homme/false = femme
-	bool alive = true;
 	int aliment;// 1 = carnivore, 2 = herbivore
 	
 
@@ -29,6 +26,7 @@ public:
 
 	// reproduction, manger, boire, chasser, deplacer : methodes
 	int x, y;
+	bool alive = true;
 	
 	bool sex()
 	{
@@ -46,21 +44,14 @@ public:
 
 	Animal( string Race, bool sexe, int e, int a, int c, int h, int x, int y, int l) : race(Race), sexe(sexe), x(x), y(y), speed(e), age(a), categorie(c), thirsty(h), hungry(h), aliment(l) {}
 	
-	int x, y;
-	
 	// reproduction, manger, boire, chasser, deplacer : methodes
-<<<<<<< HEAD
-=======
 
->>>>>>> df7655e0e5bb6e6a35b9b9505ab14b7267786474
 	virtual void eat() = 0;
 	virtual void drink() = 0;
 	virtual void reproduction(Animal& target) = 0;
 	virtual void hunt(Animal& target) = 0;
 	virtual void talk(Animal& other) = 0;
 
-<<<<<<< HEAD
-=======
 	void agee() 
 	{
 		int debut = 0;
@@ -84,21 +75,17 @@ public:
 	}
 
 
->>>>>>> df7655e0e5bb6e6a35b9b9505ab14b7267786474
 	string getRace() const { return race; }
 	bool getSexe() const { return sexe; }
-	bool getAlive() const { return alive; }
 	int getAge() const { return age; }
 	int getSpeed() const { return speed; }
 	int getThirsty() const { return thirsty; }
 	int getHungry() const { return hungry; }
 	int getCategorie() const { return categorie; }
 	int getAliment() const { return aliment; }
-<<<<<<< HEAD
-=======
-
->>>>>>> df7655e0e5bb6e6a35b9b9505ab14b7267786474
 };
+
+vector<Animal*> animaux;
 
 class Capybara : public Animal
 {
@@ -106,12 +93,8 @@ public:
 
 	// bool sexe, int x, int y, int age : pas besoin dans constructeur
 
-<<<<<<< HEAD
 	Capybara() : Animal("Capybara", sexe, 1,age, 1,100,x,y,1) {}
-=======
-	Capybara() : Animal("Capybara", sex(), 1, age, 1, 100, x, y) {}
 
->>>>>>> df7655e0e5bb6e6a35b9b9505ab14b7267786474
 
 	void eat() override
 	{
@@ -154,13 +137,13 @@ public:
 				// Vérification des limites
 				if (nx >= 0 && nx < 30 && ny >= 0 && ny < 90)
 				{
-					if (board[nx][ny] == )
+					if (board[nx][ny].animal.species != 0)
 					{ 
 						if (race == target.getRace())
 						{
-							if (sexe == target.getSexe())
+							if (sexe != target.getSexe())
 							{
-								if (age == 10 && target.getAge() <= 10)
+								if (age >= 10 && target.getAge() >= 10)
 								{
 									animaux.push_back(new Capybara());
 
@@ -229,12 +212,7 @@ class Hippopotamus : public Animal
 {
 public:
 
-<<<<<<< HEAD
 	Hippopotamus() : Animal("Hippopotamus", sexe, 1, age, 2, 100, x, y,1) {}
-
-=======
-	Hippopotamus() : Animal("Hippopotamus", sex(), 1, age, 2, 100, x, y) {}
->>>>>>> df7655e0e5bb6e6a35b9b9505ab14b7267786474
 
 	void eat() override
 	{
