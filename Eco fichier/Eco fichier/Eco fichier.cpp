@@ -1,5 +1,6 @@
 #include<vector>
 #include<iostream>
+#include<ctime>
 using namespace std;
 
 struct animal {
@@ -38,7 +39,7 @@ protected:
 
 public:
 
-	Animal(string Race, int e, int a, int c, int h, int x, int y, int l) : race(Race), x(x), y(y), speed(e), age(a), categorie(c), thirsty(h), hungry(h), aliment(l) {}
+	Animal(string Race,  int e, int a, int c, int h, int x, int y, int l) : race(Race), x(x), y(y), speed(e), age(a), categorie(c), thirsty(h), hungry(h), aliment(l) {}
 
 	// reproduction, manger, boire, chasser, deplacer : methodes
 	int x, y;
@@ -106,7 +107,7 @@ public:
 
 	// bool sexe, int x, int y, int age : pas besoin dans constructeur
 
-	Capybara(int x, int y) : Animal("Capybara", 1, age, 1, 100, x, y, 1) {}
+	Capybara(int x, int y, int age) : Animal("Capybara", 1, age, 1, 100, x, y, 1) {}
 
 
 	void eat() override
@@ -158,7 +159,7 @@ public:
 							{
 								if (age >= 10 && target.getAge() >= 10)
 								{
-									animaux.push_back(new Capybara(nx, ny));
+									animaux.push_back(new Capybara(nx, ny, 0));
 
 									cout << " Un Capybara est né." << endl;
 								}
@@ -225,7 +226,7 @@ class Hippopotamus : public Animal
 {
 public:
 
-	Hippopotamus(int x, int y) : Animal("Hippopotamus", 1, age, 2, 100, x, y, 1) {}
+	Hippopotamus(int x, int y, int age) : Animal("Hippopotamus", 1, age, 2, 100, x, y, 1) {}
 
 	void eat() override
 	{
@@ -271,7 +272,7 @@ public:
 				{
 					if (age == 10 && target.getAge() <= 10)
 					{
-						animaux.push_back(new Hippopotamus(5, 5));
+						animaux.push_back(new Hippopotamus(5, 5, 0));
 
 						cout << " Un hippopotame est né." << endl;
 					}
@@ -333,7 +334,7 @@ class Dragon : public Animal
 {
 public:
 
-	Dragon(int x, int y) : Animal("Dragon", 1, age, 3, 100, x, y, 2) {}
+	Dragon(int x, int y, int age) : Animal("Dragon", 1, age, 3, 100, x, y, 2) {}
 
 	void eat() override
 	{
@@ -377,7 +378,7 @@ public:
 				{
 					if (age == 10 && target.getAge() <= 10)
 					{
-						animaux.push_back(new Dragon(5, 5));
+						animaux.push_back(new Dragon(5, 5, 0));
 
 						cout << " Un dragon est né." << endl;
 					}
@@ -616,9 +617,9 @@ public:
 			y = rand() % 29;
 			switch (classe)
 			{
-			case 0: animaux.push_back(new Capybara(x, y)); break;
-			case 1: animaux.push_back(new Hippopotamus(x, y)); break;
-			case 2: animaux.push_back(new Dragon(x, y)); break;
+			case 0: animaux.push_back(new Capybara(x, y, 11)); break;
+			case 1: animaux.push_back(new Hippopotamus(x, y, 11)); break;
+			case 2: animaux.push_back(new Dragon(x, y, 11)); break;
 			}
 		}
 	}
