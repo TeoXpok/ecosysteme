@@ -701,27 +701,27 @@ void deplacement(int x, int y, int posx, int posy, Animal& target)
 	if (target.x < posx)
 	{
 		target.x++;
-		target.getThirsty() - 2;
-		target.getHungry() - 4;
+		target.drink(-2);
+		target.eat(-4);
 	}
 	else if (target.x > posx)
 	{
 		target.x--;
-		target.getThirsty() - 2;
-		target.getHungry() - 4;
+		target.drink(-2);
+		target.eat(-4);
 	}
 
 	if (target.y < posy)
 	{
 		target.y++;
-		target.getThirsty() - 2;
-		target.getHungry() - 4;
+		target.drink(-2);
+		target.eat(-4);
 	}
 	else if (target.y > posy)
 	{
 		target.y--;
-		target.getThirsty() - 2;
-		target.getHungry() - 4;
+		target.drink(-2);
+		target.eat(-4);
 	}
 }
 
@@ -745,7 +745,7 @@ void choix(Animal& target)
 				check(target.x + 1, target.y, target) ||
 				check(target.x + 1, target.y + 1, target))
 			{
-				target.eat();
+				target.eat(50);
 				return;
 			}
 		}
@@ -766,7 +766,7 @@ void choix(Animal& target)
 				check(target.x + 1, target.y, target) ||
 				check(target.x + 1, target.y + 1, target))
 			{
-				target.eat();
+				target.eat(30);
 				return;
 			}
 		}
@@ -788,7 +788,7 @@ void choix(Animal& target)
 			check(target.x + 1, target.y, target) ||
 			check(target.x + 1, target.y + 1, target))
 		{
-			target.eat();
+			target.drink(50);
 			return;
 		}
 	}
@@ -805,39 +805,39 @@ void choix(Animal& target)
 		{
 			target.x--;
 		}
-		target.getThirsty() - 2;
-		target.getHungry() - 4;
-
+		target.drink(-2);
+		target.eat(-4);
+		break;
 	case 1:
 		target.x--;
 		if (target.x >= 0 || target.x < 30 || target.y >= 0 || target.y < 90)
 		{
 			target.x++;
 		}
-		target.getThirsty() - 2;
-		target.getHungry() - 4;
-
+		target.drink(-2);
+		target.eat(-4);
+		break;
 	case 2:
 		target.y++;
 		if (target.x >= 0 || target.x < 30 || target.y >= 0 || target.y < 90)
 		{
 			target.y--;
 		}
-		target.getThirsty() - 2;
-		target.getHungry() - 4;
-
+		target.drink(-2);
+		target.eat(-4);
+		break;
 	case 3:
 		target.y--;
 		if (target.x >= 0 || target.x < 30 || target.y >= 0 || target.y < 90)
 		{
 			target.y++;
 		}
-		target.getThirsty() - 2;
-		target.getHungry() - 4;
-
+		target.drink(-2);
+		target.eat(-4);
+		break;
 	case 4:
-		target.getThirsty() - 1;
-		target.getHungry() - 2;
+		target.drink(-2);
+		target.eat(-4);
 	default:
 		break;
 	}
