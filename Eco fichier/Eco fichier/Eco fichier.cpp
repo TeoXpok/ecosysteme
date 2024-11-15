@@ -56,8 +56,7 @@ public:
 
 	virtual void eat(int nb) = 0;
 	virtual void drink(int nb) = 0;
-	virtual void reproduction() = 0;
-	virtual void hunt(Animal& target) = 0;
+	virtual void reproduction(Animal& target) = 0;
 	virtual void talk(Animal& other) = 0;
 
 	void agee()
@@ -368,22 +367,6 @@ public:
 		}
 	}
 
-	void hunt(Animal& target) override
-	{
-		// se deplace en fonction de la position de target : appeler deplacement()
-
-		cout << "Position du personnage : (" << x << ", " << y << ")" << std::endl;
-
-		// si sur la meme case mouru
-		if (x == target.x && y == target.y)
-		{
-			// appel du destructeur 
-		}
-		cout << race << " chasse " << target.getRace() << " ! " << endl;
-
-		cout << target.getRace() << " est mort, mangé par : " << race << " ! " << endl;
-	}
-
 	void talk(Animal& other) override
 	{
 		// Vérification des cases adjacentes
@@ -460,21 +443,6 @@ public:
 		}
 	}
 
-	void hunt(Animal& target) override
-	{
-		// se deplace en fonction de la position de target : appeler deplacement()
-
-		cout << "Position du personnage : (" << x << ", " << y << ")" << std::endl;
-
-		if (x == target.x && y == target.y) // si sur la meme case mouru
-		{
-			// appel du destructeur 
-		}
-		cout << race << " chasse " << target.getRace() << " ! " << endl;
-
-		cout << target.getRace() << " est mort, mangé par : " << race << " ! " << endl;
-	}
-
 	void talk(Animal& other) override
 	{
 		// Vérification des cases adjacentes
@@ -548,22 +516,6 @@ public:
 				}
 			}
 		}
-	}
-
-	void hunt(Animal& target) override
-	{
-		// se deplace en fonction de la position de target : appeler deplacement()
-
-		cout << "Position du personnage : (" << x << ", " << y << ")" << std::endl;
-
-		// si sur la meme case mouru
-		if (x == target.x && y == target.y)
-		{
-			// appel du destructeur 
-		}
-		cout << race << " chasse " << target.getRace() << " ! " << endl;
-
-		cout << target.getRace() << " est mort, mangé par : " << race << " ! " << endl;
 	}
 
 	void talk(Animal& other) override
